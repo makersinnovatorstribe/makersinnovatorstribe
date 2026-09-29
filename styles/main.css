@@ -1,0 +1,19 @@
+/* general */
+h1{
+    text-align: center;
+    font-size: 5vw;
+}
+
+p{
+    font-size: 1.5vw;
+}
+
+img {
+    object-fit: contain;
+    max-width: 100%;
+    height: auto;
+}
+
+.image-with-text{
+    display: flex;
+}
