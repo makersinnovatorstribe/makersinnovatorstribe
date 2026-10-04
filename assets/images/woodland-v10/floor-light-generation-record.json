@@ -1,0 +1,15 @@
+{
+  "mode": "built-in image_gen edit",
+  "created": "2026-10-04",
+  "editReference": "source/floor-material.png",
+  "generatedSource": "C:/Users/Jun Leong/.codex/generated_images/01a0ff71-0f1b-7683-9b7e-4a0f83087b41/exec-b00ca3f4-ba39-444e-8bc3-d9702a74e6a3.png",
+  "source": "source/floor-material-light.png",
+  "web": "floor-material-light.webp",
+  "change": "Broad floor papers repainted in lighter opaque cream-sage; crisp flora and composition preserved.",
+  "export": "native resolution, lossless WebP",
+  "prompt": "Use case: precise-object-edit\nAsset type: lighter opaque woodland paper floor material.\nInput image 1 is the EDIT TARGET.\nPrimary request: change ONLY the colors of the broad underlying floor paper patches to lighter cream-sage paper. Use these three base paper colors: #c7cfab, #b9c49b and #d6d8b7. The floor should be light and restful enough for larger sage/olive paper-cut trees placed above it to stand out.\nExact invariants: preserve the original full composition, every patch contour, every grass/clover/daisy/ochre leaf shape, every object's placement and size, all crisp cut-paper edges, fine restrained paper fibres and gentle shallow layered paper shading. Do not redesign, move, enlarge, delete or add any flora. Keep the same native 1086 by 1448 full opaque canvas and edge-to-edge composition.\nColor treatment: the specified lighter colors are the actual solid opaque paper material colors, not a translucent white overlay. Keep clover and grass as readable middle-sage paper shapes against the pale floor, with natural subtle layered shading; preserve the rich ochre/brown fallen leaves and the cream daisies with mustard centers. Everything remains opaque matte colored paper, with fine fibres and confident crisp edges.\nAvoid: fading overlays, opacity reduction, blur, washed-out objects, global desaturation, coarse grain, dirt/gravel, extra decoration, new paths or trees. Change only the broad base paper colors and their correspondingly subtle paper-edge shading.",
+  "width": 1086,
+  "height": 1448,
+  "opaque": true,
+  "bytes": 1662698
+}

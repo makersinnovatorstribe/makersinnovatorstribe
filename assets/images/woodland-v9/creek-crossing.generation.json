@@ -1,0 +1,19 @@
+{
+  "name": "creek-crossing",
+  "method": "Built-in image_gen",
+  "reference": "C:/Users/JUNLEO~1/AppData/Local/Temp/codex-clipboard-88322d81-2fa1-4e79-947d-9d6b5bad249a.png",
+  "source": "C:\\Users\\Jun Leong\\Documents\\CCA Website\\makersinnovatorstribe-main\\assets\\images\\woodland-v9\\source\\creek-crossing.png",
+  "generatedSource": "C:\\Users\\Jun Leong\\.codex\\generated_images\\01a1002d-241f-7113-974b-76fa650032a7\\exec-58425197-abd9-49d5-b8d4-0fdec1374793.png",
+  "promptFile": "creek-crossing.prompt.txt",
+  "output": "C:\\Users\\Jun Leong\\Documents\\CCA Website\\makersinnovatorstribe-main\\assets\\images\\woodland-v9\\creek-crossing.webp",
+  "width": 1086,
+  "height": 362,
+  "bytes": 84900,
+  "alpha": {
+    "transparent": 247723,
+    "partial": 143830,
+    "opaque": 1579,
+    "redEdge": 0
+  },
+  "visualInspection": "Independent transparent cutout; no full land backing, trees, people or labels."
+}

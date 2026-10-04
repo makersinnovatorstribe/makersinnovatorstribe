@@ -1,0 +1,29 @@
+{
+  "mode": "built-in image_gen",
+  "reference": "assets/images/atelier-v6/woodland-ground.webp",
+  "created": "2026-10-04",
+  "assets": [
+    {
+      "name": "path-only",
+      "source": "source/path-only.png",
+      "web": "path-only.webp",
+      "generatedSource": "C:/Users/Jun Leong/.codex/generated_images/01a0ff71-0f1b-7683-9b7e-4a0f83087b41/exec-7725aefe-cb95-42d7-9d58-c6b6098405b7.png",
+      "prompt": "Use case: background-extraction\nAsset type: isolated transparent path layer for a tall scrolling paper woodland website.\nInput image 1 is the EDIT TARGET and style reference: preserve its existing cream straw meandering footpath exactly as a separate layer.\nPrimary request: extract ONLY the pale golden straw paper footpath from this reference. Remove the green woodland floor, all plants, grasses, leaves, acorns, flowers, rocks, pebbles and all surrounding illustration to genuine fully transparent alpha. The result is ONLY the connected straw path shape, with its original gentle top-to-bottom bends and the small upper-left path spur retained.\nComposition: a tall portrait canvas with exact width-to-height ratio 1:3. Preserve the reference's full 724 by 2172 conceptual composition. The path enters near top center, meanders right then center, right, left, center, left and down toward bottom center. It reaches both the top and bottom canvas edges. Do not crop tighter around the path or turn it into a centered decorative squiggle: keep all original positions relative to the tall full canvas.\nStyle: same handmade matte flat cut-paper illustration, pale warm straw ochre, fine fibrous paper grain, softly irregular organic edges. Keep the width and unassuming irregularities of the original walking path.\nConstraints: actual transparent background around the path. No pale-green base, no rectangular ground sheet, no grassy border, no ground shadow, no rocks or pebble edging, no flowers, no leaves, no trees, no water, no bridge, no text. Change only by deleting everything except the existing straw path. Keep the path fully opaque textured paper.",
+      "width": 724,
+      "height": 2172,
+      "alpha": true
+    },
+    {
+      "name": "floor-island",
+      "source": "source/floor-island.png",
+      "web": "floor-island.webp",
+      "generatedSource": "C:/Users/Jun Leong/.codex/generated_images/01a0ff71-0f1b-7683-9b7e-4a0f83087b41/exec-3d419d69-716b-410a-a408-be7e55b3c124.png",
+      "prompt": "Use case: illustration-story\nAsset type: a small individual transparent woodland-floor prop layer for a paper-cut website.\nInput image 1 is only a STYLE AND MATERIALS REFERENCE. Match its soft matte handmade woodland paper shapes and muted palette, but do not reproduce the long landscape or path.\nPrimary request: make ONE compact asymmetrical woodland-floor cluster: exactly two rounded gray moss-covered rocks of different sizes, three or four sparse sage and olive paper grass/leaf tufts, two ochre acorns, and two tiny white daisies with mustard centers. It should feel like a single natural small patch of undergrowth placed next to a woodland footpath.\nComposition: one low, wide island silhouette, roughly 3:2 canvas, larger moss rock on the left and smaller rock near its right, leaves rising unevenly behind, acorns and daisies nestled at their feet. Keep all objects complete and safely inside the canvas. Compact, connected visual grouping with uneven organic outline. Genuine transparent gaps between projecting stems and leaves.\nStyle: same flat cut-paper illustration as the reference. Natural irregular paper edges, subtle fibrous grain, simple gently overlapping shapes, restrained shallow layered shadows inside the grouping only. Muted moss green, sage, olive, warm gray, ochre and cream, no saturated colors.\nConstraints: actual transparent background outside the cluster. No rectangular backing, no strip, no flat ground plane or green base sheet, no large oval mat, no path, no trees, no character, no bridge, no stream, no text, no decorative border. The rocks and foliage themselves define the island shape.",
+      "width": 768,
+      "height": 512,
+      "sourceWidth": 1536,
+      "sourceHeight": 1024,
+      "alpha": true
+    }
+  ]
+}

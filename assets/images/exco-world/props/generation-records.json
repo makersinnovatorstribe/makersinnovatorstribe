@@ -1,0 +1,219 @@
+{
+  "mode": "built-in image_gen",
+  "generatedAt": "2026-10-03",
+  "assets": [
+    {
+      "name": "workbench",
+      "prompt": "Create a NEW isolated transparent foreground prop for a layered mobile woodland maker-club website. The attached images are STYLE REFERENCES ONLY: preserve their flat matte cut-paper craft construction, warm honey and ocher wood, dark navy and butter yellow accents, small paper fibers and gentle overlap shadows. Subject: a shallow WIDE maker workbench seen straight-on from slightly above the tabletop, about a 2:1 silhouette, entire bench visible and tightly framed with small transparent margins. Solid sturdy honey-brown front plank/apron and two short wooden legs; subtle cut-paper woodgrain strips, never photorealistic. Across the top LEFT and RIGHT ends ONLY, a tiny navy spool of thread, yellow-handled scissors and a little cup holding two navy/yellow tools. Keep the middle sixty percent of the tabletop COMPLETELY CLEAR and low, because character cutouts will stand behind this foreground bench in code. No bear, no human, no text, no letters, no trees, no surroundings, no sky or ground plane, no vignette or opaque shadow/background. Real transparent alpha outside this single prop and between its legs. Do not recreate the whole reference scenes. Clean tactile handmade paper illustration, broad readable shapes suitable at 200 pixels wide, muted colors, no gradients or glossy 3D rendering.",
+      "referenceImages": [
+        "C:/Users/Jun Leong/Documents/CCA Website/makersinnovatorstribe-main/assets/images/exco-world/stations/source/station-01.png",
+        "C:/Users/Jun Leong/Documents/CCA Website/makersinnovatorstribe-main/assets/images/exco-world/stations/source/station-02.png"
+      ],
+      "transparent_background": true,
+      "source": "source/workbench.png",
+      "optimized": "workbench.webp",
+      "generatedSource": "C:/Users/Jun Leong/.codex/generated_images/01a10038-82cc-7e60-bbe5-b798cadfe070/exec-cc4543c0-c67d-45e0-bfd3-e286a84764eb.png",
+      "width": 700,
+      "height": 350,
+      "sourceWidth": 1774,
+      "sourceHeight": 887,
+      "hasAlpha": true,
+      "bytes": 24694,
+      "alphaBounds": {
+        "threshold": 10,
+        "left": 8,
+        "top": 53,
+        "right": 691,
+        "bottom": 333,
+        "width": 684,
+        "height": 281,
+        "coveragePercent": 36.4
+      },
+      "solidAlphaBounds": {
+        "threshold": 128,
+        "left": 9,
+        "top": 54,
+        "right": 691,
+        "bottom": 333,
+        "width": 683,
+        "height": 280,
+        "coveragePercent": 35.77
+      }
+    },
+    {
+      "name": "log-ferns",
+      "prompt": "Create a NEW isolated transparent FOREGROUND PROP for a layered mobile woodland maker-club website. The attached image is a STYLE REFERENCE ONLY: match flat matte cut-paper construction, textured colored paper with small fibers, subtle paper overlap shadows, broad simple cut shapes, warm honey/ocher wood and muted sage, olive, deep navy leaves. Subject: a LOW WIDE cluster of forest-floor objects, roughly 3:1 silhouette, complete and tightly framed with small transparent margins. A short fallen honey-wood log lies horizontally slightly left of center, its round cut end visible; a few low layered paper ferns curl outward at either end, and two tiny terracotta mushrooms with cream spots nestle on the right. The central log is very low; tallest fern at either edge is less than twice the log height. It will occlude only the FEET of stick-figure characters placed behind it, so no tall plants, no trees or upright trunk. No large ground patch. Transparent alpha around all objects with clean contours. No bear or human, no text, no letters, no scenery, no sky, no background, no dark haze. Must feel handmade and charming with muted organic colors, not realistic, not painterly, no glossy gradients or 3D CGI.",
+      "referenceImages": [
+        "C:/Users/Jun Leong/Documents/CCA Website/makersinnovatorstribe-main/assets/images/exco-world/stations/source/station-01.png"
+      ],
+      "transparent_background": true,
+      "source": "source/log-ferns.png",
+      "optimized": "log-ferns.webp",
+      "generatedSource": "C:/Users/Jun Leong/.codex/generated_images/01a10038-82cc-7e60-bbe5-b798cadfe070/exec-16ea3b28-54a2-4a26-b518-be3d16c952c0.png",
+      "width": 700,
+      "height": 233,
+      "sourceWidth": 2172,
+      "sourceHeight": 724,
+      "hasAlpha": true,
+      "bytes": 30074,
+      "alphaBounds": {
+        "threshold": 10,
+        "left": 19,
+        "top": 41,
+        "right": 685,
+        "bottom": 216,
+        "width": 667,
+        "height": 176,
+        "coveragePercent": 44.55
+      },
+      "solidAlphaBounds": {
+        "threshold": 128,
+        "left": 20,
+        "top": 42,
+        "right": 684,
+        "bottom": 215,
+        "width": 665,
+        "height": 174,
+        "coveragePercent": 43.59
+      }
+    },
+    {
+      "name": "fern-patch",
+      "prompt": "Create a NEW isolated transparent low foreground FERN AND WILDFLOWER PATCH ONLY for a layered mobile woodland maker-club website. The attached reference is for STYLE ONLY: match its flat matte cut-paper construction, softly textured colored paper with visible little fibers, gentle overlap shadows and simple broad shapes. One airy, very shallow wide cluster approximately 4:1 silhouette. Sparse small fern fronds and low grass leaves in muted sage, olive and deep navy; two or three tiny white paper wildflowers with mustard yellow centers, asymmetrically scattered. The middle should be especially low and sparse, with some visible transparent gaps between stems and leaves. This prop will overlap only the very bottom of illustrated characters' FEET, so keep it low, delicately airy and not a dense wall of foliage. Warm handmade storybook paper craft style, slightly irregular scissor-cut edges, flat muted colors. Entire patch visible, tightly framed with modest transparent margins. NO log, NO tree, NO rock, NO mushroom, NO bear or human, NO ground patch, NO text, NO frame, NO surrounding forest, NO opaque backdrop, NO halo or haze, no realistic gradients or glossy 3D. Genuine transparent alpha outside the leaves, stems, and tiny flowers.",
+      "referenceImages": [
+        "C:/Users/Jun Leong/Documents/CCA Website/makersinnovatorstribe-main/assets/images/exco-world/stations/source/station-01.png"
+      ],
+      "transparent_background": true,
+      "source": "source/fern-patch.png",
+      "optimized": "fern-patch.webp",
+      "generatedSource": "C:/Users/Jun Leong/.codex/generated_images/01a10038-82cc-7e60-bbe5-b798cadfe070/exec-b6fb805c-1e58-4a6e-9ff0-94e69d821ce1.png",
+      "width": 700,
+      "height": 280,
+      "sourceWidth": 1983,
+      "sourceHeight": 793,
+      "hasAlpha": true,
+      "bytes": 44570,
+      "alphaBounds": {
+        "threshold": 10,
+        "left": 13,
+        "top": 45,
+        "right": 690,
+        "bottom": 258,
+        "width": 678,
+        "height": 214,
+        "coveragePercent": 27.34
+      }
+    },
+    {
+      "name": "craft-supplies",
+      "prompt": "Create a NEW isolated transparent papercraft prop for a layered mobile woodland maker club scene. Attached image is a STYLE REFERENCE ONLY. Match its flat matte cut colored-paper construction, warm honey wood, restrained paper-fiber grain, simple readable forms, gentle thin paper overlap shadows, muted sage, butter mustard and deep navy accents. Subject: a small rustic honey-wood craft crate, compact landscape 3:2 silhouette, packed with one navy ball of yarn, two rolled cream and sage fabrics, yellow-handled scissors poking out, and two small thread spools. A tiny finished honey-wood birdhouse with navy roof rests beside the crate near its base, with a loose curl of navy yarn nearby. Inviting maker picnic supplies, entire arrangement fully visible and closely framed with small transparent margins. Objects overlap naturally as one cohesive little cluster. NO person, NO bear, NO text, NO logo, NO tree, NO scene backdrop, NO ground patch, NO sky, NO opaque shadow or halo; genuinely transparent alpha outside the objects. Avoid photorealism, watercolor, glossy 3D, gradients, oversized tools or extra objects. Same handmade paper storybook world as the reference, suitable at 150 pixels wide.",
+      "referenceImages": [
+        "C:/Users/Jun Leong/Documents/CCA Website/makersinnovatorstribe-main/assets/images/exco-world/stations/source/station-02.png"
+      ],
+      "transparent_background": true,
+      "source": "source/craft-supplies.png",
+      "optimized": "craft-supplies.webp",
+      "targetWidth": 600,
+      "generatedSource": "C:/Users/Jun Leong/.codex/generated_images/01a10038-82cc-7e60-bbe5-b798cadfe070/exec-42c22559-90aa-45de-815d-33740ad1504e.png",
+      "width": 600,
+      "height": 400,
+      "sourceWidth": 1536,
+      "sourceHeight": 1024,
+      "hasAlpha": true,
+      "bytes": 38882,
+      "alphaBounds": {
+        "threshold": 10,
+        "left": 93,
+        "top": 27,
+        "right": 568,
+        "bottom": 383,
+        "width": 476,
+        "height": 357,
+        "coveragePercent": 47.83
+      }
+    },
+    {
+      "name": "footbridge",
+      "prompt": "Create a NEW isolated transparent papercraft prop for a layered mobile woodland maker club scene. Attached image is a STYLE REFERENCE ONLY. Match its flat matte cut colored-paper construction, warm honey and ocher wood, subtle paper-fiber grain and restrained paper overlap shadows. Subject: a very SHORT LOW rustic wooden footbridge, wide low-profile silhouette about 3:1, viewed from front three-quarter and slightly elevated so the top planks are visible. Five or six broad honey wood planks curve gently over a shallow arch. Simple thick little end posts, low cream rope rail along each side, modest wooden supports underneath. It will span a narrow winding paper trail within a coded woodland environment. Keep the bridge small, friendly and grounded, no dramatically high arch or tall poles. Entire bridge visible, tightly framed with small transparent margins. Warm muted wood tones, simple cut-paper woodgrain strips, navy shadow accents only at joins. NO forest, NO stream or water, NO surrounding plants, NO ground or road, NO human or bear, NO text or letters, NO opaque background or shadow cloud. Genuine alpha transparency around and beneath the bridge and through the rope rail gaps. Do not reproduce the reference scene. No photorealism, watercolor, shiny CGI, gradients or realistic 3D render.",
+      "referenceImages": [
+        "C:/Users/Jun Leong/Documents/CCA Website/makersinnovatorstribe-main/assets/images/exco-world/stations/source/station-01.png"
+      ],
+      "transparent_background": true,
+      "source": "source/footbridge.png",
+      "optimized": "footbridge.webp",
+      "targetWidth": 700,
+      "generatedSource": "C:/Users/Jun Leong/.codex/generated_images/01a10038-82cc-7e60-bbe5-b798cadfe070/exec-eec9d202-f522-4d35-8b95-bb5dbc4ec8cb.png",
+      "width": 700,
+      "height": 233,
+      "sourceWidth": 2172,
+      "sourceHeight": 724,
+      "hasAlpha": true,
+      "bytes": 29486,
+      "alphaBounds": {
+        "threshold": 10,
+        "left": 41,
+        "top": 6,
+        "right": 659,
+        "bottom": 226,
+        "width": 619,
+        "height": 221,
+        "coveragePercent": 43.07
+      }
+    },
+    {
+      "name": "canopy-complete",
+      "prompt": "EDIT the attached cut-paper canopy asset into a complete, naturally outlined freestanding canopy arch. Preserve its handmade matte paper style, muted sage/olive/deep navy/ochre lobed leaves, honey-brown curved branching wood, cream leaf veins, and the two navy lanterns with warm yellow centers, one on each side. Critical correction: the original artwork is abruptly cropped along the top and side edges. REDRAW / EXPAND THE COMPOSITION so ALL leaves and branches have complete organic outer contours within the canvas. Leave at least 8 percent genuinely transparent empty padding above the highest leaf, and around 5 percent padding at the left and right outermost leaves. NO shape may intersect the top or side image edge. Branch tips and thicker branch ends must end naturally behind leaf clusters rather than abruptly at a rectangular canvas boundary. Arrange the two sides into an airy low wide canopy arch, overall landscape ratio approximately 2:1. Keep the bottom-center open and transparent, suitable for people standing underneath in a layered woodland webpage. Preserve the two lanterns, paper grain, subtle paper-overlap shadows, and large flat cut shapes. No white or colored rectangular background, no ground, no whole forest or distant scenery, no text, no people, no bears, no border, no realistic gradients, no glow haze. Genuine transparent alpha all around and through the central opening. The complete natural upper leafy silhouette is the highest priority.",
+      "referenceImages": [
+        "C:/Users/Jun Leong/Documents/CCA Website/makersinnovatorstribe-main/assets/images/exco-world/immersive/canopy.webp"
+      ],
+      "transparent_background": true,
+      "source": "source/canopy-complete.png",
+      "optimized": "canopy-complete.webp",
+      "targetWidth": 800,
+      "generatedSource": "C:/Users/Jun Leong/.codex/generated_images/01a10038-82cc-7e60-bbe5-b798cadfe070/exec-0707ee80-6982-4895-a835-4b37ee54a485.png",
+      "width": 800,
+      "height": 398,
+      "sourceWidth": 1779,
+      "sourceHeight": 884,
+      "hasAlpha": true,
+      "bytes": 60076,
+      "alphaBounds": {
+        "threshold": 10,
+        "left": 5,
+        "top": 3,
+        "right": 799,
+        "bottom": 389,
+        "width": 795,
+        "height": 387,
+        "coveragePercent": 43.8
+      }
+    },
+    {
+      "name": "woodland-grove-complete",
+      "prompt": "EDIT the attached woodland-back image into a properly finished transparent grove layer. Preserve the TWO SEPARATE tree clusters, one on the left and one on the right, with the WIDE CLEAR TRANSPARENT CENTRAL GAP. Preserve all complete leafy crowns, the charming flat matte cut-paper style, muted olive/sage/ochre greens, honey-brown tree trunks, cream birch trunks, cream simple leaf veins, subtle paper-fiber grain and gentle paper overlap depth. The current lower edge of each grove looks horizontally sliced off. FIX THE ACTUAL ARTWORK, not with a fade: redraw and extend the lower trunks into NATURAL EXPOSED CURVING ROOTS, individual low leaves and small irregular stones, arranged at DIFFERENT DEPTHS so there is an ORGANIC SCALLOPED / JAGGED OUTER BASE SILHOUETTE with individual root tips and small foliage ends extending lower at unequal levels. No horizontal baseline, no shelf, no rectangular base, no straight line under the plants, and no opaque ground patch. Every trunk should terminate naturally in visible tapering roots or be naturally obscured behind small plants, never appear chopped off. Keep the groves as two compact distinct islands, do not fill the central gap with anything. Fully complete outer contours, no cropping; leave at least8percent real transparent padding around ALL outside edges of the overall composition. Landscape aspect approximately2:1, like the original. Genuine transparent alpha around and between all objects. Do not add forest backdrop, sky, characters, bears, text, frames, ground shadows or haze. No blur, opacity fade, gradients or watercolor. The lower contour must be made from visible fully opaque paper roots and plant shapes with clean organic edges.",
+      "referenceImages": [
+        "C:/Users/Jun Leong/Documents/CCA Website/makersinnovatorstribe-main/assets/images/exco-world/woodland/woodland-back.webp"
+      ],
+      "transparent_background": true,
+      "source": "source/woodland-grove-complete.png",
+      "optimized": "woodland-grove-complete.webp",
+      "generatedSource": "C:/Users/Jun Leong/.codex/generated_images/01a10038-82cc-7e60-bbe5-b798cadfe070/exec-d04f0d4c-672a-4ee1-b0bd-c0baf75e76ab.png",
+      "width": 1200,
+      "height": 600,
+      "sourceWidth": 1774,
+      "sourceHeight": 887,
+      "hasAlpha": true,
+      "bytes": 138508,
+      "alphaBounds": {
+        "threshold": 10,
+        "left": 22,
+        "top": 63,
+        "right": 1173,
+        "bottom": 586,
+        "width": 1152,
+        "height": 524,
+        "coveragePercent": 46.37
+      }
+    }
+  ]
+}

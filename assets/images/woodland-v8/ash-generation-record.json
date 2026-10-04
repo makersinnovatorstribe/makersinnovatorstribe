@@ -1,0 +1,7 @@
+{
+  "mode": "built-in imagegen",
+  "prompt": "Use case: illustration-story. Generate ONE complete standalone mature woodland tree as a transparent paper-cut layer for the existing mobile forest scene. Reference image is STYLE only: keep its handmade textured paper, clean cream leaf-vein lines, warm wood and muted sage/olive palette. Make a DIFFERENT TREE: very tall graceful ash tree with a long clearly exposed forked trunk, asymmetrical crown of broad rounded paper leaves, several airy gaps that show real transparency, flared roots and a small patch of moss at the base. Mature tree, not shrub; its height is about2.2 times its crown width. Use light sage, soft olive and straw-green leaves cut from FULLY OPAQUE papers, trunk medium warm ochre-brown with clean wood-grain cuts; no opacity fading, no gradient haze. Tree will be a distant depth plane behind darker oak trees, but must still be detailed and readable. Subtle paper fibres, flat matte handmade illustration, lightly layered shadows. No lantern, no bear, no flowers, no bird, no grass strip, no background landscape, no horizon, no frame, no text. Whole tree including every branch, leaf tip and root stays comfortably inside the image. True transparent background outside tree and between branches. Portrait aspect roughly1:2.",
+  "reference": "assets/images/exco-world/woodland/woodland-oak.webp",
+  "source": "source/ash-tree.png",
+  "output": "ash-tree.webp"
+}

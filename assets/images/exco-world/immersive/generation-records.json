@@ -1,0 +1,23 @@
+{
+  "mode": "Built-in ImageGen",
+  "reference": "../stations/source/station-01.png",
+  "generated": "2026-10-03",
+  "assets": [
+    {
+      "key": "canopy",
+      "prompt": "Use case: illustration-story. Asset type: a separate foreground canopy layer for an immersive mobile woodland website. Reference image is STYLE ONLY: match its tactile handmade cut-paper, visible fibre, flat colour and tiny overlap shadows. Draw a sweeping arch of LARGE oak foliage and twisting woody branches across the TOP and upper corners, like looking into a forest from beneath a real canopy. Dense broad clustered leaves in muted olive, dusty sage and deep navy teal, a few mustard leaves. Branches extend diagonally inwards from both upper corners; two slender hanging strings with small navy-and-butter lanterns at far sides. A broad unobstructed opening occupies the central lower two thirds. Composition wide 3:2, entirely transparent background and opening. No treehouse, bears, people, lettering, ground, sky or whole scene. All leaf forms must be bold and legible at phone width; make one cohesive asymmetrical canopy, not a row of small trees, no separate decorative sticker icons. Matte flat paper, no gradients, no glow haze, no CGI, no watercolour."
+    },
+    {
+      "key": "trunk-left",
+      "prompt": "Use case: illustration-story. Asset type: one separate close foreground tree layer for a mobile paper woodland. Reference is STYLE ONLY: same matte handmade layered cut-paper with subtle paper fibres and flat muted palette. Draw ONE monumental organic oak trunk rooted at lower left, rising along the left side, with strong diagonal branch reaching toward upper right. A canopy of broad dusty sage, olive and dark navy-teal leaf shapes occupies top third. A few large fern leaves, moss, one tiny mushroom at the strong roots. Tree should occupy most of a vertical2:3canvas with transparent negative space on its right; all roots and crown visible with small outermargin. Warm layered honey-brown wood, deepest navy tiny shadows, almost no outline. This is a close foreground environmental shape, not a small cute icon or a symmetric clip-art tree. No bear, person, building, words, sky, floor rectangle, glossy lighting or realistic rendering. Genuine transparent background."
+    },
+    {
+      "key": "clearing",
+      "prompt": "Use case: illustration-story. Asset type: separate transparent forest-floor and raised clearing layer, matching the reference handmade cut-paper illustration style only. Wide3:2composition. A broad softly irregular grassy woodland clearing of muted sage and warm pale ochre layered paper, slightly raised like a shallow paper theatre stage seen from a low elevated front angle. One large usable empty ground surface at centre, suitable for placing illustrated people. Dense overlapping fern/leaves in navy-teal, moss and muted olive along the left and right edges and bottom foreground. A fallen honey-brown log left, two little mushrooms and cream daisies right. No vertical trees, bears, people, buildings, text, sky or background: outside the clearing and undergrowth is true transparency. Ground organic and expansive, NOT a small isolated round island, not many little stickers. Paper fibre and cut edges, restrained softcontact shadows, flat matte colours. No photorealism/CGI/gradient glow."
+    },
+    {
+      "key": "depth",
+      "prompt": "Use case: illustration-story. Asset type: distant background plane only for a multilayer mobile forest website. Reference is a STYLE reference only, match its handmade flat cut-paper texture and colour family. Create a tall portrait1:3view deep into a woodland: big overlapping silhouettes of tree trunks and dense oak foliage occupy left and right margins, opening into a winding clear middle corridor of muted dusty sage. Distant shapes are lighter dusty blue-green, middle distant trees are navy-teal, upper foliage dark desaturated olive. Deep paper cutout depth from flat shapes with soft restrained separation shadows and fine fibrous texture. Ground reads as continuous soft sage paper, with very few simple leaf silhouettes; keep the middle50% mostly quiet for separately layered characters. No characters, buildings, bears, tools, decorative objects, path, lettering, photo frames, or foreground roots. This is just the far forest atmosphere; real figures and nearer scenery will be added as separate layers in code. No glossy 3D/photorealism/watercolour/gradienthaze/neongreen. Entirecanvas is opaque, fullbleed tall composition."
+    }
+  ]
+}

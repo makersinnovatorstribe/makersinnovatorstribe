@@ -1,0 +1,232 @@
+/* Load after hero-indie.css and all other component styles.
+   This is an explicit list of controls: figures, photos, cube faces, draggable
+   bears and memory tokens keep their own shapes and interactions. */
+:root {
+  --control-face: #20384a;
+  --control-ink: #fff7e5;
+  --control-edge: #122a38;
+  --control-border: #173141;
+  --control-focus: #20384a;
+  --control-size: 13px;
+  --control-pad-x: 19px;
+  --control-gap: 12px;
+  --control-height: 48px;
+}
+
+body :is(
+  .button, .menu-button, .close-button, .round-button, .gallery-filter,
+  .exco-close, .exco-retry, .exco-personal-link,
+  .exco-lantern-toggle, .exco-night-toggle, .exco-tilt-toggle,
+  .maker-start, .maker-help-button, .buddy-box-toggle, .buddy-put-all,
+  .hero-indie .idea-readout > button,
+  .hero-indie .idea-readout > .hero-explore-craft
+) {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--control-gap);
+  min-width: 48px;
+  min-height: var(--control-height);
+  max-width: 100%;
+  padding: 11px var(--control-pad-x);
+  border: 1px solid var(--control-border);
+  border-radius: 6px 3px 7px 4px / 4px 7px 3px 6px;
+  background: var(--control-face);
+  background-image: url('../assets/images/textures/maker-paper.svg');
+  background-size: 220px;
+  background-blend-mode: multiply;
+  color: var(--control-ink);
+  box-shadow: 0 3px 0 var(--control-edge), 0 5px 8px #20384a17;
+  font: 700 var(--control-size)/1.25 var(--font, sans-serif);
+  letter-spacing: -.01em;
+  text-align: center;
+  text-decoration: none;
+  text-wrap: balance;
+  vertical-align: middle;
+  appearance: none;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transform: none;
+  transition: transform .14s ease, box-shadow .14s ease, background-color .14s ease;
+}
+
+/* Cream paper is for small utilities; mustard picks out the next action. */
+:is(
+  .menu-button, .close-button, .round-button, .gallery-filter, .exco-close,
+  .exco-lantern-toggle, .exco-night-toggle, .exco-tilt-toggle,
+  .maker-help-button, .buddy-box-toggle, .buddy-put-all
+), .hero-indie #mix-idea, .hero-indie .play-link.button {
+  --control-face: #fff9e8;
+  --control-ink: #20384a;
+  --control-edge: #c1b18e;
+  --control-border: #a79775;
+}
+.header-actions .button,
+.moments .album-action .button,
+.hero-indie .hero-explore-craft,
+.maker-start,
+.exco-retry {
+  --control-face: #edc65e;
+  --control-ink: #20384a;
+  --control-edge: #ad8d40;
+  --control-border: #a18a49;
+}
+.gallery-filter[aria-pressed='true'] {
+  --control-face: #20384a;
+  --control-ink: #fff7e5;
+  --control-edge: #122a38;
+  --control-border: #173141;
+}
+:is(.exco-lantern-toggle, .exco-night-toggle, .exco-tilt-toggle)[aria-pressed='true'] {
+  --control-face: #edc65e;
+  --control-ink: #20384a;
+  --control-edge: #ad8d40;
+  --control-border: #a18a49;
+}
+.site-header, .moments { --control-focus: #fff7e5; }
+
+/* Icon controls use the same square paper pieces, not a separate bubble UI. */
+:is(.menu-button, .close-button, .round-button, .exco-close),
+.hero-indie #mix-idea { --control-pad-x: 0px; --control-gap: 0px; --control-size: 27px; }
+body .site-header .header-actions .menu-button {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+}
+.site-header .menu-button > span { display: block; width: 21px; height: 2px; margin: 0; border-radius: 1px; background: currentColor; }
+.header-actions .button { --control-size: 12px; --control-pad-x: 13px; --control-gap: 8px; }
+.photo-controls :is(.round-button), .exco-window-bar .exco-close, .dialog-top .close-button { flex: 0 0 48px; width: 48px; height: 48px; }
+.photo-controls { gap: 16px; }
+.photo-controls #photo-position { font: 600 12px/1.2 var(--font, sans-serif); letter-spacing: .05em; }
+body .hero-indie .idea-readout > button { width: 48px; height: 48px; }
+body .hero-indie .idea-readout > .hero-explore-craft {
+  --control-size: 12px;
+  --control-pad-x: 14px;
+  --control-gap: 8px;
+  width: auto;
+  height: auto;
+  min-width: 112px;
+}
+.hero-indie .hero-actions .button { --control-size: 13px; --control-pad-x: 16px; --control-gap: 11px; }
+
+/* Existing icons remain meaningful; only their optical scale is shared. */
+body :is(.button, .maker-start, .hero-indie .hero-explore-craft) > span[aria-hidden='true'] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  min-width: 18px;
+  color: inherit;
+  font: 500 22px/1 var(--font, sans-serif);
+}
+body .hero-indie .play-link.button > span[aria-hidden='true'] { font-size: 13px; }
+body .hero-indie #mix-idea > span { font-size: 27px; line-height: 1; }
+:is(.exco-lantern-toggle, .exco-night-toggle, .exco-tilt-toggle) { --control-size: 11px; --control-pad-x: 12px; --control-gap: 8px; }
+:is(.exco-lantern-toggle, .exco-night-toggle, .exco-tilt-toggle) svg { display: block; width: 20px; height: 25px; flex-shrink: 0; }
+.gallery-filter { --control-size: 12px; --control-pad-x: 12px; }
+.gallery-filters { gap: 10px; padding-bottom: 4px; }
+.maker-console-controls { gap: 12px; }
+:is(.maker-start, .maker-help-button) { --control-size: 12px; --control-pad-x: 16px; }
+
+/* The Toy box remains a shelf of art. Its action labels are simple ink, and
+   the complete bear choice continues to provide the generous hit area. */
+.buddy-box-toggle { --control-size: 21px; --control-pad-x: 13px; justify-content: flex-start; }
+.buddy-box-toggle > span:last-child { width: 24px; height: 24px; margin-left: auto; border-radius: 0; background: transparent; }
+.buddy-choice-action { padding: 3px 2px; border: 0; border-radius: 0; background: none; font-size: 11px; text-decoration: underline; text-underline-offset: 3px; }
+.buddy-put-all { --control-size: 11px; --control-pad-x: 14px; }
+
+/* A short press compresses the paper edge; keyboard focus stays separate. */
+@media (hover:hover) and (pointer:fine) {
+  body :is(
+    .button, .menu-button, .close-button, .round-button, .gallery-filter,
+    .exco-close, .exco-retry, .exco-personal-link,
+    .exco-lantern-toggle, .exco-night-toggle, .exco-tilt-toggle,
+    .maker-start, .maker-help-button, .buddy-box-toggle, .buddy-put-all,
+    .hero-indie .idea-readout > button,
+    .hero-indie .idea-readout > .hero-explore-craft
+  ):not(:disabled):hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 0 var(--control-edge), 0 7px 11px #20384a20;
+  }
+}
+body :is(
+  .button, .menu-button, .close-button, .round-button, .gallery-filter,
+  .exco-close, .exco-retry, .exco-personal-link,
+  .exco-lantern-toggle, .exco-night-toggle, .exco-tilt-toggle,
+  .maker-start, .maker-help-button, .buddy-box-toggle, .buddy-put-all,
+  .hero-indie .idea-readout > button,
+  .hero-indie .idea-readout > .hero-explore-craft
+):not(:disabled):active {
+  transform: translateY(3px);
+  box-shadow: 0 0 0 var(--control-edge), 0 1px 2px #20384a1a;
+}
+body :is(
+  .button, .menu-button, .close-button, .round-button, .gallery-filter,
+  .exco-close, .exco-retry, .exco-personal-link,
+  .exco-lantern-toggle, .exco-night-toggle, .exco-tilt-toggle,
+  .maker-start, .maker-help-button, .buddy-box-toggle, .buddy-put-all,
+  .hero-indie .idea-readout > button,
+  .hero-indie .idea-readout > .hero-explore-craft
+):focus-visible {
+  outline: 3px solid var(--control-focus);
+  outline-offset: 5px;
+}
+body :is(
+  .button, .round-button, .gallery-filter, .exco-retry,
+  .exco-lantern-toggle, .exco-night-toggle, .exco-tilt-toggle,
+  .maker-start, .maker-help-button, .buddy-put-all,
+  .hero-indie .idea-readout > button,
+  .hero-indie .idea-readout > .hero-explore-craft
+):disabled {
+  opacity: .5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 2px 0 var(--control-edge);
+}
+
+/* Higher-specificity legacy joining styles otherwise remove the paper edge. */
+.join-dialog #join-details .button { border: 1px solid var(--control-border); background-color: var(--control-face); color: var(--control-ink); font-size: 13px; }
+@media (max-width:549px) {
+  /* At320px the two woodland controls share ~274px; labels can take two
+     lines instead of squeezing either icon or reducing the touch target. */
+  .exco-world-controls { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+  .exco-world-controls > :is(.exco-invitation,.exco-motion-status) { grid-column: 1/-1; max-width: 100%; }
+  .exco-world-controls > :is(.exco-lantern-toggle,.exco-night-toggle,.exco-tilt-toggle) {
+    --control-pad-x: 8px;
+    --control-gap: 6px;
+    width: 100%;
+    white-space: normal;
+  }
+  .exco-world-controls > button > span:last-child { min-width: 0; white-space: normal; text-align: left; }
+}
+@media (max-width:359px) {
+  .header-actions .button { --control-size: 11px; --control-pad-x: 10px; --control-gap: 6px; }
+  .hero-indie .hero-actions .button { --control-size: 12px; --control-pad-x: 13px; }
+  :is(.maker-start, .maker-help-button) { --control-pad-x: 12px; }
+}
+@media (min-width:1050px) {
+  body .site-header .header-actions .menu-button { display: none; }
+}
+@media (prefers-reduced-motion:reduce) {
+  body :is(
+    .button, .menu-button, .close-button, .round-button, .gallery-filter,
+    .exco-close, .exco-retry, .exco-personal-link,
+    .exco-lantern-toggle, .exco-night-toggle, .exco-tilt-toggle,
+    .maker-start, .maker-help-button, .buddy-box-toggle, .buddy-put-all,
+    .hero-indie .idea-readout > button,
+    .hero-indie .idea-readout > .hero-explore-craft
+  ) { transition: none; }
+  body :is(
+    .button, .menu-button, .close-button, .round-button, .gallery-filter,
+    .exco-close, .exco-retry, .exco-personal-link,
+    .exco-lantern-toggle, .exco-night-toggle, .exco-tilt-toggle,
+    .maker-start, .maker-help-button, .buddy-box-toggle, .buddy-put-all,
+    .hero-indie .idea-readout > button,
+    .hero-indie .idea-readout > .hero-explore-craft
+  ):not(:disabled):is(:hover,:active) { transform: none; }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "path-detailed",
+  "method": "Built-in image_gen",
+  "reference": "C:/Users/JUNLEO~1/AppData/Local/Temp/codex-clipboard-88322d81-2fa1-4e79-947d-9d6b5bad249a.png",
+  "source": "C:\\Users\\Jun Leong\\Documents\\CCA Website\\makersinnovatorstribe-main\\assets\\images\\woodland-v9\\source\\path-detailed.png",
+  "generatedSource": "C:\\Users\\Jun Leong\\.codex\\generated_images\\01a1002d-241f-7113-974b-76fa650032a7\\exec-18a764db-f481-4d4a-8d4f-7876bb9372f1.png",
+  "promptFile": "path-detailed.prompt.txt",
+  "output": "C:\\Users\\Jun Leong\\Documents\\CCA Website\\makersinnovatorstribe-main\\assets\\images\\woodland-v9\\path-detailed.webp",
+  "width": 724,
+  "height": 2172,
+  "bytes": 230020,
+  "alpha": {
+    "transparent": 1288802,
+    "partial": 283711,
+    "opaque": 15,
+    "redEdge": 0
+  },
+  "visualInspection": "Independent transparent cutout; no full land backing, trees, people or labels."
+}

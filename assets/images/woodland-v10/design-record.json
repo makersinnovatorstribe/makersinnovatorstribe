@@ -1,0 +1,100 @@
+{
+  "type": "Code-native SVG illustration assets",
+  "date": "2026-10-04",
+  "path": {
+    "file": "path-paper.svg",
+    "viewBox": "0 0 820 2400",
+    "mainCenterGuides": [
+      {
+        "x": 420,
+        "y": 0,
+        "width": 72
+      },
+      {
+        "x": 470,
+        "y": 240,
+        "width": 76
+      },
+      {
+        "x": 380,
+        "y": 450,
+        "width": 80
+      },
+      {
+        "x": 540,
+        "y": 720,
+        "width": 85
+      },
+      {
+        "x": 400,
+        "y": 1000,
+        "width": 72
+      },
+      {
+        "x": 470,
+        "y": 1280,
+        "width": 76
+      },
+      {
+        "x": 340,
+        "y": 1530,
+        "width": 76
+      },
+      {
+        "x": 410,
+        "y": 1680,
+        "width": 79
+      },
+      {
+        "x": 420,
+        "y": 1820,
+        "width": 84
+      },
+      {
+        "x": 310,
+        "y": 2070,
+        "width": 75
+      },
+      {
+        "x": 420,
+        "y": 2400,
+        "width": 76
+      }
+    ],
+    "crossing": {
+      "yRange": [
+        1530,
+        1680
+      ],
+      "centerXRange": [
+        340,
+        410
+      ]
+    },
+    "style": "Three filled paper contours; warm sand #decf9d; variable72–85 unit width; 1.45-unit inset and1.4/1.8-unit paper thickness shadow; sparse individual leaves and three small flat stones.",
+    "grainOpacity": 0.048,
+    "curveConstruction": "C2-continuous natural cubic Bezier contours through the supplied main anchors; separately hand-shaped upper-left spur."
+  },
+  "creek": {
+    "file": "creek-paper.svg",
+    "viewBox": "0 0 1200 320",
+    "style": "Gently rising slate-blue paper water, narrow moss/beige edges, four small reed clusters and three clean separate grey stepping stones.",
+    "stoneCenters": [
+      [
+        535,
+        131
+      ],
+      [
+        598,
+        181
+      ],
+      [
+        664,
+        230
+      ]
+    ],
+    "grainOpacity": 0.046
+  },
+  "implementation": "Static self-contained SVGs with true transparent surrounds, no external resources, no bitmap data, gradients, photographic texture or stroked-road outlines. Procedural grain is clipped to the paper face and remains below6% opacity. Designed for image elements with preserveAspectRatio=none. No JS/CSS files changed.",
+  "validation": "Both SVGs parsed and rendered successfully with Sharp. Rendered shapes visually inspected; final path bends are smooth, current-band ends tapered, all three stepping stones separated. Temporary PNG renders removed; only SVGs and this design record are deliverables."
+}

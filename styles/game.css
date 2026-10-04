@@ -1,0 +1,126 @@
+/* A little wooden workbench. The game stays compact enough to play on a phone. */
+#maker-game {
+  --game-ink: #20384a;
+  --game-butter: #edc65e;
+  --game-paper: #f7f0dd;
+  --game-sage: #9baa83;
+  --game-wood: #cda875;
+  width: 100%;
+  max-width: 540px;
+  margin-inline: auto;
+  color: var(--game-ink);
+}
+#maker-game *, #maker-game *::before, #maker-game *::after { box-sizing: border-box; }
+#maker-game button { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+.maker-console {
+  position: relative;
+  isolation: isolate;
+  padding: 16px 15px 18px;
+  border: 1px solid #a27c50;
+  border-radius: 25px 23px 29px 21px;
+  background: var(--game-wood);
+  box-shadow: inset 0 2px 0 #fff6, inset 0 -2px 0 #936b4255, 0 7px 0 #a47d50, 0 12px 0 #80664a1a, 0 18px 28px #20384a1a;
+}
+.maker-console::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: url('../assets/images/textures/maker-paper.svg') center / 280px;
+  opacity: .2;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+.maker-console-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 0 4px 13px; }
+.maker-console-top > span:first-child { font: 700 clamp(23px, 5.2vw, 30px)/1 var(--hand, 'Caveat', cursive); transform: rotate(-2deg); }
+.maker-console-top > span:last-child { max-width: 75px; font: 700 10px/1.4 var(--font, 'DM Sans', sans-serif); text-align: right; }
+.maker-screen { position: relative; padding: 11px 6px 12px; border-radius: 12px 14px 10px 13px; background: var(--game-paper); box-shadow: 0 2px 3px #6f4e321a; }
+.maker-scoreboard { display: grid; grid-template-columns: 1fr 1fr 1fr; text-align: center; gap: 4px; }
+.maker-scoreboard > span { display: flex; flex-direction: column; gap: 5px; font: 600 10px/1.2 var(--font, 'DM Sans', sans-serif); }
+.maker-scoreboard > span + span { border-left: 1px solid #20384a20; }
+.maker-scoreboard strong { font: 800 23px/1 var(--display, 'DM Sans', sans-serif); font-variant-numeric: tabular-nums; letter-spacing: -.04em; }
+.maker-token-board {
+  --token-columns: 4;
+  display: grid;
+  grid-template-columns: repeat(var(--token-columns), minmax(0, 1fr));
+  gap: 11px 9px;
+  padding: 16px 10px 18px;
+  margin: 13px 0 0;
+  border-radius: 14px 18px 14px 17px;
+  background: #7f947f;
+  box-shadow: inset 0 2px 5px #20384a26;
+  perspective: 900px;
+}
+.maker-token {
+  --token-tilt: -2deg;
+  --token-colour: #f6e8c0;
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: .94;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 13px;
+  background: transparent;
+  color: var(--game-ink);
+  cursor: pointer;
+  transform: rotate(var(--token-tilt));
+  transition: transform .18s ease;
+  perspective: 500px;
+}
+.maker-token:nth-child(3n + 2) { --token-tilt: 2deg; }
+.maker-token:nth-child(3n) { --token-tilt: -1deg; }
+.maker-token:nth-child(4n) { --token-tilt: 1deg; }
+.maker-token-inner { position: absolute; inset: 0; display: block; border-radius: inherit; transform-style: preserve-3d; transition: transform .42s cubic-bezier(.22,.74,.27,1); }
+.maker-token-back, .maker-token-front {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border: 1px solid #c9b180;
+  border-radius: inherit;
+  background: var(--token-colour);
+  box-shadow: inset 0 2px 0 #fff8, 0 3px 0 #c5b084, 0 6px 7px #20384a2b;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+}
+.maker-token-back::before { content: ''; position: absolute; inset: 6px; border: 1px solid #c49a5b55; border-radius: 50%; pointer-events: none; }
+.maker-token-back img { position: relative; width: 75%; height: 76%; object-fit: contain; transform: rotate(-6deg); filter: saturate(.72); pointer-events: none; }
+.maker-token-front { padding: 6px; background: #fffbef; transform: rotateY(180deg); }
+.maker-token-front img { width: 100%; height: 100%; object-fit: contain; border-radius: 5px; pointer-events: none; }
+.maker-token-front img[data-photo] { background: #eae4d4; }
+.maker-token.is-open .maker-token-inner { transform: rotateY(180deg); }
+.maker-token.is-matched { cursor: default; animation: maker-found .5s cubic-bezier(.22,.7,.22,1) both; }
+.maker-token.is-matched .maker-token-front { border-color: #657851; background: #e8ecd9; }
+.maker-match-mark { position: absolute; top: -4px; right: -3px; z-index: 2; display: grid; place-items: center; width: 20px; height: 20px; border: 2px solid #f7f0dd; border-radius: 50%; background: #486447; color: #fffaf0; font: 800 11px/1 sans-serif; opacity: 0; transform: scale(.4); transition: opacity .15s .2s, transform .2s .2s; pointer-events: none; }
+.is-matched .maker-match-mark { opacity: 1; transform: scale(1); }
+.maker-message { display: grid; place-items: center; min-height: 46px; margin: 8px 0 3px; padding: 5px 6px; text-align: center; font: 600 12px/1.4 var(--font, 'DM Sans', sans-serif); }
+.maker-console-controls { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 10px; }
+.maker-start, .maker-help-button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 46px; max-width: 100%; padding: 11px 18px; border: 1px solid #20384a; border-radius: 100px; font: 700 12px/1.2 var(--font, 'DM Sans', sans-serif); cursor: pointer; transition: transform .16s ease, box-shadow .16s ease; }
+.maker-start { background: var(--game-ink); color: var(--game-paper); box-shadow: 0 3px 0 #112733; }
+#maker-game .maker-console .maker-start { min-width: 0; flex: 0 1 auto; }
+.maker-start > span { font-size: 17px; }
+.maker-help-button { background: #f7f0dd; color: var(--game-ink); border-color: #a78253; box-shadow: 0 3px 0 #b58e5e; }
+.maker-start:active, .maker-help-button:active { transform: translateY(2px); box-shadow: 0 1px 0 #20384a66; }
+.maker-instructions { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.maker-help { padding: 15px; margin-top: 14px; border: 1px solid #b99c6e; border-radius: 10px 12px 9px 11px; background: var(--game-paper); font: 12px/1.6 var(--font, 'DM Sans', sans-serif); }
+.maker-help p { margin: 0; }
+.maker-help p + p { margin-top: 8px; }
+.maker-celebration { position: absolute; top: 37%; inset-inline: 10px; pointer-events: none; }
+.maker-celebration i { position: absolute; left: calc(8% + var(--piece) * 12%); width: 9px; height: 17px; background: #edc65e; border-radius: 3px 6px 3px 4px; opacity: 0; }
+.maker-celebration i:nth-child(2n) { background: #c67b61; }
+.maker-celebration i:nth-child(3n) { background: #d3deb8; }
+.is-complete .maker-celebration i { animation: maker-celebrate .95s cubic-bezier(.2,.6,.4,1) calc(var(--piece) * 45ms) both; }
+.is-complete .maker-message { color: #20384a; font-weight: 800; }
+#maker-game button:focus-visible { outline: 3px solid #fffaf0; outline-offset: 5px; }
+#maker-game .maker-start:focus-visible, #maker-game .maker-help-button:focus-visible { outline-color: #20384a; }
+@keyframes maker-found { 0%, 100% { transform: rotate(var(--token-tilt)); } 40% { transform: translateY(-7px) rotate(0) scale(1.06); } 70% { transform: translateY(1px) rotate(var(--token-tilt)); } }
+@keyframes maker-celebrate { 0% { opacity: 0; transform: translateY(0) rotate(0); } 15% { opacity: 1; } 100% { opacity: 0; transform: translateY(calc(-100px - var(--piece) * 8px)) rotate(calc(70deg + var(--piece) * 47deg)); } }
+@media (hover: hover) and (pointer: fine) { .maker-token:not(.is-matched):hover { transform: translateY(-3px) rotate(0); } .maker-start:hover, .maker-help-button:hover { transform: translateY(-2px); } }
+@media (min-width: 560px) { .maker-console { padding: 22px; } .maker-token-board { gap: 14px; padding: 21px 17px 24px; } .maker-token-front { padding: 10px; } .maker-message { min-height: 48px; font-size: 13px; } }
+@media (max-width: 350px) { .maker-console { padding: 14px 10px 16px; } .maker-console-top { padding-inline: 2px; gap: 7px; } .maker-console-top > span:first-child { font-size: 22px; } .maker-console-top > span:last-child { font-size: 9px; } .maker-token-board { gap: 10px 7px; padding: 14px 8px 17px; } .maker-token { border-radius: 10px; } .maker-token-front { padding: 4px; } .maker-scoreboard strong { font-size: 21px; } .maker-message { font-size: 11px; } .maker-start, .maker-help-button { padding-inline: 14px; font-size: 11px; } }
+@media (prefers-reduced-motion: reduce) { #maker-game *, #maker-game *::before, #maker-game *::after { transition: none !important; animation: none !important; } .maker-celebration { display: none; } }

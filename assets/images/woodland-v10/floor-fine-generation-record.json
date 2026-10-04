@@ -1,0 +1,17 @@
+{
+  "mode": "built-in image_gen edit",
+  "created": "2026-10-04",
+  "editReference": "source/floor-material-light.png",
+  "styleReference": "assets/images/exco-world/woodland/woodland-birch.webp",
+  "generatedSource": "C:/Users/Jun Leong/.codex/generated_images/01a0ff71-0f1b-7683-9b7e-4a0f83087b41/exec-d4f55c3a-54b4-4163-848f-4edb41319d89.png",
+  "source": "source/floor-material-fine.png",
+  "web": "floor-material-fine.webp",
+  "width": 1086,
+  "height": 1448,
+  "opaque": true,
+  "change": "Smaller sparse paper flora clusters over preserved light paper floor clearings.",
+  "export": "native resolution lossless WebP",
+  "seamNote": "Material extends to all edges with no border. Exact pixel-continuous repeat is unverified; blending adjacent plane seams may still be needed.",
+  "integrationStatus": "Saved only. No integration following user direction to stop design iterations.",
+  "prompt": "Use case: precise-object-edit\nAsset type: fine-scale opaque paper woodland floor material for a mobile website.\nInput image 1 is the EDIT TARGET; image 2, the existing birch illustration, is only a STYLE REFERENCE for flat confident cut-paper foliage.\nPrimary request: keep the light cream-sage broad floor paper patches and fine restrained fibres of image 1, but reduce ALL ground flora to about HALF its current linear size and make it flat paper cutouts. Replace its giant folded origami-like upright grass with SMALL simple flat silhouettes of three or four gently tapered paper blades, as flat and graphic as the birch reference foliage. All grass, clover, daisies and fallen ochre leaves should now read as little ground details, not large wallpaper motifs or raised bushes.\nComposition and scale: same native 1086 by 1448 opaque portrait canvas, edge-to-edge. The gentle broad pale sage clearings should be the dominant visual, around 85% of the area. Small natural sparse clusters of tiny flat ground details can gather around patch boundaries, edge pockets and corners, with occasional small details in open areas. At this native size, daisy flowerheads should be roughly 20–25px across, clovers about 25–35px, fallen leaves about 35–50px long, and entire three-blade grass tufts no larger than 35–50px wide and 45–65px tall. None of the original oversized 100px-plus flora remains. Use enough little clusters to look lived-in, but keep clearings spacious and avoid a uniformly packed repeat pattern.\nPreserve: the actual opaque cream-sage base paper palette #c7cfab, #b9c49b, #d6d8b7, broad cut-paper patch contours, crisp edges and fine subtle real paper fibres. Clover and grass stay readable muted mid-sage; daisies cream with mustard centers; fallen leaves ochre and warm brown. Shallow paper overlap only, almost flat.\nAvoid: upright 3D grass fans, folded spikes, big shadowed props, giant flora, giant flowers, photographic moss, dirty/gravel texture, speckled pixel mottling, dark gravel, dark olive background, blur, washed-out translucent overlay. No path, creek, trees, people, stations, animals, text or transparent margins. Full opaque floor material."
+}

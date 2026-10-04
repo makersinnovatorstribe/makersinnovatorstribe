@@ -1,0 +1,43 @@
+/* Labels live beside the landscape, above its complete stacking context. */
+#committee-grid .forest-label-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2147483647;
+  pointer-events: none;
+  overflow: visible;
+}
+
+#committee-grid.forest-labels-ready .exco-person-place .exco-person-label {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#committee-grid .forest-label-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  transform-origin: 0 0;
+  text-align: center;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.forest-label-name,
+.forest-label-role {
+  display: block;
+  margin-inline: auto;
+  paint-order: stroke fill;
+}
+
+.forest-label-item.is-focused {
+  outline: 2px solid currentColor;
+  outline-offset: 5px;
+  border-radius: 4px;
+}
+
+.forest-editor:not(.is-preview) .forest-label-item {
+  pointer-events: none;
+  cursor: inherit;
+}

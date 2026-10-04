@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="2400" viewBox="0 0 820 2400" preserveAspectRatio="none" role="img" aria-labelledby="path-title">
+<title id="path-title">Winding cut-paper woodland path</title>
+<desc>A warm sand paper trail with a short upper-left branch, subtle layered edges, and a handful of small paper leaves. Everything beyond the trail and its small verge details is transparent.</desc>
+<!-- Filled contours, not a stroked road. Each side has its own smooth varying-width boundary. -->
+<defs>
+ <path id="path-edge" d="M 384 -60 C 382.94 -40, 381.87 -20, 384 0 C 392.51 80, 452.07 160, 432 240 C 414.44 310, 335.93 380, 340 450 C 345.24 540, 487.01 630, 497.5 720 C 508.38 813.33, 378.09 906.67, 364 1000 C 349.91 1093.33, 452.04 1186.67, 432 1280 C 414.11 1363.33, 298.84 1446.67, 302 1530 C 303.9 1580, 348.44 1630, 370.5 1680 C 391.09 1726.67, 392.11 1773.33, 378 1820 C 352.8 1903.33, 279.35 1986.67, 272.5 2070 C 263.45 2180, 370.43 2290, 382 2400 C 384.1 2420, 383.05 2440, 382 2460 L 458 2460 C 459.09 2440, 460.18 2420, 458 2400 C 445.99 2290, 334.94 2180, 347.5 2070 C 357.02 1986.67, 437.48 1903.33, 462 1820 C 475.73 1773.33, 471.92 1726.67, 449.5 1680 C 425.48 1630, 380.09 1580, 378 1530 C 374.52 1446.67, 491.31 1363.33, 508 1280 C 526.7 1186.67, 419.83 1093.33, 436 1000 C 452.17 906.67, 591.36 813.33, 582.5 720 C 573.95 630, 427.73 540, 420 450 C 413.98 380, 491.74 310, 508 240 C 526.58 160, 464.82 80, 456 0 C 453.79 -20, 454.9 -40, 456 -60 Z"/>
+ <path id="path-face" d="M 385.45 -60 C 384.39 -40, 383.32 -20, 385.45 0 C 393.96 80, 453.52 160, 433.45 240 C 415.89 310, 337.38 380, 341.45 450 C 346.69 540, 488.46 630, 498.95 720 C 509.83 813.33, 379.54 906.67, 365.45 1000 C 351.36 1093.33, 453.49 1186.67, 433.45 1280 C 415.56 1363.33, 300.29 1446.67, 303.45 1530 C 305.35 1580, 349.89 1630, 371.95 1680 C 392.54 1726.67, 393.56 1773.33, 379.45 1820 C 354.25 1903.33, 280.8 1986.67, 273.95 2070 C 264.9 2180, 371.88 2290, 383.45 2400 C 385.55 2420, 384.5 2440, 383.45 2460 L 456.55 2460 C 457.64 2440, 458.73 2420, 456.55 2400 C 444.54 2290, 333.49 2180, 346.05 2070 C 355.57 1986.67, 436.03 1903.33, 460.55 1820 C 474.28 1773.33, 470.47 1726.67, 448.05 1680 C 424.03 1630, 378.64 1580, 376.55 1530 C 373.07 1446.67, 489.86 1363.33, 506.55 1280 C 525.25 1186.67, 418.38 1093.33, 434.55 1000 C 450.72 906.67, 589.91 813.33, 581.05 720 C 572.5 630, 426.28 540, 418.55 450 C 412.53 380, 490.29 310, 506.55 240 C 525.13 160, 463.37 80, 454.55 0 C 452.34 -20, 453.45 -40, 454.55 -60 Z"/>
+ <path id="spur-edge" d="M 224 453 C 235 442 247 444 258 453 C 290 476 324 479 350 450 C 362 436 375 432 392 439 L 406 471 C 382 481 371 496 355 507 C 328 526 292 526 265 513 C 244 503 222 486 218 471 C 216 464 219 458 224 453 Z"/>
+ <path id="spur-face" d="M 225 455 C 235 445 246 446 257 455 C 290 478 325 482 352 452 C 365 438 377 435 391 441 L 403 470 C 380 480 370 495 354 506 C 328 524 292 524 266 511 C 245 501 224 485 220 471 C 218 465 220 460 225 455 Z"/>
+ <clipPath id="path-paper-surface"><use href="#path-face"/><use href="#spur-face"/></clipPath>
+ <filter id="path-paper-grain" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+  <feTurbulence type="fractalNoise" baseFrequency=".64" numOctaves="1" seed="29" stitchTiles="stitch"/>
+  <feColorMatrix type="saturate" values="0"/>
+ </filter>
+</defs>
+<!-- The 1.4/1.8-unit offset is paper thickness, not a dark outline or dirt bank. -->
+<g fill="#aa9c77" opacity=".2" transform="translate(1.4 1.8)"><use href="#path-edge"/><use href="#spur-edge"/></g>
+<g fill="#c9bb8e"><use href="#path-edge"/><use href="#spur-edge"/></g>
+<g fill="#decf9d"><use href="#path-face"/><use href="#spur-face"/></g>
+<g clip-path="url(#path-paper-surface)" opacity=".048"><rect width="820" height="2400" filter="url(#path-paper-grain)"/></g>
+<!-- A few separated cut-paper verge details; intentionally no gravel necklace. -->
+<g transform="translate(392 349) rotate(-35) scale(0.95)"><path d="M-10 0Q-4-9 7-5Q13-2 11 1Q4 9-5 6Q-9 5-10 0Z" fill="#a5aa7c"/><path d="m-9 1 17-3" fill="none" stroke="#f0e5bd" stroke-width=".8" opacity=".7"/></g>
+<g transform="translate(576 756) rotate(49) scale(1.05)"><path d="M-10 0Q-4-9 7-5Q13-2 11 1Q4 9-5 6Q-9 5-10 0Z" fill="#b6a16f"/><path d="m-9 1 17-3" fill="none" stroke="#f0e5bd" stroke-width=".8" opacity=".7"/></g>
+<g transform="translate(389 1118) rotate(22) scale(0.9)"><path d="M-10 0Q-4-9 7-5Q13-2 11 1Q4 9-5 6Q-9 5-10 0Z" fill="#a3aa82"/><path d="m-9 1 17-3" fill="none" stroke="#f0e5bd" stroke-width=".8" opacity=".7"/></g>
+<g transform="translate(428 1418) rotate(-47) scale(0.9)"><path d="M-10 0Q-4-9 7-5Q13-2 11 1Q4 9-5 6Q-9 5-10 0Z" fill="#baa575"/><path d="m-9 1 17-3" fill="none" stroke="#f0e5bd" stroke-width=".8" opacity=".7"/></g>
+<g transform="translate(361 1917) rotate(24) scale(1.02)"><path d="M-10 0Q-4-9 7-5Q13-2 11 1Q4 9-5 6Q-9 5-10 0Z" fill="#9fa77e"/><path d="m-9 1 17-3" fill="none" stroke="#f0e5bd" stroke-width=".8" opacity=".7"/></g>
+<g transform="translate(417 2219) rotate(56) scale(0.95)"><path d="M-10 0Q-4-9 7-5Q13-2 11 1Q4 9-5 6Q-9 5-10 0Z" fill="#b6a16f"/><path d="m-9 1 17-3" fill="none" stroke="#f0e5bd" stroke-width=".8" opacity=".7"/></g>
+<g fill="#adae9b"><path d="M482 120Q479 116 483 113Q489 111 492 115Q495 119 491 121Q486 124 482 120Z"/><path d="M345 1668Q340 1667 342 1663Q345 1659 350 1661Q355 1663 352 1667Q350 1670 345 1668Z"/><path d="M293 2060Q289 2058 290 2054Q293 2050 299 2052Q303 2055 300 2059Q297 2062 293 2060Z"/></g>
+</svg>

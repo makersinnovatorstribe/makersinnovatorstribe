@@ -1,0 +1,6 @@
+{
+  "asset": "foreground-fern.webp",
+  "tool": "built-in image_gen",
+  "source": "source/foreground-fern.png",
+  "prompt": "Create one standalone botanical foreground cutout for the woodland illustrated by the reference. Exact same handmade flat cut-paper storybook style, fine matte paper fibres, navy-green, muted sage, olive, straw yellow and creamy white. A graceful ASYMMETRIC CLUSTER of three tall curved fern fronds and two broad oak-like paper leaves, all visibly rooted in a small irregular moss mound with two tiny cream daisies and ONE small ochre mushroom. More airy than bushy: beautiful large clear silhouettes with plenty of transparent gaps between separate stems, and fine cut-out cream vein marks. Left frond is taller and curves left, right frond arches right, small stems staggered. At phone size it should read as one three-dimensional foreground plant ~100px tall, not a decorative horizontal hedge strip. Whole cutout 4:5 width:height ratio with natural irregular contour. Main leaves completely opaque. Nothing clipped at edges. No frame, no rectangle of ground, no scenery behind, no text, no bear, no background canvas. Genuine transparent background. Keep the shapes flat and carefully designed, slight tangible paper layer shadows only, no glossy3D, watercolor or heavy noisy shading."
+}

@@ -1,0 +1,19 @@
+{
+  "mode": "built-in image_gen",
+  "created": "2026-10-04",
+  "purpose": "Crisp paper-cut floor material matching existing trees and workshop; integrate at native 3:4 aspect ratio without stretching.",
+  "references": [
+    "assets/images/exco-world/woodland/woodland-oak.webp",
+    "assets/images/exco-world/woodland/woodland-birch.webp",
+    "assets/images/exco-world/stations/station-01.webp"
+  ],
+  "generatedSource": "C:/Users/Jun Leong/.codex/generated_images/01a0ff71-0f1b-7683-9b7e-4a0f83087b41/exec-1ffd5dfd-273c-4caf-8c19-fec207697093.png",
+  "source": "source/floor-material.png",
+  "web": "floor-material.webp",
+  "width": 1086,
+  "height": 1448,
+  "opaque": true,
+  "export": "lossless WebP, native resolution",
+  "seamNote": "Prompt requests repeatable top-to-bottom material; exact pixel-continuous tiling is not guaranteed. Alternating planes may be used.",
+  "prompt": "Use case: illustration-story\nAsset type: high-resolution opaque tiling moss/sage paper floor material for a handmade woodland website.\nInput images 1, 2 and 3 are STYLE REFERENCES ONLY. Match the crisp layered colored-paper shapes, restrained fine real paper fibres, matte materials, shallow collage relief and sage/olive/mustard palette of these exact oak, birch and bear-workshop illustrations. Do not copy their trees, lanterns, bear or workshop.\nPrimary request: create an edge-to-edge top-down woodland floor material, native 1536 by 2048 portrait resolution. A rich medium sage/olive colored-paper base with overlapping opaque patches of slightly different muted sage, moss and light olive paper. These are intentional clean handmade cut-paper shapes with gently irregular edges, not gradients or mottled dirt. Fine, understated real paper fibre texture, as subtle as the reference tree canopies; the large patches remain clean readable solid colors.\nSurface detail: distribute moderate, well-composed sparse groups of clearly cut-paper ground objects throughout the entire image: pointed 3–5 blade grass tufts, little three-leaf clovers, a few tiny cream daisies with mustard centers, and individual fallen ochre or warm-brown oak leaves. The blades, petals and leaves have confident crisp edges, distinct intentional silhouettes and subtle shallow paper overlap. At native 1536px width each little object is about 25–55px across; details should remain clean at mobile size. Use about twenty naturally scattered small groupings, with calm useful spaces between. No giant clumps. Lived-in and detailed enough, but no dense photographic scatter or muddy noise.\nComposition: flat directly overhead rectangular material covering every pixel, fully opaque on all four edges, with no outer island outline, no blank outside margin, no vignette or frame. Design as a repeatable floor material, particularly a seamless top-to-bottom repeat: the top and bottom edges meet with matching paper colors and continuation of shapes, no unique horizon or center feature. A few patches may cross image edges naturally. Balanced detail from top to bottom with no blank central lane.\nConstraints: no path, no roads, no creeks or water, no rocks or gravel, no trees, no bushes, no animals, no characters, no stations or buildings. NO photographic soil, pebble texture, coarse nubbly paper, speckled grain, pixel mottling, noisy random marks, blurred painted grass, atmospheric gradients or watercolor wash. Avoid broad smooth vector waves and giant pale empty fields. No text. The result must belong visually with the sharp layered paper reference illustrations, with fine restrained fibres instead of the old coarse mossy texture. Opaque output."
+}

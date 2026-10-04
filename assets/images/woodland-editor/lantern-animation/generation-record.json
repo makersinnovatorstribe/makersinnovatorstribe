@@ -1,0 +1,20 @@
+{
+  "tool": "Built-in image_gen",
+  "created": "2026-10-04",
+  "source": "../lantern-paper.png",
+  "prompt": "Use case: precise-object-edit. Edit target: the supplied single navy paper lantern. Produce a production animation SPRITE SHEET of this EXACT same lantern, arranged precisely FOUR EQUAL COLUMNS and TWO EQUAL ROWS (8 cells total). Transparent background. Desired image aspect ratio 2:1 landscape, each cell square, e.g. 2048 x 1024. Each lantern centered horizontally in its cell and occupying same 86% height, identical body proportions, registration and paper texture. Very clear evenly spaced grid but NO drawn grid lines, numbers, labels or captions. Full handle and base in every frame, empty transparent padding so cells never touch. TOP ROW = four ON animation frames, steady same rigid navy frame and brass buttons, warm golden glass: flame changes from small upright, gently bent left, slightly taller upright, gently bent right; subtle warm light level variation. BOTTOM ROW = four OFF animation frames, exactly matching same lantern design and scale and position: NO FLAME, NO GLOW, NO yellow internal illumination, glass is subdued pale gray-sage translucent-looking PAPER with simple reflection highlights; wick remains visible. In bottom frames the whole rigid lantern leans very slightly through -2 degrees,0,+2,0 around its top handle for a gentle resting sway. Maintain flat tactile cut-paper style and all structural details of reference, no new elements. Actual cutouts with transparent empty pixels between cells and inside handles; NO haze or shadow outside silhouettes. Preserve identical camera straight-on and no perspectivechange. Consistent sheet is essential for animation.",
+  "files": {
+    "master": "lantern-frames.png",
+    "delivery": "lantern-frames.webp"
+  },
+  "layout": {
+    "columns": 4,
+    "rows": 2,
+    "width": 1774,
+    "height": 887,
+    "topRow": "Lit flame flicker",
+    "bottomRow": "Unlit glass, no flame"
+  },
+  "encoding": "Lossless WebP conversion, decoded RGBA bytes verified identical to PNG master.",
+  "registration": "CSS frame offsets align body position; no edits to generated pixels."
+}

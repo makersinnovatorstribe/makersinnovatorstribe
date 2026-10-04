@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap');
+
+/* The reserved portrait appears only in a profile, alongside personal details. */
+.exco-photo-slot { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; aspect-ratio: 3 / 4; min-height: 0; background: #fffbed; color: #68767a; overflow: hidden; }
+.exco-camera { display: block; width: 45px; opacity: .48; }
+.exco-camera svg { display: block; width: 100%; height: auto; }
+.exco-portrait-image { display: block; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: center 30%; }
+.exco-photo-note { display: block; margin-top: 8px; color: #5e6480; font: 600 17px/1 'Caveat', cursive; }
+
+/* Extra details open in the native profile window. */
+.exco-dialog { padding: 0; border: 3px solid var(--ink, #253255); border-radius: 5px; color: var(--ink, #253255); background: var(--paper, #fff9e8); width: min(720px, calc(100vw - 28px)); max-width: calc(100vw - 28px); max-height: calc(100dvh - 36px); overflow-y: auto; box-shadow: 7px 8px 0 var(--yellow, #f6d44d); }
+.exco-dialog::backdrop { background: #121b3bcc; backdrop-filter: blur(3px); }
+.exco-window-bar { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-bottom: 3px solid var(--ink, #253255); background: var(--yellow, #f6d44d); }
+.exco-window-title { font: 700 10px/1.3 var(--mono, monospace); }
+.exco-close { flex: 0 0 44px; margin-left: auto; width: 44px; height: 44px; display: grid; place-items: center; border: 2px solid var(--ink, #253255); border-radius: 2px; background: var(--paper, #fff9e8); color: var(--ink, #253255); font: 400 29px/1 var(--font, sans-serif); box-shadow: 2px 2px 0 var(--ink, #253255); }
+.exco-close:hover { background: var(--lime, #e4ec9c); }
+.exco-close:focus-visible, .exco-personal-link:focus-visible, .exco-retry:focus-visible { outline: 3px solid var(--blue, #4563f1); outline-offset: 4px; }
+.exco-profile-body { display: grid; grid-template-columns: minmax(0, 1fr); gap: 23px; padding: 22px 20px 27px; }
+.exco-profile-photo { width: min(210px, 75%); margin: auto; }
+.exco-photo-slot-large { height: auto; aspect-ratio: 3 / 4; border: 3px solid var(--ink, #253255); box-shadow: 4px 5px 0 var(--ink, #253255); transform: rotate(-3deg); }
+.exco-photo-slot-large .exco-camera { width: 70px; }
+.exco-photo-slot-large .exco-photo-note { margin-top: 14px; font-size: 22px; }
+.exco-term { display: inline-block; padding: 4px 7px; border: 1.5px solid var(--ink, #253255); background: var(--yellow, #f6d44d); font: 700 10px/1.3 var(--mono, monospace); transform: rotate(-2deg); }
+.exco-profile-name { margin: 15px 0 7px; font: 700 clamp(42px, 12vw, 58px)/1 'Caveat', cursive; letter-spacing: -.03em; }
+.exco-profile-role { margin: 0; font: 700 15px/1.45 var(--font, sans-serif); }
+.exco-bio { margin: 20px 0 0; font: 400 14px/1.7 var(--font, sans-serif); }
+.exco-pending { color: #606782; font-style: italic; }
+.exco-details { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 17px; margin: 22px 0; padding-top: 19px; border-top: 2px dashed #25325540; }
+.exco-detail-wide { grid-column: 1 / -1; }
+.exco-detail-label { margin: 0 0 5px; font: 700 9px/1.4 var(--mono, monospace); letter-spacing: .04em; text-transform: uppercase; }
+.exco-detail-value { margin: 0; font: 500 13px/1.5 var(--font, sans-serif); overflow-wrap: anywhere; }
+.exco-personal-link { display: inline-flex; padding: 9px 13px; border: 2px solid var(--ink, #253255); background: var(--blue, #4563f1); color: var(--white, #fffdf5); box-shadow: 3px 3px 0 var(--ink, #253255); font: 700 12px/1.4 var(--font, sans-serif); }
+.exco-load-notice { padding: 22px; border: 2px solid var(--yellow, #f6d44d); font-size: 14px; text-align: center; }
+.exco-retry { margin-top: 12px; padding: 8px 12px; border: 2px solid var(--ink, #253255); background: var(--yellow, #f6d44d); color: var(--ink, #253255); font-weight: 700; }
+
+
+@media (min-width: 600px) {
+  .exco-profile-body { grid-template-columns: minmax(0, 200px) minmax(0, 1fr); gap: 30px; padding: 31px 28px; }
+  .exco-profile-photo { width: 100%; margin: 0; }
+  .exco-profile-name { margin-top: 20px; font-size: 58px; }
+  .exco-window-title { font-size: 12px; }
+  .exco-window-bar { padding: 10px 15px; }
+}

@@ -1,0 +1,116 @@
+/* Show the whole make, including portrait and wide workshop photographs. */
+.project-photo img,
+.moment-photo img,
+.gallery-photo img {
+  object-fit: contain;
+  object-position: center;
+  background: var(--paper, #fff8e7);
+}
+
+.project-card:hover .project-photo img {
+  transform: none;
+}
+
+/* Action groups stay within easy thumb reach; artwork keeps its own positions. */
+@media (max-width: 899px) {
+  .photo-controls {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .photo-controls .round-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .hero-actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-actions .button,
+  .hero-actions .play-link {
+    min-height: 44px;
+  }
+
+  .hero-actions .play-link {
+    min-width: 44px;
+    justify-content: center;
+  }
+
+  .more-makes-control,
+  .album-action {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .more-makes-control .button,
+  .album-action .button,
+  .join > .button {
+    min-height: 44px;
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .join {
+    text-align: center;
+  }
+
+  .join-doodle {
+    left: 24px;
+    bottom: 28px;
+    font-size: 84px;
+  }
+
+  .window-content .text-link,
+  .join-dialog #join-details .button,
+  .exco-personal-link,
+  .exco-retry {
+    display: flex;
+    width: fit-content;
+    max-width: 100%;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+  }
+
+  .gallery-filters,
+  .social-links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .gallery-filter {
+    min-width: 44px;
+    min-height: 44px;
+    max-width: 100%;
+  }
+
+  .social-links a {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #maker-game .maker-console-controls {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  #maker-game .maker-start {
+    flex: 0 1 auto;
+    min-width: min(152px, 100%);
+    max-width: 100%;
+    min-height: 48px;
+  }
+
+  #maker-game .maker-help-button {
+    width: auto;
+    max-width: 100%;
+    min-height: 48px;
+  }
+}

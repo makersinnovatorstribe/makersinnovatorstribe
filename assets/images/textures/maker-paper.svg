@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320">
+  <filter id="paper">
+    <feTurbulence type="fractalNoise" baseFrequency=".74" numOctaves="3" seed="17" stitchTiles="stitch"/>
+    <feColorMatrix type="saturate" values="0"/>
+  </filter>
+  <filter id="fibres">
+    <feTurbulence type="fractalNoise" baseFrequency=".11 .44" numOctaves="2" seed="9" stitchTiles="stitch"/>
+    <feColorMatrix type="saturate" values="0"/>
+  </filter>
+  <rect width="320" height="320" fill="#f2e7cd"/>
+  <rect width="320" height="320" filter="url(#fibres)" opacity=".12"/>
+  <rect width="320" height="320" filter="url(#paper)" opacity=".32"/>
+</svg>

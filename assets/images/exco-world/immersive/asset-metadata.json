@@ -1,0 +1,135 @@
+{
+  "exportMode": "Sharp resize/WebP conversion; no cropping or raster editing",
+  "quality": 83,
+  "alphaQuality": 100,
+  "assets": [
+    {
+      "name": "canopy",
+      "sourceOriginal": "C:\\Users\\Jun Leong\\Documents\\CCA Website\\makersinnovatorstribe-main\\assets\\images\\exco-world\\immersive\\source\\canopy.png",
+      "generatedSource": "C:\\Users\\Jun Leong\\.codex\\generated_images\\01a0ff08-1c9b-74b3-8609-ce5223a48079\\exec-24b19663-e3b1-4aff-b4f9-bd7868481154.png",
+      "optimized": "C:\\Users\\Jun Leong\\Documents\\CCA Website\\makersinnovatorstribe-main\\assets\\images\\exco-world\\immersive\\canopy.webp",
+      "width": 1000,
+      "height": 667,
+      "sourceWidth": 1536,
+      "sourceHeight": 1024,
+      "hasAlpha": true,
+      "optimizedBytes": 70602,
+      "alphaBounds": {
+        "threshold": 10,
+        "left": 0,
+        "top": 0,
+        "right": 999,
+        "bottom": 499,
+        "width": 1000,
+        "height": 500,
+        "coveragePercent": 39.18
+      },
+      "solidAlphaBounds": {
+        "threshold": 128,
+        "left": 0,
+        "top": 0,
+        "right": 999,
+        "bottom": 499,
+        "width": 1000,
+        "height": 500,
+        "coveragePercent": 38.74
+      }
+    },
+    {
+      "name": "trunk-left",
+      "sourceOriginal": "C:\\Users\\Jun Leong\\Documents\\CCA Website\\makersinnovatorstribe-main\\assets\\images\\exco-world\\immersive\\source\\trunk-left.png",
+      "generatedSource": "C:\\Users\\Jun Leong\\.codex\\generated_images\\01a0ff08-1c9b-74b3-8609-ce5223a48079\\exec-bbbe19c7-cb36-4e82-8b6b-cdd4c94c7c72.png",
+      "optimized": "C:\\Users\\Jun Leong\\Documents\\CCA Website\\makersinnovatorstribe-main\\assets\\images\\exco-world\\immersive\\trunk-left.webp",
+      "width": 600,
+      "height": 900,
+      "sourceWidth": 1024,
+      "sourceHeight": 1536,
+      "hasAlpha": true,
+      "optimizedBytes": 82404,
+      "alphaBounds": {
+        "threshold": 10,
+        "left": 5,
+        "top": 9,
+        "right": 591,
+        "bottom": 886,
+        "width": 587,
+        "height": 878,
+        "coveragePercent": 56.02
+      },
+      "solidAlphaBounds": {
+        "threshold": 128,
+        "left": 6,
+        "top": 10,
+        "right": 591,
+        "bottom": 885,
+        "width": 586,
+        "height": 876,
+        "coveragePercent": 55.39
+      }
+    },
+    {
+      "name": "clearing",
+      "sourceOriginal": "C:\\Users\\Jun Leong\\Documents\\CCA Website\\makersinnovatorstribe-main\\assets\\images\\exco-world\\immersive\\source\\clearing.png",
+      "generatedSource": "C:\\Users\\Jun Leong\\.codex\\generated_images\\01a0ff08-1c9b-74b3-8609-ce5223a48079\\exec-a768a467-03a7-469a-849e-5dbfc991d65c.png",
+      "optimized": "C:\\Users\\Jun Leong\\Documents\\CCA Website\\makersinnovatorstribe-main\\assets\\images\\exco-world\\immersive\\clearing.webp",
+      "width": 1000,
+      "height": 667,
+      "sourceWidth": 1536,
+      "sourceHeight": 1024,
+      "hasAlpha": true,
+      "optimizedBytes": 85804,
+      "alphaBounds": {
+        "threshold": 10,
+        "left": 0,
+        "top": 198,
+        "right": 999,
+        "bottom": 652,
+        "width": 1000,
+        "height": 455,
+        "coveragePercent": 54.88
+      },
+      "solidAlphaBounds": {
+        "threshold": 128,
+        "left": 0,
+        "top": 199,
+        "right": 999,
+        "bottom": 651,
+        "width": 1000,
+        "height": 453,
+        "coveragePercent": 54.51
+      }
+    },
+    {
+      "name": "depth",
+      "sourceOriginal": "C:\\Users\\Jun Leong\\Documents\\CCA Website\\makersinnovatorstribe-main\\assets\\images\\exco-world\\immersive\\source\\depth.png",
+      "generatedSource": "C:\\Users\\Jun Leong\\.codex\\generated_images\\01a0ff08-1c9b-74b3-8609-ce5223a48079\\exec-e9a1baf3-71b3-4899-959d-4d0456bf0586.png",
+      "optimized": "C:\\Users\\Jun Leong\\Documents\\CCA Website\\makersinnovatorstribe-main\\assets\\images\\exco-world\\immersive\\depth.webp",
+      "width": 724,
+      "height": 2172,
+      "sourceWidth": 724,
+      "sourceHeight": 2172,
+      "hasAlpha": false,
+      "optimizedBytes": 118544,
+      "alphaBounds": {
+        "threshold": 10,
+        "left": 0,
+        "top": 0,
+        "right": 723,
+        "bottom": 2171,
+        "width": 724,
+        "height": 2172,
+        "coveragePercent": 100
+      },
+      "solidAlphaBounds": {
+        "threshold": 128,
+        "left": 0,
+        "top": 0,
+        "right": 723,
+        "bottom": 2171,
+        "width": 724,
+        "height": 2172,
+        "coveragePercent": 100
+      }
+    }
+  ]
+}

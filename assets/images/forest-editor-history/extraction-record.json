@@ -1,0 +1,45 @@
+{
+  "source": "scripts/woodland-terrain.js",
+  "sourceSha256": "17b0321732abfebc8062525f38c85fc2974165914b693c382ae5b3bb0cdbfcd2",
+  "method": "Executed retained original renderer in an isolated empty-window VM. For path01–03, retained the original defs and exact soil/path/texture/stone markup; omitted terrain-only fills and foliage. path04 nests those original trails at y0/800/1600. path05 nests the three complete original scene SVGs. No coordinates, colors, filters, geometry or textures were redrawn.",
+  "outputs": [
+    {
+      "file": "path-01.svg",
+      "scene": 0,
+      "width": 400,
+      "height": 800
+    },
+    {
+      "file": "path-02.svg",
+      "scene": 1,
+      "width": 400,
+      "height": 800
+    },
+    {
+      "file": "path-03.svg",
+      "scene": 2,
+      "width": 400,
+      "height": 800
+    },
+    {
+      "file": "path-04.svg",
+      "scenes": [
+        0,
+        1,
+        2
+      ],
+      "width": 400,
+      "height": 2400
+    },
+    {
+      "file": "path-05.svg",
+      "scenes": [
+        0,
+        1,
+        2
+      ],
+      "width": 400,
+      "height": 2400
+    }
+  ]
+}

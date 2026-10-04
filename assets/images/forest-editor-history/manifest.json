@@ -1,0 +1,371 @@
+{
+  "title": "Saved woodland path and creek choices",
+  "date": "2026-10-04",
+  "defaults": {
+    "path": "none",
+    "creek": "creek-none"
+  },
+  "dataModule": "scripts/forest-path-options.js",
+  "coverage": "All distinct recoverable saved path designs found in assets, retained inline woodland-terrain.js, and the original project archive inventory. Full backgrounds are labelled because their paths are baked into the artwork. No designs were reconstructed from screenshots or redrawn.",
+  "extraction": "extraction-record.json",
+  "thumbnailMethod": "Faithful proportional contain on transparent canvas, WebP quality 88. Portrait/landscape path previews 240 by 360; creek previews 360 by 120. No crop, color change, redraw or generated replacement.",
+  "optimizedOriginal": {
+    "source": "assets/images/atelier-v6/source/woodland-ground.png",
+    "output": "assets/images/forest-editor-history/ground-earthy-stream.webp",
+    "method": "Same dimensions; WebP quality 94, alpha quality 100; no crop or visual edit."
+  },
+  "excluded": [
+    {
+      "source": "assets/images/exco-world/source/forest-mid.png",
+      "reason": "Generation source of the wide midground. Same path as cleaned/optimized forest-mid.webp; duplicate route, not a separate historical design."
+    },
+    {
+      "source": "assets/images/exco-world/source/forest-mid-clean.png",
+      "reason": "Clean source of included forest-mid.webp."
+    },
+    {
+      "source": "assets/images/woodland-v9/ground-detailed.webp",
+      "reason": "Path-free ground only; retained ground history, not a path option."
+    },
+    {
+      "source": "assets/images/woodland-v10/floor-material.webp",
+      "reason": "Ground-only material, no path."
+    },
+    {
+      "source": "assets/images/woodland-v10/floor-material-light.webp",
+      "reason": "Ground-only material, no path."
+    },
+    {
+      "source": "assets/images/woodland-v10/floor-material-fine.webp",
+      "reason": "Ground-only material, no path."
+    },
+    {
+      "source": "assets/images/woodland-v8/floor-island.webp",
+      "reason": "Ground island only, no continuous path."
+    },
+    {
+      "source": "assets/images/exco-world/immersive/clearing.webp",
+      "reason": "Small clearing with foliage, no continuous path."
+    },
+    {
+      "source": "assets/images/exco-world/forest-back-mobile.webp",
+      "reason": "Forest background without a path."
+    },
+    {
+      "source": "assets/images/exco-world/forest-front-mobile.webp",
+      "reason": "Foreground foliage without a path."
+    },
+    {
+      "source": "../makersinnovatorstribe-main.zip",
+      "reason": "Inspected archive entry names; original archive predates the woodland and contains no path, forest, grove or terrain assets."
+    },
+    {
+      "source": "Early screenshot-only broad stroke trails",
+      "reason": "No retained standalone source recovered; omitted rather than inventing an approximation."
+    }
+  ],
+  "options": [
+    {
+      "id": "none",
+      "category": "path",
+      "kind": "none",
+      "label": "No path",
+      "description": "Keep the woodland floor clear.",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "id": "forest-blue-tall",
+      "category": "path",
+      "kind": "image",
+      "label": "Original blue forest · tall",
+      "description": "The original cream trail, with the blue forest and bear workshops baked in.",
+      "src": "assets/images/mascots/maker-grove-mobile.webp",
+      "width": 724,
+      "height": 2172,
+      "includesGround": true,
+      "includesScenery": true,
+      "thumbnail": "assets/images/forest-editor-history/thumbs/forest-blue-tall.webp",
+      "alpha": false,
+      "bytes": 280530,
+      "sha256": "da4db25496c3c7ca42128361c97889b4a2781839ef7e1d6c25b504a9cc3b92e0",
+      "source": "assets/images/mascots/maker-grove-mobile.webp"
+    },
+    {
+      "id": "forest-blue-wide",
+      "category": "path",
+      "kind": "image",
+      "label": "Original blue forest · wide",
+      "description": "The landscape version of the first blue woodland, including its broad curved trail.",
+      "src": "assets/images/mascots/maker-grove.webp",
+      "width": 1536,
+      "height": 1024,
+      "includesGround": true,
+      "includesScenery": true,
+      "thumbnail": "assets/images/forest-editor-history/thumbs/forest-blue-wide.webp",
+      "alpha": false,
+      "bytes": 265604,
+      "sha256": "0410ff87306ef859372e3e7d4b2ee0b9eed8c1cfa8c034fe5c76c77a80373643",
+      "source": "assets/images/mascots/maker-grove.webp"
+    },
+    {
+      "id": "forest-painted-tall",
+      "category": "path",
+      "kind": "image",
+      "label": "Painted green forest · tall",
+      "description": "The shaded green forest version. Trees, bear workshops and the pale trail are one image.",
+      "src": "assets/images/mascots/maker-grove-mobile-natural.webp",
+      "width": 724,
+      "height": 2171,
+      "includesGround": true,
+      "includesScenery": true,
+      "thumbnail": "assets/images/forest-editor-history/thumbs/forest-painted-tall.webp",
+      "alpha": false,
+      "bytes": 347862,
+      "sha256": "b211590b946ce480f73855e376607b61d2893bb43811a127e51cfd106d92c34d",
+      "source": "assets/images/mascots/maker-grove-mobile-natural.webp"
+    },
+    {
+      "id": "forest-painted-wide",
+      "category": "path",
+      "kind": "image",
+      "label": "Painted green forest · wide",
+      "description": "The landscape green woodland version, including the complete setting and trail.",
+      "src": "assets/images/mascots/maker-grove-natural.webp",
+      "width": 1536,
+      "height": 1024,
+      "includesGround": true,
+      "includesScenery": true,
+      "thumbnail": "assets/images/forest-editor-history/thumbs/forest-painted-wide.webp",
+      "alpha": false,
+      "bytes": 339758,
+      "sha256": "b0e4869286b16b48c4e876acf943121bef0984378c97b3c1e0b04f2fd8871566",
+      "source": "assets/images/mascots/maker-grove-natural.webp"
+    },
+    {
+      "id": "forest-cutout-tall",
+      "category": "path",
+      "kind": "image",
+      "label": "Bear workshops & trail · tall",
+      "description": "The earlier transparent forest cutout. The pale trail is joined to the trees and bear workshops.",
+      "src": "assets/images/exco-world/forest-mid-mobile.webp",
+      "width": 724,
+      "height": 2172,
+      "includesScenery": true,
+      "thumbnail": "assets/images/forest-editor-history/thumbs/forest-cutout-tall.webp",
+      "alpha": true,
+      "bytes": 434266,
+      "sha256": "4da0a44b1bb0d2e1051303a914920d590686d187f4eb3b2dd3c74461c8417357",
+      "source": "assets/images/exco-world/forest-mid-mobile.webp"
+    },
+    {
+      "id": "forest-cutout-wide",
+      "category": "path",
+      "kind": "image",
+      "label": "Bear workshops & trail · wide",
+      "description": "The landscape transparent cutout, with the original winding route and bear workshops.",
+      "src": "assets/images/exco-world/forest-mid.webp",
+      "width": 1536,
+      "height": 1024,
+      "includesScenery": true,
+      "thumbnail": "assets/images/forest-editor-history/thumbs/forest-cutout-wide.webp",
+      "alpha": true,
+      "bytes": 365534,
+      "sha256": "d430d5aef79bf4e7499c3023307f32ccd2c90a3c2a9630aafe3ede194846a924",
+      "source": "assets/images/exco-world/forest-mid.webp"
+    },
+    {
+      "id": "paper-trail-treehouse",
+      "category": "path",
+      "kind": "image",
+      "label": "Earlier paper trail · treehouse",
+      "description": "The original first clearing trail: warm paper, a narrow soil edge and a few small stones.",
+      "src": "assets/images/forest-editor-history/path-01.svg",
+      "width": 400,
+      "height": 800,
+      "thumbnail": "assets/images/forest-editor-history/thumbs/paper-trail-treehouse.webp",
+      "alpha": true,
+      "bytes": 29486,
+      "sha256": "842fdca8e55488ed064b2b6f076abf364d9e929fb2c2f784ecc756ee62afa504",
+      "source": "assets/images/forest-editor-history/path-01.svg"
+    },
+    {
+      "id": "paper-trail-camp",
+      "category": "path",
+      "kind": "image",
+      "label": "Earlier paper trail · camp",
+      "description": "The original middle clearing trail, faithfully recovered from the saved renderer.",
+      "src": "assets/images/forest-editor-history/path-02.svg",
+      "width": 400,
+      "height": 800,
+      "thumbnail": "assets/images/forest-editor-history/thumbs/paper-trail-camp.webp",
+      "alpha": true,
+      "bytes": 31440,
+      "sha256": "9ec706946a00079c268d4eaabd2ce2e50c25d3272be770403443a0534ffc59be",
+      "source": "assets/images/forest-editor-history/path-02.svg"
+    },
+    {
+      "id": "paper-trail-lookout",
+      "category": "path",
+      "kind": "image",
+      "label": "Earlier paper trail · lookout",
+      "description": "The original lower clearing trail, with its leftward opening bend.",
+      "src": "assets/images/forest-editor-history/path-03.svg",
+      "width": 400,
+      "height": 800,
+      "thumbnail": "assets/images/forest-editor-history/thumbs/paper-trail-lookout.webp",
+      "alpha": true,
+      "bytes": 29497,
+      "sha256": "11c9279e979530175a2dc04adff36fcc238fcf62bfaf820104d5049366be9dc0",
+      "source": "assets/images/forest-editor-history/path-03.svg"
+    },
+    {
+      "id": "paper-trail-joined",
+      "category": "path",
+      "kind": "image",
+      "label": "Earlier paper trail · full route",
+      "description": "All three original paper trails joined in their original order, without the ground panels.",
+      "src": "assets/images/forest-editor-history/path-04.svg",
+      "width": 400,
+      "height": 2400,
+      "thumbnail": "assets/images/forest-editor-history/thumbs/paper-trail-joined.webp",
+      "alpha": true,
+      "bytes": 90729,
+      "sha256": "375ca9223cc66ec7b4b736bd5c02d4ddd317dd1a09c0e543e8f4c58c0c04f9f4",
+      "source": "assets/images/forest-editor-history/path-04.svg"
+    },
+    {
+      "id": "paper-terrain-joined",
+      "category": "path",
+      "kind": "image",
+      "label": "Earlier paper landscape",
+      "description": "The original three paper clearings, with their sage ground layers and full winding route.",
+      "src": "assets/images/forest-editor-history/path-05.svg",
+      "width": 400,
+      "height": 2400,
+      "includesGround": true,
+      "thumbnail": "assets/images/forest-editor-history/thumbs/paper-terrain-joined.webp",
+      "alpha": true,
+      "bytes": 102451,
+      "sha256": "b968159bfb66b90f8551ddb264ef1f73e9e0c4eb0db4523783461d76d62cd469",
+      "source": "assets/images/forest-editor-history/path-05.svg"
+    },
+    {
+      "id": "earthy-ground-stream",
+      "category": "path",
+      "kind": "image",
+      "label": "Earthy ground & stream",
+      "description": "The first continuous mossy floor. Its clay trail, creek and stepping stones are baked together.",
+      "src": "assets/images/forest-editor-history/ground-earthy-stream.webp",
+      "width": 724,
+      "height": 2172,
+      "includesGround": true,
+      "includesCreek": true,
+      "thumbnail": "assets/images/forest-editor-history/thumbs/earthy-ground-stream.webp",
+      "alpha": true,
+      "bytes": 690788,
+      "sha256": "e6a23c43cd6c62bb1c84d99098c6c7b74a50f6eb77a606420b5242637871abb3",
+      "source": "assets/images/atelier-v6/source/woodland-ground.png"
+    },
+    {
+      "id": "sage-ground-trail",
+      "category": "path",
+      "kind": "image",
+      "label": "Light sage ground & trail",
+      "description": "The lighter continuous sage floor, with a soft straw trail and scattered woodland plants.",
+      "src": "assets/images/atelier-v6/woodland-ground.webp",
+      "width": 724,
+      "height": 2172,
+      "includesGround": true,
+      "thumbnail": "assets/images/forest-editor-history/thumbs/sage-ground-trail.webp",
+      "alpha": true,
+      "bytes": 291696,
+      "sha256": "08152dd3cf11f019bcb56a50e58c2e6ad63aa4e8ce2bb988c21cfded01dece6a",
+      "source": "assets/images/atelier-v6/woodland-ground.webp"
+    },
+    {
+      "id": "straw-cutout",
+      "category": "path",
+      "kind": "image",
+      "label": "Straw paper cutout",
+      "description": "The earlier standalone straw path, with an upper-left branch and softly uneven paper edges.",
+      "src": "assets/images/woodland-v8/path-only.webp",
+      "width": 724,
+      "height": 2172,
+      "thumbnail": "assets/images/forest-editor-history/thumbs/straw-cutout.webp",
+      "alpha": true,
+      "bytes": 78592,
+      "sha256": "68484196f44f2aeaf9ecc98a1a9d56a34122ca2581ba4be0b2dbe5348577381b",
+      "source": "assets/images/woodland-v8/path-only.webp"
+    },
+    {
+      "id": "textured-clay",
+      "category": "path",
+      "kind": "image",
+      "label": "Textured clay path",
+      "description": "The dusty tan standalone trail, with gravel edges, tiny leaves and an upper-left branch.",
+      "src": "assets/images/woodland-v9/path-detailed.webp",
+      "width": 724,
+      "height": 2172,
+      "thumbnail": "assets/images/forest-editor-history/thumbs/textured-clay.webp",
+      "alpha": true,
+      "bytes": 230020,
+      "sha256": "125620359717a2e8c39948557a25f04e1ca766c79b14948f7cd3ea43bbbaac20",
+      "source": "assets/images/woodland-v9/path-detailed.webp"
+    },
+    {
+      "id": "simple-paper-latest",
+      "category": "path",
+      "kind": "image",
+      "label": "Latest simple paper-cut",
+      "description": "The most recent smooth sand-coloured paper trail, with a fine edge and an upper-left branch.",
+      "src": "assets/images/woodland-v10/path-paper.svg",
+      "width": 820,
+      "height": 2400,
+      "thumbnail": "assets/images/forest-editor-history/thumbs/simple-paper-latest.webp",
+      "alpha": true,
+      "bytes": 5518,
+      "sha256": "0ee3fffaf0a0c623c054e2b3439acecbf2cda0925174547d2a3ac6c35a562bf1",
+      "source": "assets/images/woodland-v10/path-paper.svg"
+    },
+    {
+      "id": "creek-none",
+      "category": "creek",
+      "kind": "none",
+      "label": "No creek",
+      "description": "Keep the woodland floor dry.",
+      "width": 0,
+      "height": 0
+    },
+    {
+      "id": "creek-gravel",
+      "category": "creek",
+      "kind": "image",
+      "label": "Gravel-bank creek",
+      "description": "The earlier textured slate-blue creek, with reeds, pebble banks and three stepping stones.",
+      "src": "assets/images/woodland-v9/creek-crossing.webp",
+      "width": 1086,
+      "height": 362,
+      "thumbnail": "assets/images/forest-editor-history/thumbs/creek-gravel.webp",
+      "alpha": true,
+      "bytes": 84900,
+      "sha256": "8186384f7e8bc63c65f0179ee21d017f6dd7c750bf9626d5bff493378ab0aeee",
+      "source": "assets/images/woodland-v9/creek-crossing.webp"
+    },
+    {
+      "id": "creek-paper",
+      "category": "creek",
+      "kind": "image",
+      "label": "Simple paper creek",
+      "description": "The latest flat blue paper stream, with thin current lines and three grey stepping stones.",
+      "src": "assets/images/woodland-v10/creek-paper.svg",
+      "width": 1200,
+      "height": 320,
+      "thumbnail": "assets/images/forest-editor-history/thumbs/creek-paper.webp",
+      "alpha": true,
+      "bytes": 7711,
+      "sha256": "734ab4ebbe8e79410b7e504cf35f7a3ca60a5489bfe1b0211b495f07a54ac479",
+      "source": "assets/images/woodland-v10/creek-paper.svg"
+    }
+  ]
+}

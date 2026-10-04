@@ -1,0 +1,51 @@
+/* 4 columns × 2 rows. Row 0 is lit; row 1 is unlit paper-frame movement.
+   A single cycle visits 0%, 33.333%, 66.667%, 100% with hard frame cuts.
+   The original img remains measurable and available to the alpha picker. */
+.lantern-frame-visual {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 0;
+  width: auto;
+  height: 100%;
+  aspect-ratio: var(--lantern-frame-ratio, .5);
+  transform: translate(-58.512965%, .901917%);
+  transform-origin: 50% 8%;
+  display: block;
+  visibility: hidden;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: 400% 200%;
+  background-position: 0% 100%;
+  filter: drop-shadow(1px 2px 1px #23372c35);
+  animation: lantern-paper-frames-off 5.6s steps(1, end) infinite;
+  animation-play-state: paused;
+}
+.has-lantern-frames > .lantern-frame-visual { visibility: visible; }
+.has-lantern-frames > img.exco-lamp-art,
+body #people .has-lantern-frames > img.woodland-lantern-art { opacity: 0; }
+.is-evening .lantern-frame-visual {
+  background-position: 0% 0%;
+  transform: translate(-57.384442%, 0);
+  animation-name: lantern-paper-frames-lit;
+  animation-duration: 1.4s;
+}
+.lantern-frames-running > .lantern-frame-visual { animation-play-state: running; }
+.lantern-frames-still > .lantern-frame-visual { animation: none; background-position: 0% 100%; }
+.is-evening .lantern-frames-still > .lantern-frame-visual { background-position: 0% 0%; }
+@keyframes lantern-paper-frames-off {
+  0%, 100% { background-position: 0% 100%; transform: translate(-58.512965%, .901917%); }
+  25% { background-position: 33.333333% 100%; transform: translate(-49.605411%, .450958%); }
+  50% { background-position: 66.666667% 100%; transform: translate(-49.267193%, .450958%); }
+  75% { background-position: 100% 100%; transform: translate(-42.615558%, .450958%); }
+}
+@keyframes lantern-paper-frames-lit {
+  0%, 100% { background-position: 0% 0%; transform: translate(-57.384442%, 0); }
+  25% { background-position: 33.333333% 0%; transform: translate(-49.492672%, 0); }
+  50% { background-position: 66.666667% 0%; transform: translate(-49.492672%, 0); }
+  75% { background-position: 100% 0%; transform: translate(-42.615558%, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lantern-frame-visual { animation: none !important; background-position: 0% 100%; }
+  .is-evening .lantern-frame-visual { background-position: 0% 0%; }
+}
