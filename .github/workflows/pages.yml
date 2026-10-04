@@ -1,0 +1,38 @@
+name: Publish MIT website
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out website without the broken legacy submodule
+        uses: actions/checkout@v6
+        with:
+          submodules: false
+      - name: Prepare the clean site folder
+        run: node scripts/build-site.cjs --output site
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload the site folder
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+      - name: Publish website
+        id: deployment
+        uses: actions/deploy-pages@v4
