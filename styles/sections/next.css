@@ -1,0 +1,25 @@
+/* A live workshop ticket, with date, poster and contact supplied by the archive. */
+.next{background:var(--c-paper)}
+#next[data-workshop-pending][hidden]{display:block!important;min-height:var(--next-pending-height)}
+.next-ticket{position:relative;width:min(100%,620px);margin-inline:auto;padding:var(--s-6);border-bottom:3px solid var(--c-butter-deep);border-radius:var(--r-ticket);background:var(--c-butter);color:var(--c-on-butter);box-shadow:var(--sh-paper)}
+.next-ticket-top{display:flex;align-items:center;justify-content:space-between;gap:var(--s-3);margin-bottom:var(--s-5)}
+.next-countdown{color:var(--c-ink-soft)}
+.next-ticket-main{display:flex;align-items:center;gap:var(--s-4)}
+.next-date-stamp{display:flex;flex:none;flex-direction:column;align-items:center;justify-content:center;gap:var(--s-1);width:72px;height:80px;border-radius:var(--r-date);background:var(--c-ink);color:var(--c-on-ink);rotate:var(--stamp-angle)}
+.next-date-day{font:800 var(--t-date-day)/1 var(--f-display);letter-spacing:var(--tr-display)}
+.next-ticket-copy{min-width:0}
+.next-title{max-width:22ch;text-wrap:balance}
+.next-time,.next-location,.next-spots{margin-top:var(--s-2)}
+.next-perforation{position:relative;margin:var(--s-6) calc(var(--s-6)*-1);border-top:var(--border-width) dashed var(--c-butter-deep)}
+.next-perforation::before,.next-perforation::after{content:'';position:absolute;top:-10px;width:18px;height:18px;border-radius:var(--r-pill);background:var(--c-paper)}
+.next-perforation::before{left:-9px}.next-perforation::after{right:-9px}
+.next-ticket-detail{display:flex;align-items:center;gap:var(--s-4)}
+.next-poster-thumb{flex:none;width:56px;height:72px;object-fit:contain;background:var(--c-card);box-shadow:var(--sh-paper)}
+.next-description{max-width:var(--measure)}
+.next-ticket-actions{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s-4);margin-top:var(--s-6)}
+.next-ticket.is-stamped{animation:ticket-rise var(--d-ticket) var(--e-spring) both}
+.next-ticket.is-stamped .next-date-stamp{animation:date-land var(--d-ticket) var(--e-spring) both}
+@keyframes ticket-rise{from{translate:0 12px}to{translate:0 0}}
+@keyframes date-land{from{scale:1.06}to{scale:1}}
+@media(max-width:359px){.next-ticket{padding:var(--s-5)}.next-perforation{margin-inline:calc(var(--s-5)*-1)}.next-ticket-actions{gap:var(--s-2)}}
+@media(prefers-reduced-motion:reduce){.next-ticket.is-stamped,.next-ticket.is-stamped .next-date-stamp{animation:none;translate:none;scale:none}}

@@ -1,0 +1,72 @@
+/* Woodland evening is local to the people section; the page stays daylight. */
+/* Ambient night light is cool and restrained. Fixtures retain their user-set
+   glow and size; a small warm core falls off into a broad, low-opacity pool. */
+.people.is-evening :is(.exco-terrain,.exco-path-plane,.exco-creek-plane){filter:brightness(.49) saturate(.72)}
+.people.is-evening :is(.exco-back-grove,.exco-edge-tree,.exco-tree,.exco-ground-detail){filter:brightness(.56) saturate(.82)}
+.people.is-evening .editor-added-asset:not(.exco-scene-lamp){filter:brightness(.59) saturate(.84)}
+.people.is-evening .exco-station-art{filter:brightness(.87) saturate(.91)}
+.exco-lamp-halo::before{background:radial-gradient(ellipse closest-side at 50% 50%,var(--legacy-color-121) 0%,var(--legacy-color-122) 9%,var(--legacy-color-123) 27%,var(--legacy-color-124) 52%,var(--legacy-color-125) 80%,var(--legacy-color-126) 100%)}
+.exco-lamp-pool::before{background:radial-gradient(ellipse closest-side at 50% 40%,var(--legacy-color-127) 0%,var(--legacy-color-128) 27%,var(--legacy-color-129) 55%,var(--legacy-color-130) 80%,var(--legacy-color-131) 100%)}
+@keyframes woodland-lamp-glow{0%,100%{opacity:.9}43%{opacity:1}72%{opacity:.94}}
+
+/* The switch's pressed state means this lantern is ON. Forest fixtures can
+   still illuminate the scene when the main switch puts the site to sleep. */
+body #people .woodland-lantern-button[aria-pressed='true'] .lantern-frame-visual{
+  background-position:0% 0%;transform:translate(-57.384442%,0);
+  animation-name:lantern-paper-frames-lit;animation-duration:1.4s;
+}
+body #people .woodland-lantern-button[aria-pressed='false'] .lantern-frame-visual{
+  background-position:0% 100%;transform:translate(-58.512965%,.901917%);
+  animation-name:lantern-paper-frames-off;animation-duration:5.6s;
+}
+body #people .woodland-lantern-button .lantern-frames-still>.lantern-frame-visual{animation:none}
+@media(prefers-reduced-motion:reduce){
+  .people{transition:none}
+  body #people .woodland-lantern-button .lantern-frame-visual{animation:none!important}
+}
+
+
+
+
+
+/* UI around the saved woodland. ID bridges override renderer ink/type only. */
+.people-intro,.people-heading{position:relative;max-width:1160px;margin-inline:auto}
+.people .section-topline,.people .section-heading{max-width:1160px;margin-inline:auto;padding-inline:var(--gutter)}
+.people .section-heading{margin-bottom:var(--s-6)}
+.people .crew-click-note{margin-top:var(--s-4);font:400 var(--t-lede)/var(--lh-lede) var(--f-body);max-width:var(--measure);color:inherit}
+.crew-roster{position:relative;margin:var(--s-6) auto var(--s-7);padding-inline:var(--gutter);max-width:1160px}
+.crew-roster ul{list-style:none;margin-block:0;padding-block:var(--s-1)}
+.crew-roster:empty{min-height:var(--roster-pending-height)}
+#people[data-forest-pending] #committee-grid[hidden]{display:block!important;width:100%;max-width:560px;aspect-ratio:var(--forest-pending-ratio);margin-inline:auto}
+.roster-chip{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:var(--s-1);height:52px;min-width:120px;padding:var(--s-2) var(--chip-pad);border:var(--border-width) solid var(--c-line);border-radius:var(--r-btn);background:var(--c-card);color:var(--c-ink);text-align:left;white-space:nowrap}
+.roster-chip-name{font:700 var(--t-roster)/1 var(--f-display)}
+.roster-chip-role{font:600 var(--t-label)/1 var(--f-body);color:var(--c-muted);text-transform:none;letter-spacing:0}
+.roster-chip[aria-pressed=true]{border-color:var(--c-butter-deep);background:var(--c-butter)}
+#people .has-person-cutout .exco-person-pose{filter:var(--sticker) var(--sh-cutout)}
+.exco-person-role,.forest-label-role{font:600 var(--t-label)/1.25 var(--f-body)}
+.exco-person-name,.forest-label-name{font-size:var(--t-forest-name)}
+#people{padding-top:var(--section-y);background:var(--c-paper);color:var(--c-ink);transition:background-color var(--d-scene) var(--e-out),color var(--d-scene) var(--e-out)}
+#people>.section-topline,#people>.section-heading{padding-inline:var(--gutter);max-width:1160px}
+#people>.section-topline,#people .term-badge{font-size:var(--t-label)}
+#people .section-heading h2{font:800 var(--t-h2)/var(--lh-heading) var(--f-display);letter-spacing:var(--tr-display)}
+#people .crew-click-note{font:400 var(--t-lede)/var(--lh-lede) var(--f-body);color:inherit;max-width:var(--measure);margin-top:var(--s-4)}
+#people .section-heading h2 br{display:block}
+#people .crew-word{display:inline-block;margin:0 0 0 12%;font:700 var(--t-h2)/1 var(--f-hand);color:inherit;transform:rotate(-3deg);letter-spacing:var(--tr-display)}
+#people .term-badge{padding:var(--s-1) var(--stamp-pad);border:var(--border-width) solid currentColor;border-radius:var(--s-1);background:none;color:var(--c-moss);rotate:var(--stamp-angle)}
+#people.is-evening{background:var(--c-forest-ground);color:var(--c-forest-ink)}
+#people.is-evening :is(.section-topline,.section-heading,.crew-word,.term-badge,.woodland-lantern-hint,.woodland-lantern-arrow){color:var(--c-forest-ink)}
+body #people .woodland-lantern-dock{position:relative;height:100px;padding-inline:var(--gutter);transform:none;max-width:1160px;align-items:center;margin:var(--s-4) auto}
+body #people .woodland-lantern-hint{font-size:var(--t-note)}
+@media(min-width:900px){#people .forest-canvas-frame{max-width:560px}#people{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}#people>.section-topline{grid-column:1/-1;width:100%}#people>.section-heading{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:var(--s-4);align-content:start;max-width:640px;width:100%;margin-right:0}#people .section-heading h2{grid-column:1}#people .crew-click-note{grid-column:1;grid-row:2}#people>.crew-roster{grid-column:2;grid-row:2;margin-left:0;margin-top:0;width:100%;max-width:580px}#people .forest-canvas-frame{grid-column:1/-1}.crew-roster .chip-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible;mask-image:none;margin-inline:0;padding-inline:0}.roster-chip{width:100%}body #people .woodland-lantern-dock{max-width:140px;grid-column:2;grid-row:1/3;margin:0;padding:0}}
+@media(min-width:900px){.people-intro{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--s-7);width:100%;padding-inline:var(--gutter)}.people-intro>.section-topline{grid-column:1/-1;width:100%;padding-inline:0}.people-intro>.section-heading{grid-column:1;grid-row:2/4;align-self:start;width:100%;margin:0;padding-inline:0}.people-intro>.crew-roster{grid-column:2;grid-row:3;width:100%;padding-inline:0;margin:var(--s-4) 0 var(--s-7)}body #people .people-intro>.woodland-lantern-dock{grid-column:2;grid-row:2;max-width:180px;align-self:start;justify-self:end}}
+@media(prefers-reduced-motion:reduce){#people{transition:none}}
+/* Spotlight is painted above the landscape; saved asset geometry is untouched.
+   The rendered name already uses ::after for its link arrow, so its underline
+   uses ::before instead. These ID bridges match the existing renderer cascade. */
+.exco-world.is-spotlit::after{content:'';position:absolute;inset:0;z-index:calc(var(--z-labels) - 1);pointer-events:none;background:radial-gradient(circle 120px at var(--spot-x) var(--spot-y),var(--c-spot-warm) 0%,var(--c-spot-clear) 55%,var(--c-scrim) 100%);animation:spot-in var(--d-slow) var(--e-out) both}
+.exco-person.is-spotlit .exco-person-character{animation:person-hop var(--d-hop) var(--e-spring) both}
+#people .is-spotlit:is(.exco-person,.forest-label-item) :is(.exco-person-name,.forest-label-name)::before{content:'';position:absolute;left:0;right:0;bottom:-3px;height:3px;border-radius:var(--r-pill);background:var(--c-butter);transform-origin:left;animation:name-underline var(--d-base) var(--e-out) both}
+@keyframes spot-in{from{opacity:0}to{opacity:1}}
+@keyframes person-hop{0%,100%{translate:0 0}45%{translate:0 -6px}}
+@keyframes name-underline{from{scale:0 1}to{scale:1 1}}
+@media(prefers-reduced-motion:reduce){.exco-world.is-spotlit::after,.exco-person.is-spotlit .exco-person-character,#people .is-spotlit:is(.exco-person,.forest-label-item) :is(.exco-person-name,.forest-label-name)::before{animation:none}}

@@ -1,0 +1,41 @@
+/* The same bench and hanging attachments, with the club explained first. */
+.hero{position:relative;isolation:isolate;overflow:visible;color:var(--c-ink);background:var(--c-paper)}
+.hero-inner{display:flex;flex-direction:column;align-items:stretch;width:100%;max-width:1160px;margin-inline:auto;padding:var(--s-5) var(--gutter) 0;gap:0}
+.hero-copy{width:100%;min-width:0}
+.hero-title-top{display:flex;align-items:center;gap:var(--s-3)}
+.hero-title-top>span{display:block}
+.hero-title-top em{display:block;font:700 var(--t-hero-note)/1 var(--f-hand);font-style:normal;white-space:nowrap;rotate:-2deg}
+.hero .mischief{display:block;color:var(--c-ink);margin:0;padding:0;font:inherit;letter-spacing:var(--tr-display);background:none;box-shadow:none;transform:none}
+.mischief>span{color:var(--c-clay)}
+.hero-copy>.t-lede{margin-top:14px;max-width:32ch}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:18px}
+.hero-workshop-scene{position:relative;isolation:isolate;container-type:inline-size;width:min(100%,520px);max-width:520px;aspect-ratio:1374/1145;margin:var(--s-3) auto 0;overflow:visible}
+.hero-workshop-art{position:absolute;inset:0;z-index:3;display:block;width:100%;height:100%;aspect-ratio:1374/1145;object-fit:contain;pointer-events:none;user-select:none;-webkit-user-drag:none;animation:workshop-bear-breathe 5.7s ease-in-out infinite;animation-play-state:paused}
+.hero-workshop-active .hero-workshop-art{animation-play-state:running}
+.hero-hanging-piece{position:absolute;z-index:2;display:block;min-width:44px;min-height:44px;height:auto;margin:0;padding:0;color:var(--c-ink);background:transparent;border:0;border-radius:0;box-shadow:none;appearance:none;cursor:pointer;touch-action:manipulation}
+.hero-piece-bag{left:7.6%;top:19%;width:28.5%}.hero-piece-rug{left:66%;top:15%;width:23%}
+.hero-piece-sway{display:block;width:100%;line-height:0;animation-play-state:paused;animation-iteration-count:infinite;animation-timing-function:ease-in-out}
+.hero-piece-bag .hero-piece-sway{transform-origin:49% 4%;animation-name:workshop-bag-sway;animation-duration:5.2s;animation-delay:-.8s}
+.hero-piece-rug .hero-piece-sway{transform-origin:51.5% 12%;animation-name:workshop-rug-sway;animation-duration:6.4s;animation-delay:-2.1s}
+.hero-piece-sway img{display:block;width:100%;height:auto;object-fit:contain;filter:var(--sticker) var(--sh-cutout);user-select:none;-webkit-user-drag:none}
+.hero-workshop-active .hero-piece-sway{animation-play-state:running}
+.hero-hanging-piece:focus-visible .hero-piece-sway{animation-play-state:paused}
+.hero-piece-label{position:absolute;left:50%;display:block;width:max-content;padding:0;color:var(--c-ink);font:700 var(--t-piece-note)/1 var(--f-hand);white-space:nowrap;transform:translateX(-50%) rotate(-3deg)}
+.hero-piece-bag .hero-piece-label{top:-18cqw}.hero-piece-rug .hero-piece-label{top:-15cqw;transform:translateX(-50%) rotate(2deg)}
+.hero-hanging-piece:focus-visible .hero-piece-label{text-decoration:underline;text-underline-offset:var(--s-1)}
+.craft-strip{padding:var(--s-3) 0;background:var(--c-ink);color:var(--c-on-ink);overflow:hidden}
+.craft-strip>.chip-row{margin-inline:0;padding-inline:var(--gutter)}
+.craft-strip .chip{color:var(--c-on-ink);border-color:var(--c-ink-chip)}
+.hero-workshop-scene:not(.is-ready) .hero-piece-sway{opacity:0}
+.hero-piece-bag{--arrival-angle:-8deg;--arrival-delay:0ms}.hero-piece-rug{--arrival-angle:8deg;--arrival-delay:120ms}
+.hero-workshop-scene.is-ready .hero-hanging-piece{animation:workshop-piece-arrive var(--d-arrival) var(--e-spring) var(--arrival-delay) both}
+.craft-strip.is-arriving .chip{animation:craft-chip-arrive var(--d-arrival) var(--e-out) both;animation-delay:calc(var(--chip-order,0)*40ms)}
+.craft-strip .chip:nth-child(2){--chip-order:1}.craft-strip .chip:nth-child(3){--chip-order:2}.craft-strip .chip:nth-child(4){--chip-order:3}.craft-strip .chip:nth-child(5){--chip-order:4}.craft-strip .chip:nth-child(6){--chip-order:5}.craft-strip .chip:nth-child(7){--chip-order:6}
+@keyframes workshop-piece-arrive{from{translate:0 -24px;rotate:var(--arrival-angle)}to{translate:0 0;rotate:0deg}}
+@keyframes craft-chip-arrive{from{translate:0 6px;opacity:.55}to{translate:0 0;opacity:1}}
+@media(min-width:900px){.hero-inner{display:grid;grid-template-columns:minmax(0,.46fr) minmax(0,.54fr);align-items:center;gap:var(--s-7);padding-block:var(--s-7)}.hero-workshop-scene{margin:0;grid-column:2;grid-row:1}.hero-copy{grid-column:1;grid-row:1}}
+@media(hover:hover){.hero-hanging-piece:hover .hero-piece-sway{animation-play-state:paused}.hero-hanging-piece:hover .hero-piece-label{text-decoration:underline}}
+@keyframes workshop-bear-breathe{0%,15%,100%{translate:0 0}42%{translate:0 -1.6px}72%{translate:0 -.3px}}
+@keyframes workshop-bag-sway{0%,100%{transform:rotate(-1deg)}18%{transform:rotate(4deg)}42%{transform:rotate(-3deg)}63%{transform:rotate(2.5deg)}83%{transform:rotate(-2deg)}}
+@keyframes workshop-rug-sway{0%,100%{transform:rotate(.6deg)}22%{transform:rotate(-2.8deg)}48%{transform:rotate(2.2deg)}76%{transform:rotate(-1.4deg)}}
+@media(prefers-reduced-motion:reduce){.hero-workshop-scene:not(.is-ready) .hero-piece-sway{opacity:1}.hero-piece-sway,.hero-workshop-art,.hero-workshop-scene.is-ready .hero-hanging-piece,.craft-strip.is-arriving .chip{animation:none;transform:none;translate:none;rotate:none;opacity:1}}

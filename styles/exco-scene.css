@@ -54,6 +54,7 @@
 .exco-person-role{display:block;margin:5px auto 0;max-width:160px;font:700 12px/1.25 var(--font);text-wrap:balance}
 .exco-person-name,.exco-person-role{paint-order:stroke fill;-webkit-text-stroke:1.5px #dedbb9;text-shadow:0 1px 1px #f7edcd70}
 .exco-person-role{-webkit-text-stroke:1px #dedbb9}
+.exco-person-character{position:absolute;inset:0;display:block;transform-origin:50% 100%}
 .exco-person-art{position:absolute;inset:0;display:block;z-index:4;transform-origin:50% 98%;transition:transform .22s ease;filter:none}
 .exco-person-pose{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center bottom}
 .exco-person-ground{position:absolute;bottom:0;left:27%;width:46%;height:6px;border-radius:50%;background:#34483940;z-index:3}
@@ -120,7 +121,7 @@
 .exco-world-stage[data-scene='0'] .exco-back-grove{left:45%}
 }
 @media(prefers-reduced-motion:reduce){
-.exco-back-grove,.exco-edge-tree,.exco-near-plants,.exco-person-art{transform:none!important;transition:none}
+.exco-back-grove:not(.forest-depth),.exco-edge-tree:not(.forest-depth),.exco-near-plants:not(.forest-depth),.exco-person-art{transform:none!important;transition:none}
 .exco-path-plane,.exco-creek-plane{transform:none}.exco-tree{transform:translate(-50%,-100%)}.exco-ground-detail{transform:translate(-50%,-100%)}
 .exco-fireflies i,.exco-lantern-toggle::after,.is-evening .exco-lamp-halo::before,.is-evening .exco-lamp-pool::before{animation:none}
 .exco-scene-lamp{transform:translate(-50%,0)}

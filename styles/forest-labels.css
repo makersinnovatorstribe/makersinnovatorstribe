@@ -1,4 +1,56 @@
 /* Labels live beside the landscape, above its complete stacking context. */
+#committee-grid {
+  --crew-label-paper: #eee7caa6;
+  --crew-label-paper-soft: #eee7ca4d;
+  --crew-label-paper-clear: #eee7ca00;
+  --crew-label-ink: #20384a;
+}
+
+#committee-grid.is-evening,
+html[data-theme='dark'] #committee-grid {
+  --crew-label-paper: #293e3280;
+  --crew-label-paper-soft: #293e3230;
+  --crew-label-paper-clear: #293e3200;
+  --crew-label-ink: #fff9e6;
+}
+
+#committee-grid :is(.exco-person-label, .forest-label-item) {
+  isolation: isolate;
+  color: var(--crew-label-ink);
+  font-size: 0;
+  line-height: 0;
+}
+
+/* A feathered paper wash joins the name and role without a visible label box.
+   It is painted behind their original geometry, preserving saved placements. */
+#committee-grid :is(.exco-person-label, .forest-label-item)::before {
+  content: '';
+  position: absolute;
+  inset: -12px -12px -10px;
+  z-index: -1;
+  background: radial-gradient(ellipse closest-side at 50% 48%, var(--crew-label-paper) 0%, var(--crew-label-paper) 20%, var(--crew-label-paper-soft) 65%, var(--crew-label-paper-clear) 100%);
+  pointer-events: none;
+}
+
+#committee-grid :is(.exco-person-name, .forest-label-name) {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  isolation: isolate;
+}
+
+#committee-grid .exco-person-label :is(.exco-person-name, .exco-person-role) {
+  -webkit-text-stroke: .35px var(--crew-label-paper);
+  text-shadow: 0 1px 2px var(--crew-label-paper);
+}
+
+#committee-grid :is(.exco-person-role, .forest-label-role) {
+  position: relative;
+  width: fit-content;
+  max-width: 120px;
+  isolation: isolate;
+}
+
 #committee-grid .forest-label-overlay {
   position: absolute;
   inset: 0;

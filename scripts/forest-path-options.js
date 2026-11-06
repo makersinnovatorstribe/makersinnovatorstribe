@@ -57,8 +57,8 @@
     {
       id: 'paper-trail-treehouse', category: 'path', kind: 'image',
       label: 'Earlier paper trail · treehouse',
-      description: 'The original first clearing trail: warm paper, a narrow soil edge and a few small stones.',
-      src: history + 'path-01.svg', width: 400, height: 800
+      description: 'The original first clearing trail: warm paper, a narrow soil edge and a few small stones, with a smooth lower exit.',
+      src: history + 'path-01-tail-v2.svg', width: 400, height: 800
     },
     {
       id: 'paper-trail-camp', category: 'path', kind: 'image',

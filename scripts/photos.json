@@ -16,10 +16,14 @@
     "originalWidth": 1600,
     "originalHeight": 1200,
     "bytes": 216248,
-    "thumbnail": "assets/images/photos/thumbs/mascot-rug.webp",
-    "thumbnailWidth": 640,
-    "thumbnailHeight": 480,
-    "thumbnailBytes": 48470
+    "thumbnail": "assets/images/photos/delivery-v2/thumbnail/mascot-rug.webp",
+    "thumbnailWidth": 480,
+    "thumbnailHeight": 360,
+    "thumbnailBytes": 29956,
+    "detail": "assets/images/photos/delivery-v2/detail/mascot-rug.webp",
+    "detailWidth": 960,
+    "detailHeight": 720,
+    "detailBytes": 108380
   },
   {
     "id": "strawberry-bags",
@@ -39,10 +43,14 @@
     "originalWidth": 4032,
     "originalHeight": 3024,
     "bytes": 403360,
-    "thumbnail": "assets/images/photos/thumbs/strawberry-bags.webp",
-    "thumbnailWidth": 640,
-    "thumbnailHeight": 480,
-    "thumbnailBytes": 98620
+    "thumbnail": "assets/images/photos/delivery-v2/thumbnail/strawberry-bags.webp",
+    "thumbnailWidth": 480,
+    "thumbnailHeight": 360,
+    "thumbnailBytes": 83400,
+    "detail": "assets/images/photos/delivery-v2/detail/strawberry-bags.webp",
+    "detailWidth": 960,
+    "detailHeight": 720,
+    "detailBytes": 207854
   },
   {
     "id": "creature-keychain",
@@ -62,10 +70,14 @@
     "originalWidth": 2048,
     "originalHeight": 1536,
     "bytes": 84336,
-    "thumbnail": "assets/images/photos/thumbs/creature-keychain.webp",
-    "thumbnailWidth": 640,
-    "thumbnailHeight": 480,
-    "thumbnailBytes": 22530
+    "thumbnail": "assets/images/photos/delivery-v2/thumbnail/creature-keychain.webp",
+    "thumbnailWidth": 480,
+    "thumbnailHeight": 360,
+    "thumbnailBytes": 15288,
+    "detail": "assets/images/photos/delivery-v2/detail/creature-keychain.webp",
+    "detailWidth": 960,
+    "detailHeight": 720,
+    "detailBytes": 42542
   },
   {
     "id": "layered-wood",
@@ -85,10 +97,14 @@
     "originalWidth": 1536,
     "originalHeight": 2048,
     "bytes": 260666,
-    "thumbnail": "assets/images/photos/thumbs/layered-wood.webp",
-    "thumbnailWidth": 480,
-    "thumbnailHeight": 640,
-    "thumbnailBytes": 54098
+    "thumbnail": "assets/images/photos/delivery-v2/thumbnail/layered-wood.webp",
+    "thumbnailWidth": 360,
+    "thumbnailHeight": 480,
+    "thumbnailBytes": 31512,
+    "detail": "assets/images/photos/delivery-v2/detail/layered-wood.webp",
+    "detailWidth": 720,
+    "detailHeight": 960,
+    "detailBytes": 125550
   },
   {
     "id": "drawstring-pouches",
@@ -107,10 +123,14 @@
     "originalWidth": 4749,
     "originalHeight": 3562,
     "bytes": 208884,
-    "thumbnail": "assets/images/photos/thumbs/drawstring-pouches.webp",
-    "thumbnailWidth": 640,
-    "thumbnailHeight": 480,
-    "thumbnailBytes": 51814
+    "thumbnail": "assets/images/photos/delivery-v2/thumbnail/drawstring-pouches.webp",
+    "thumbnailWidth": 480,
+    "thumbnailHeight": 360,
+    "thumbnailBytes": 34688,
+    "detail": "assets/images/photos/delivery-v2/detail/drawstring-pouches.webp",
+    "detailWidth": 960,
+    "detailHeight": 720,
+    "detailBytes": 105318
   },
   {
     "id": "leather-cutting",
@@ -130,10 +150,14 @@
     "originalWidth": 1600,
     "originalHeight": 874,
     "bytes": 88348,
-    "thumbnail": "assets/images/photos/thumbs/leather-cutting.webp",
-    "thumbnailWidth": 640,
-    "thumbnailHeight": 350,
-    "thumbnailBytes": 22734
+    "thumbnail": "assets/images/photos/delivery-v2/thumbnail/leather-cutting.webp",
+    "thumbnailWidth": 480,
+    "thumbnailHeight": 262,
+    "thumbnailBytes": 14638,
+    "detail": "assets/images/photos/delivery-v2/detail/leather-cutting.webp",
+    "detailWidth": 960,
+    "detailHeight": 524,
+    "detailBytes": 43740
   },
   {
     "id": "embroidery-learning",
@@ -152,10 +176,14 @@
     "originalWidth": 4080,
     "originalHeight": 3060,
     "bytes": 237340,
-    "thumbnail": "assets/images/photos/thumbs/embroidery-learning.webp",
-    "thumbnailWidth": 640,
-    "thumbnailHeight": 480,
-    "thumbnailBytes": 44568
+    "thumbnail": "assets/images/photos/delivery-v2/thumbnail/embroidery-learning.webp",
+    "thumbnailWidth": 480,
+    "thumbnailHeight": 360,
+    "thumbnailBytes": 27998,
+    "detail": "assets/images/photos/delivery-v2/detail/embroidery-learning.webp",
+    "detailWidth": 960,
+    "detailHeight": 720,
+    "detailBytes": 102552
   },
   {
     "id": "rug-trimming",
@@ -174,10 +202,14 @@
     "originalWidth": 4080,
     "originalHeight": 3060,
     "bytes": 384480,
-    "thumbnail": "assets/images/photos/thumbs/rug-trimming.webp",
-    "thumbnailWidth": 640,
-    "thumbnailHeight": 480,
-    "thumbnailBytes": 64798
+    "thumbnail": "assets/images/photos/delivery-v2/thumbnail/rug-trimming.webp",
+    "thumbnailWidth": 480,
+    "thumbnailHeight": 360,
+    "thumbnailBytes": 38630,
+    "detail": "assets/images/photos/delivery-v2/detail/rug-trimming.webp",
+    "detailWidth": 960,
+    "detailHeight": 720,
+    "detailBytes": 160738
   },
   {
     "id": "rug-community",
@@ -196,10 +228,14 @@
     "originalWidth": 4000,
     "originalHeight": 3000,
     "bytes": 221890,
-    "thumbnail": "assets/images/photos/thumbs/rug-community.webp",
-    "thumbnailWidth": 640,
-    "thumbnailHeight": 480,
-    "thumbnailBytes": 48326
+    "thumbnail": "assets/images/photos/delivery-v2/thumbnail/rug-community.webp",
+    "thumbnailWidth": 480,
+    "thumbnailHeight": 360,
+    "thumbnailBytes": 30644,
+    "detail": "assets/images/photos/delivery-v2/detail/rug-community.webp",
+    "detailWidth": 960,
+    "detailHeight": 720,
+    "detailBytes": 102764
   },
   {
     "id": "printed-plane",
@@ -219,10 +255,14 @@
     "originalWidth": 2048,
     "originalHeight": 1536,
     "bytes": 39908,
-    "thumbnail": "assets/images/photos/thumbs/printed-plane.webp",
-    "thumbnailWidth": 640,
-    "thumbnailHeight": 480,
-    "thumbnailBytes": 12304
+    "thumbnail": "assets/images/photos/delivery-v2/thumbnail/printed-plane.webp",
+    "thumbnailWidth": 480,
+    "thumbnailHeight": 360,
+    "thumbnailBytes": 8794,
+    "detail": "assets/images/photos/delivery-v2/detail/printed-plane.webp",
+    "detailWidth": 960,
+    "detailHeight": 720,
+    "detailBytes": 22198
   },
   {
     "id": "strawberry-session",
@@ -242,10 +282,14 @@
     "originalWidth": 1280,
     "originalHeight": 960,
     "bytes": 118438,
-    "thumbnail": "assets/images/photos/thumbs/strawberry-session.webp",
-    "thumbnailWidth": 640,
-    "thumbnailHeight": 480,
-    "thumbnailBytes": 41602
+    "thumbnail": "assets/images/photos/delivery-v2/thumbnail/strawberry-session.webp",
+    "thumbnailWidth": 480,
+    "thumbnailHeight": 360,
+    "thumbnailBytes": 27514,
+    "detail": "assets/images/photos/delivery-v2/detail/strawberry-session.webp",
+    "detailWidth": 960,
+    "detailHeight": 720,
+    "detailBytes": 80506
   },
   {
     "id": "strawberry-detail",
@@ -265,10 +309,14 @@
     "originalWidth": 4032,
     "originalHeight": 3024,
     "bytes": 84242,
-    "thumbnail": "assets/images/photos/thumbs/strawberry-detail.webp",
-    "thumbnailWidth": 640,
-    "thumbnailHeight": 480,
-    "thumbnailBytes": 23812
+    "thumbnail": "assets/images/photos/delivery-v2/thumbnail/strawberry-detail.webp",
+    "thumbnailWidth": 480,
+    "thumbnailHeight": 360,
+    "thumbnailBytes": 16100,
+    "detail": "assets/images/photos/delivery-v2/detail/strawberry-detail.webp",
+    "detailWidth": 960,
+    "detailHeight": 720,
+    "detailBytes": 44692
   },
   {
     "id": "wood-workshop",
@@ -288,10 +336,14 @@
     "originalWidth": 1600,
     "originalHeight": 1200,
     "bytes": 393720,
-    "thumbnail": "assets/images/photos/thumbs/wood-workshop.webp",
-    "thumbnailWidth": 640,
-    "thumbnailHeight": 480,
-    "thumbnailBytes": 72286
+    "thumbnail": "assets/images/photos/delivery-v2/thumbnail/wood-workshop.webp",
+    "thumbnailWidth": 480,
+    "thumbnailHeight": 360,
+    "thumbnailBytes": 39688,
+    "detail": "assets/images/photos/delivery-v2/detail/wood-workshop.webp",
+    "detailWidth": 960,
+    "detailHeight": 720,
+    "detailBytes": 187110
   },
   {
     "id": "wood-making",
@@ -311,10 +363,14 @@
     "originalWidth": 1536,
     "originalHeight": 2048,
     "bytes": 183094,
-    "thumbnail": "assets/images/photos/thumbs/wood-making.webp",
-    "thumbnailWidth": 480,
-    "thumbnailHeight": 640,
-    "thumbnailBytes": 48816
+    "thumbnail": "assets/images/photos/delivery-v2/thumbnail/wood-making.webp",
+    "thumbnailWidth": 360,
+    "thumbnailHeight": 480,
+    "thumbnailBytes": 31982,
+    "detail": "assets/images/photos/delivery-v2/detail/wood-making.webp",
+    "detailWidth": 720,
+    "detailHeight": 960,
+    "detailBytes": 96790
   },
   {
     "id": "embroidery-prep",
@@ -333,10 +389,14 @@
     "originalWidth": 4080,
     "originalHeight": 3060,
     "bytes": 257504,
-    "thumbnail": "assets/images/photos/thumbs/embroidery-prep.webp",
-    "thumbnailWidth": 640,
-    "thumbnailHeight": 480,
-    "thumbnailBytes": 53374
+    "thumbnail": "assets/images/photos/delivery-v2/thumbnail/embroidery-prep.webp",
+    "thumbnailWidth": 480,
+    "thumbnailHeight": 360,
+    "thumbnailBytes": 33130,
+    "detail": "assets/images/photos/delivery-v2/detail/embroidery-prep.webp",
+    "detailWidth": 960,
+    "detailHeight": 720,
+    "detailBytes": 117614
   },
   {
     "id": "embroidery-session",
@@ -355,10 +415,14 @@
     "originalWidth": 4080,
     "originalHeight": 3060,
     "bytes": 272060,
-    "thumbnail": "assets/images/photos/thumbs/embroidery-session.webp",
-    "thumbnailWidth": 640,
-    "thumbnailHeight": 480,
-    "thumbnailBytes": 53742
+    "thumbnail": "assets/images/photos/delivery-v2/thumbnail/embroidery-session.webp",
+    "thumbnailWidth": 480,
+    "thumbnailHeight": 360,
+    "thumbnailBytes": 33374,
+    "detail": "assets/images/photos/delivery-v2/detail/embroidery-session.webp",
+    "detailWidth": 960,
+    "detailHeight": 720,
+    "detailBytes": 121950
   },
   {
     "id": "leather-workshop",
@@ -378,10 +442,14 @@
     "originalWidth": 1600,
     "originalHeight": 1200,
     "bytes": 283982,
-    "thumbnail": "assets/images/photos/thumbs/leather-workshop.webp",
-    "thumbnailWidth": 640,
-    "thumbnailHeight": 480,
-    "thumbnailBytes": 69540
+    "thumbnail": "assets/images/photos/delivery-v2/thumbnail/leather-workshop.webp",
+    "thumbnailWidth": 480,
+    "thumbnailHeight": 360,
+    "thumbnailBytes": 42718,
+    "detail": "assets/images/photos/delivery-v2/detail/leather-workshop.webp",
+    "detailWidth": 960,
+    "detailHeight": 720,
+    "detailBytes": 148172
   },
   {
     "id": "leather-session",
@@ -401,10 +469,14 @@
     "originalWidth": 1200,
     "originalHeight": 1600,
     "bytes": 284662,
-    "thumbnail": "assets/images/photos/thumbs/leather-session.webp",
-    "thumbnailWidth": 480,
-    "thumbnailHeight": 640,
-    "thumbnailBytes": 62844
+    "thumbnail": "assets/images/photos/delivery-v2/thumbnail/leather-session.webp",
+    "thumbnailWidth": 360,
+    "thumbnailHeight": 480,
+    "thumbnailBytes": 36564,
+    "detail": "assets/images/photos/delivery-v2/detail/leather-session.webp",
+    "detailWidth": 720,
+    "detailHeight": 960,
+    "detailBytes": 144280
   },
   {
     "id": "printed-projects",
@@ -424,10 +496,14 @@
     "originalWidth": 1536,
     "originalHeight": 2048,
     "bytes": 84014,
-    "thumbnail": "assets/images/photos/thumbs/printed-projects.webp",
-    "thumbnailWidth": 480,
-    "thumbnailHeight": 640,
-    "thumbnailBytes": 19912
+    "thumbnail": "assets/images/photos/delivery-v2/thumbnail/printed-projects.webp",
+    "thumbnailWidth": 360,
+    "thumbnailHeight": 480,
+    "thumbnailBytes": 12322,
+    "detail": "assets/images/photos/delivery-v2/detail/printed-projects.webp",
+    "detailWidth": 720,
+    "detailHeight": 960,
+    "detailBytes": 41022
   },
   {
     "id": "printed-object",
@@ -447,10 +523,14 @@
     "originalWidth": 2048,
     "originalHeight": 1536,
     "bytes": 116500,
-    "thumbnail": "assets/images/photos/thumbs/printed-object.webp",
-    "thumbnailWidth": 640,
-    "thumbnailHeight": 480,
-    "thumbnailBytes": 24776
+    "thumbnail": "assets/images/photos/delivery-v2/thumbnail/printed-object.webp",
+    "thumbnailWidth": 480,
+    "thumbnailHeight": 360,
+    "thumbnailBytes": 15702,
+    "detail": "assets/images/photos/delivery-v2/detail/printed-object.webp",
+    "detailWidth": 960,
+    "detailHeight": 720,
+    "detailBytes": 52698
   },
   {
     "id": "bottle-lamp-making",
@@ -469,10 +549,14 @@
     "originalWidth": 3000,
     "originalHeight": 4000,
     "bytes": 193390,
-    "thumbnail": "assets/images/photos/thumbs/bottle-lamp-making.webp",
-    "thumbnailWidth": 480,
-    "thumbnailHeight": 640,
-    "thumbnailBytes": 45386
+    "thumbnail": "assets/images/photos/delivery-v2/thumbnail/bottle-lamp-making.webp",
+    "thumbnailWidth": 360,
+    "thumbnailHeight": 480,
+    "thumbnailBytes": 29980,
+    "detail": "assets/images/photos/delivery-v2/detail/bottle-lamp-making.webp",
+    "detailWidth": 720,
+    "detailHeight": 960,
+    "detailBytes": 92066
   },
   {
     "id": "bottle-lamp",
@@ -491,10 +575,14 @@
     "originalWidth": 3000,
     "originalHeight": 4000,
     "bytes": 137408,
-    "thumbnail": "assets/images/photos/thumbs/bottle-lamp.webp",
-    "thumbnailWidth": 480,
-    "thumbnailHeight": 640,
-    "thumbnailBytes": 33244
+    "thumbnail": "assets/images/photos/delivery-v2/thumbnail/bottle-lamp.webp",
+    "thumbnailWidth": 360,
+    "thumbnailHeight": 480,
+    "thumbnailBytes": 21972,
+    "detail": "assets/images/photos/delivery-v2/detail/bottle-lamp.webp",
+    "detailWidth": 720,
+    "detailHeight": 960,
+    "detailBytes": 66250
   },
   {
     "id": "bottle-lamp-detail",
@@ -513,10 +601,14 @@
     "originalWidth": 3000,
     "originalHeight": 4000,
     "bytes": 184734,
-    "thumbnail": "assets/images/photos/thumbs/bottle-lamp-detail.webp",
-    "thumbnailWidth": 480,
-    "thumbnailHeight": 640,
-    "thumbnailBytes": 44964
+    "thumbnail": "assets/images/photos/delivery-v2/thumbnail/bottle-lamp-detail.webp",
+    "thumbnailWidth": 360,
+    "thumbnailHeight": 480,
+    "thumbnailBytes": 29478,
+    "detail": "assets/images/photos/delivery-v2/detail/bottle-lamp-detail.webp",
+    "detailWidth": 720,
+    "detailHeight": 960,
+    "detailBytes": 91086
   },
   {
     "id": "pouch-making",
@@ -535,10 +627,14 @@
     "originalWidth": 4000,
     "originalHeight": 3000,
     "bytes": 181102,
-    "thumbnail": "assets/images/photos/thumbs/pouch-making.webp",
-    "thumbnailWidth": 640,
-    "thumbnailHeight": 480,
-    "thumbnailBytes": 43338
+    "thumbnail": "assets/images/photos/delivery-v2/thumbnail/pouch-making.webp",
+    "thumbnailWidth": 480,
+    "thumbnailHeight": 360,
+    "thumbnailBytes": 28708,
+    "detail": "assets/images/photos/delivery-v2/detail/pouch-making.webp",
+    "detailWidth": 960,
+    "detailHeight": 720,
+    "detailBytes": 89858
   },
   {
     "id": "moru-dolls",
@@ -557,10 +653,14 @@
     "originalWidth": 2048,
     "originalHeight": 1536,
     "bytes": 287206,
-    "thumbnail": "assets/images/photos/thumbs/moru-dolls.webp",
-    "thumbnailWidth": 640,
-    "thumbnailHeight": 480,
-    "thumbnailBytes": 68574
+    "thumbnail": "assets/images/photos/delivery-v2/thumbnail/moru-dolls.webp",
+    "thumbnailWidth": 480,
+    "thumbnailHeight": 360,
+    "thumbnailBytes": 43800,
+    "detail": "assets/images/photos/delivery-v2/detail/moru-dolls.webp",
+    "detailWidth": 960,
+    "detailHeight": 720,
+    "detailBytes": 145514
   },
   {
     "id": "tufting-workshop",
@@ -579,10 +679,14 @@
     "originalWidth": 4080,
     "originalHeight": 2296,
     "bytes": 176728,
-    "thumbnail": "assets/images/photos/thumbs/tufting-workshop.webp",
-    "thumbnailWidth": 640,
-    "thumbnailHeight": 360,
-    "thumbnailBytes": 36604
+    "thumbnail": "assets/images/photos/delivery-v2/thumbnail/tufting-workshop.webp",
+    "thumbnailWidth": 480,
+    "thumbnailHeight": 270,
+    "thumbnailBytes": 22792,
+    "detail": "assets/images/photos/delivery-v2/detail/tufting-workshop.webp",
+    "detailWidth": 960,
+    "detailHeight": 540,
+    "detailBytes": 80412
   },
   {
     "id": "acrylic-standee",
@@ -602,10 +706,14 @@
     "originalWidth": 1600,
     "originalHeight": 1200,
     "bytes": 267190,
-    "thumbnail": "assets/images/photos/thumbs/acrylic-standee.webp",
-    "thumbnailWidth": 640,
-    "thumbnailHeight": 480,
-    "thumbnailBytes": 53412
+    "thumbnail": "assets/images/photos/delivery-v2/thumbnail/acrylic-standee.webp",
+    "thumbnailWidth": 480,
+    "thumbnailHeight": 360,
+    "thumbnailBytes": 31858,
+    "detail": "assets/images/photos/delivery-v2/detail/acrylic-standee.webp",
+    "detailWidth": 960,
+    "detailHeight": 720,
+    "detailBytes": 129120
   },
   {
     "id": "acrylic-keychains",
@@ -625,10 +733,14 @@
     "originalWidth": 1200,
     "originalHeight": 1600,
     "bytes": 269832,
-    "thumbnail": "assets/images/photos/thumbs/acrylic-keychains.webp",
-    "thumbnailWidth": 480,
-    "thumbnailHeight": 640,
-    "thumbnailBytes": 62030
+    "thumbnail": "assets/images/photos/delivery-v2/thumbnail/acrylic-keychains.webp",
+    "thumbnailWidth": 360,
+    "thumbnailHeight": 480,
+    "thumbnailBytes": 37954,
+    "detail": "assets/images/photos/delivery-v2/detail/acrylic-keychains.webp",
+    "detailWidth": 720,
+    "detailHeight": 960,
+    "detailBytes": 136196
   },
   {
     "id": "cork-coasters",
@@ -648,10 +760,14 @@
     "originalWidth": 1600,
     "originalHeight": 1200,
     "bytes": 139714,
-    "thumbnail": "assets/images/photos/thumbs/cork-coasters.webp",
-    "thumbnailWidth": 640,
-    "thumbnailHeight": 480,
-    "thumbnailBytes": 34178
+    "thumbnail": "assets/images/photos/delivery-v2/thumbnail/cork-coasters.webp",
+    "thumbnailWidth": 480,
+    "thumbnailHeight": 360,
+    "thumbnailBytes": 21618,
+    "detail": "assets/images/photos/delivery-v2/detail/cork-coasters.webp",
+    "detailWidth": 960,
+    "detailHeight": 720,
+    "detailBytes": 69666
   },
   {
     "id": "orientation-community",
@@ -670,9 +786,13 @@
     "originalWidth": 4000,
     "originalHeight": 3000,
     "bytes": 194922,
-    "thumbnail": "assets/images/photos/thumbs/orientation-community.webp",
-    "thumbnailWidth": 640,
-    "thumbnailHeight": 480,
-    "thumbnailBytes": 51324
+    "thumbnail": "assets/images/photos/delivery-v2/thumbnail/orientation-community.webp",
+    "thumbnailWidth": 480,
+    "thumbnailHeight": 360,
+    "thumbnailBytes": 32916,
+    "detail": "assets/images/photos/delivery-v2/detail/orientation-community.webp",
+    "detailWidth": 960,
+    "detailHeight": 720,
+    "detailBytes": 102018
   }
 ]

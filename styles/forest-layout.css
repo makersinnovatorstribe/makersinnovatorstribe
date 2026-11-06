@@ -6,20 +6,83 @@
 #people .forest-composition .section-heading h2{font-size:43px}
 #people .exco-fireflies{z-index:210}
 #people .exco-ground-material[hidden]{display:none}
+/* Reveal each image only after its complete download and decode. Its reserved
+   box, names and the rest of the scene remain available during loading. */
+#people img[data-scene-state]:not([data-scene-state='ready']){visibility:hidden}
 #people .editor-added-asset{position:absolute;left:0;top:0;z-index:6;display:block;height:auto;pointer-events:none;margin:0;transform:none;contain:none}
 #people .editor-added-asset>img{display:block;width:100%;height:100%;object-fit:contain}
 #people .editor-added-asset.exco-scene-lamp{max-width:none;min-width:0}
 #people .editor-added-asset.exco-scene-lamp>.exco-lamp-art{position:absolute;width:200%;max-width:none;height:100%;left:-50%;top:0;object-fit:contain}
 .is-evening .editor-added-asset:not(.exco-scene-lamp){filter:brightness(.73) saturate(.88)}
-.forest-positioned{translate:calc(var(--exco-pointer-x)*-.15) calc(var(--exco-pointer-y)*-.1 + var(--exco-scroll)*-.025)}
-.forest-positioned.exco-ground-detail{translate:calc(var(--exco-pointer-x)*.13) calc(var(--exco-pointer-y)*.09 + var(--exco-scroll)*.02)}
+/* Illumination follows the exact ground silhouette, including its wavy edge.
+   Mask only the light, so trees and artwork keep their authored silhouettes. */
+.forest-light-boundary{position:absolute;inset:0 -50px;z-index:209;pointer-events:none;mask-image:url('../assets/images/woodland-v10/ground-outline.svg');mask-size:100% 100%;mask-repeat:no-repeat}
+.forest-light-stage{position:absolute;pointer-events:none}
+.forest-light-fixture{pointer-events:none}
+.forest-light-source>.exco-lamp-halo,.forest-light-source>.exco-lamp-pool{visibility:hidden}
+.is-evening .forest-light-fixture.forest-ambient-running :is(.exco-lamp-halo,.exco-lamp-pool)::before{animation-play-state:running}
+.is-motion-paused .forest-light-fixture :is(.exco-lamp-halo,.exco-lamp-pool)::before{animation-play-state:paused}
+/* Combined tilt and scroll stay within 9px × 8px of each authored anchor. */
+.forest-depth{--forest-input-x:calc(var(--exco-pointer-x,0px)*var(--forest-depth-x,0));--forest-input-y:calc(var(--exco-pointer-y,0px)*var(--forest-depth-y,0) + var(--exco-scroll,0px)*var(--forest-depth-scroll,0));translate:clamp(-9px,var(--forest-input-x),9px) clamp(-8px,var(--forest-input-y),8px)}
+.forest-ambient{animation:forest-paper-drift var(--forest-idle-duration,9s) ease-in-out infinite;animation-delay:var(--forest-idle-delay,0s);animation-play-state:paused}
+.forest-bear-bob{animation-name:forest-bear-bounce}
+.exco-hammer-station { aspect-ratio: 1; }
+.exco-hammer-station.forest-bear-bob { animation: none; }
+:is(.exco-hammer-station,.hero-bear-station) :is(.exco-hammer-fallback,.exco-hammer-player,.exco-hammer-player>svg) { display: block; width: 100%; height: 100%; }
+.exco-hammer-player { position: absolute; inset: 0; visibility: hidden; }
+.exco-hammer-source { display: none; }
+.exco-hammer-player>.bear-fixed-scenery { display:block;position:absolute;inset:0;width:100%;height:100%;pointer-events:none; }
+.is-hammer-ready>.exco-hammer-fallback { visibility: hidden; }
+.is-hammer-ready>.exco-hammer-player { visibility: visible; }
+.exco-hammer-sprite { position:absolute;display:block;background-size:200% 200%;background-repeat:no-repeat;background-position:0% 0%;translate:var(--pose-0-x,0%) var(--pose-0-y,0%);animation:bear-pose-cycle var(--hammer-duration,2.6s) step-end infinite;animation-delay:var(--bear-phase,0s);animation-play-state:paused;pointer-events:none; }
+/* Saved assets can sit outside their scene's original bounds. Use the bear's
+   own visibility observer so its playback follows its edited position. */
+.exco-world-stage:not(.is-motion-paused) .is-hammer-ready.forest-ambient-running .exco-hammer-frame { animation-play-state: running; }
+.forest-editor.is-preview .exco-world-stage.is-in-view:not(.is-motion-paused) .is-hammer-ready .exco-hammer-frame { animation-play-state: running; }
+.is-motion-paused .exco-hammer-frame { animation-play-state: paused; }
+.hero-workshop-art.hero-bear-station { animation: none; translate: none; }
+.hero-workshop-active .hero-bear-station.is-hammer-ready .exco-hammer-frame { animation-play-state: running; }
+/* Every interval contains one complete pose on one opaque sprite surface. */
+@keyframes bear-pose-cycle {
+  0%,91%,100% { background-position:0% 0%;translate:var(--pose-0-x,0%) var(--pose-0-y,0%); }
+  17%,55% { background-position:100% 0%;translate:var(--pose-1-x,0%) var(--pose-1-y,0%); }
+  29%,67% { background-position:0% 100%;translate:var(--pose-2-x,0%) var(--pose-2-y,0%); }
+  43%,79% { background-position:100% 100%;translate:var(--pose-3-x,0%) var(--pose-3-y,0%); }
+}
+@media(prefers-reduced-motion:reduce) { .exco-hammer-sprite { animation:none;background-position:0% 0%;translate:var(--pose-0-x,0%) var(--pose-0-y,0%); } }
+.forest-ambient.forest-ambient-running{animation-play-state:running}
+.is-motion-paused .forest-ambient{animation-play-state:paused}
+/* A blurred modal should sample a steady forest, not repaint dozens of moving
+   paper layers behind the portrait on every phone display frame. */
+body:has(dialog[open]) :is(.forest-ambient,.exco-hammer-frame,.exco-person-art,.lantern-frame-visual,.exco-fireflies i,.woodland-lantern-icon){animation-play-state:paused!important}
+body:has(dialog[open]) :is(.exco-lamp-halo,.exco-lamp-pool)::before{animation-play-state:paused!important}
 /* The authored trail is the fixed floor; only scenery above it has depth motion. */
 #people .exco-path-plane{translate:none}
-.forest-editor .forest-positioned{translate:none}
-.exco-person-art{animation:exco-quiet-sway var(--actor-sway-duration,6s) ease-in-out infinite;animation-delay:var(--actor-sway-delay,0s);animation-play-state:paused}
+.forest-editor .forest-depth{translate:none;animation:none}
+.exco-person-art{animation:exco-gentle-bounce var(--actor-bounce-duration,5s) ease-in-out infinite;animation-delay:var(--actor-bounce-delay,0s);animation-play-state:paused;rotate:clamp(-3.2deg,calc(var(--exco-scroll-sway,0deg)*var(--actor-scroll-rock,1)),3.2deg)}
 body:not(.forest-editor) .exco-world-stage.is-in-view:not(.is-motion-paused) .exco-person-art,
 .forest-editor.is-preview .exco-world-stage.is-in-view:not(.is-motion-paused) .exco-person-art{animation-play-state:running}
-.exco-person:is(:hover,:focus-visible,:active) .exco-person-art{animation-play-state:paused}
+.exco-person:is(:hover,:focus-visible,:active) .exco-person-art{animation-play-state:paused;transform:none;rotate:none}
+.actor-visibility-ready .exco-person-art:not(.actor-in-view){animation-play-state:paused!important}
+.firefly-visibility-ready .exco-fireflies i:not(.firefly-in-view){animation-play-state:paused!important}
 .forest-editor:not(.is-preview) .exco-person-art{animation:none;rotate:none;translate:none}
-@keyframes exco-quiet-sway{0%,100%{rotate:-.55deg;translate:0 0}42%{rotate:.7deg;translate:0 -1.7px}74%{rotate:-.15deg;translate:.6px -.4px}}
-@media(prefers-reduced-motion:reduce){.forest-positioned{translate:none}.exco-person-art{animation:none}}
+/* Three different motion phases avoid a forest that rocks as one flat sheet.
+   The bounds contain the combined ambient, tilt and scroll displacement. */
+@keyframes forest-paper-drift{
+  0%,100%{translate:clamp(-9px,calc(var(--forest-input-x) - var(--forest-idle-x)*.65),9px) clamp(-8px,calc(var(--forest-input-y) + var(--forest-idle-y)*.3),8px)}
+  36%{translate:clamp(-9px,calc(var(--forest-input-x) + var(--forest-idle-x)),9px) clamp(-8px,calc(var(--forest-input-y) - var(--forest-idle-y)),8px)}
+  72%{translate:clamp(-9px,calc(var(--forest-input-x) + var(--forest-idle-x)*.15),9px) clamp(-8px,calc(var(--forest-input-y) + var(--forest-idle-y)*.65),8px)}
+}
+@keyframes forest-bear-bounce{
+  0%,14%,100%{translate:clamp(-9px,var(--forest-input-x),9px) clamp(-8px,var(--forest-input-y),8px)}
+  42%{translate:clamp(-9px,var(--forest-input-x),9px) clamp(-8px,calc(var(--forest-input-y) - var(--forest-idle-y)),8px)}
+  68%{translate:clamp(-9px,var(--forest-input-x),9px) clamp(-8px,calc(var(--forest-input-y) - var(--forest-idle-y)*.25),8px)}
+}
+@keyframes exco-gentle-bounce{0%,12%,100%{translate:0 0}40%{translate:0 calc(var(--actor-bounce-height,3px)*-1)}68%{translate:0 calc(var(--actor-bounce-height,3px)*-.22)}}
+@media(prefers-reduced-motion:reduce){.forest-depth{translate:none;animation:none}.exco-person-art{animation:none;rotate:none;translate:none}}
+/* Phones keep the scroll breeze and character activity, while the large paper
+   scenery rests between gestures. Dozens of continuously swaying tree/plant
+   layers otherwise keep the whole forest styling on every display frame. */
+@media(max-width:767px) and (pointer:coarse){
+  body:not(.forest-editor) .forest-depth:not(.forest-bear-bob){animation:none;rotate:none}
+}

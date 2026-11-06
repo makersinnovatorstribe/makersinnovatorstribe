@@ -1,0 +1,17 @@
+.portrait-canvas{position:relative;width:100%;aspect-ratio:5/6;isolation:isolate;overflow:visible}
+.portrait-element{position:absolute;display:block;height:auto;max-width:none;user-select:none;-webkit-user-drag:none;transform-origin:center}
+.portrait-paper{aspect-ratio:3/4;box-sizing:border-box;padding:10px;background:#fffdf1;box-shadow:0 8px 14px #233a2c28}
+.portrait-paper>img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.portrait-pending>img{object-fit:contain;padding:20px 6px 34px;box-sizing:border-box}
+.portrait-pending>span{position:absolute;bottom:13px;left:5%;width:90%;text-align:center;font:italic 12px/1.4 Georgia,serif;color:#697168}
+.exco-profile-photo:has(.portrait-canvas){width:min(300px,100%)}
+@media(min-width:600px){.exco-profile-photo:has(.portrait-canvas){width:250px}}
+/* Public gardens keep complete photos and bounded foliage; editor coordinates stay independent. */
+.portrait-public .portrait-paper{background:var(--c-card);box-shadow:var(--sh-paper);padding:var(--s-2)}
+.portrait-public .portrait-paper>img,.portrait-public .project-photo-stage>img{object-fit:contain;object-position:center}
+.portrait-public .project-photo-stage{height:100%;aspect-ratio:auto;background:var(--c-card)}
+.portrait-public .portrait-decoration{pointer-events:none}
+.portrait-public .portrait-cutout .project-photo-stage{padding:var(--s-3);box-sizing:border-box}
+.portrait-public .portrait-monogram{display:grid;place-items:center;color:var(--c-muted)}
+.portrait-public .portrait-initial{font:700 var(--t-h2)/1 var(--f-hand);letter-spacing:var(--tr-display)}
+.portrait-public .project-photo-status{font-size:var(--t-label);padding:var(--s-2);left:var(--s-2);right:var(--s-2)}

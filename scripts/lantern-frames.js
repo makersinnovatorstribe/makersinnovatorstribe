@@ -4,14 +4,16 @@
 (() => {
   'use strict';
   const script = document.currentScript;
-  const source = new URL('../assets/images/woodland-editor/lantern-animation/lantern-frames.webp', script?.src || new URL('scripts/lantern-frames.js', document.baseURI));
+  const source = window.MIT_IMAGES
+    ? new URL(window.MIT_IMAGES.delivery('assets/images/woodland-editor/lantern-animation/lantern-frames-delivery-v2.webp'), document.baseURI)
+    : new URL('../assets/images/woodland-editor/lantern-animation/lantern-frames-delivery-v2.webp', script?.src || new URL('scripts/', document.baseURI));
   const selector = '.exco-scene-lamp, .woodland-lantern-icon';
   const records = new Map();
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   let ready = false, destroyed = false, suspended = false, ratio = .5, mutation, intersection;
 
   function update(record) {
-    const active = ready && record.visible && !document.hidden && !suspended && !reduced.matches && record.element.isConnected;
+    const active = ready && record.visible && !document.hidden && !suspended && !reduced.matches && record.element.isConnected && !document.querySelector?.('dialog[open]');
     record.element.classList.toggle('lantern-frames-running', active);
     record.element.classList.toggle('lantern-frames-still', reduced.matches);
   }
@@ -49,6 +51,21 @@
     for (const [element] of records) if (!element.isConnected) forget(element);
     document.querySelectorAll(selector).forEach(prepare);
   }
+  function changed(changes) {
+    if (changes.some(change => change.type === 'attributes')) updateAll();
+    // Scan only the inserted branch. A trail impression never requires a
+    // traversal of all forest assets, profiles and gallery content.
+    for (const change of changes) {
+      for (const element of change.addedNodes || []) {
+        if (!element.matches || element.classList.contains('forest-footprint')) continue;
+        if (element.matches(selector)) prepare(element);
+        element.querySelectorAll(selector).forEach(prepare);
+      }
+      if ((change.removedNodes || []).length) {
+        for (const [element] of records) if (!element.isConnected) forget(element);
+      }
+    }
+  }
   function visibilityChanged() { updateAll(); }
   function leavePage() { suspended = true; updateAll(); }
   function returnPage() { suspended = false; scan(); updateAll(); }
@@ -57,8 +74,8 @@
     if ('IntersectionObserver' in window) intersection = new IntersectionObserver(entries => {
       entries.forEach(entry => { const record = records.get(entry.target); if (record) { record.visible = entry.isIntersecting; update(record); } });
     }, { rootMargin: '50px' });
-    mutation = new MutationObserver(scan);
-    mutation.observe(document.body, { childList: true, subtree: true });
+    mutation = new MutationObserver(changed);
+    mutation.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['open'] });
     scan();
     document.addEventListener('visibilitychange', visibilityChanged);
     window.addEventListener('pagehide', leavePage);

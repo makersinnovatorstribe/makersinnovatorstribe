@@ -1,0 +1,397 @@
+/* MIT design tokens. Every colour, size, radius, shadow and timing comes from here. */
+:root {
+  /* Colour: paper workshop by day */
+  --c-ink:        #20384a;   /* text, header, primary buttons */
+  --c-ink-soft:   #3c4f5a;   /* secondary text on paper */
+  --c-muted:      #5d6a63;   /* captions, labels (4.9:1 on paper) */
+  --c-paper:      #f7f0dd;   /* page ground */
+  --c-card:       #fffaf0;   /* cards, sheets */
+  --c-butter:     #edc65e;   /* interactive wood and butter: tickets, pill, makes ground */
+  --c-butter-deep:#c99a2e;   /* butter edges and perforations */
+  --c-sage:       #9baa83;
+  --c-moss:       #5f7a4e;   /* sage that's dark enough for text */
+  --c-clay:       #c67b61;   /* the full stop in "mischief.", rare accents */
+  --c-wood:       #b98a55;
+  --c-line:       rgb(32 56 74 / .16);
+  --c-scrim:      rgb(20 34 44 / .55);
+  --c-on-ink:     #fffaf0;
+  --c-on-butter:  #20384a;
+
+  /* Type: three faces with fixed roles */
+  --f-display: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+  --f-body:    'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --f-hand:    'Caveat', 'Segoe Print', 'Bradley Hand', cursive;
+
+  --t-hero:  clamp(4rem, 17vw, 6.75rem);    /* 64 px at 390, up to 108 px */
+  --t-h2:    clamp(2.75rem, 11.5vw, 4.25rem);/* 44 px at 390 */
+  --t-h3:    1.5rem;     /* 24: sheet titles, ticket title */
+  --t-h4:    1.125rem;   /* 18: card titles */
+  --t-lede:  1.0625rem;  /* 17: hero and section intro sentences */
+  --t-body:  1rem;       /* 16 */
+  --t-small: .875rem;    /* 14: captions, meta. Minimum size for sentences */
+  --t-label: .75rem;     /* 12: uppercase labels. Absolute minimum anywhere */
+  --t-note:  1.5rem;     /* 24: Caveat annotations */
+
+  --lh-tight: .9; --lh-snug: 1.15; --lh-body: 1.5;
+  --tr-label: .12em;   /* letter-spacing for uppercase labels */
+  --tr-display: -.035em;
+
+  /* Space: 4 px scale */
+  --s-1: 4px;  --s-2: 8px;  --s-3: 12px; --s-4: 16px; --s-5: 20px;
+  --s-6: 24px; --s-7: 32px; --s-8: 48px; --s-9: 64px; --s-10: 96px;
+  --gutter: clamp(18px, 5.6vw, 32px);
+  --measure: 34rem;            /* max width of running text */
+  --section-y: clamp(56px, 14vw, 112px);
+  /* Loading reservations use the existing ticket/390px forest geometry. */
+  --next-pending-height: 532px;
+  --forest-pending-ratio: 390 / 2185;
+  --roster-pending-height: 60px;
+
+  /* Shape */
+  --r-card: 8px; --r-btn: 12px; --r-sheet: 22px; --r-pill: 999px;
+
+  /* Depth */
+  --sh-paper:  0 1px 0 rgb(32 56 74 / .06), 0 8px 18px -10px rgb(32 56 74 / .35);
+  --sh-key:    0 4px 0 var(--c-ink);                         /* the raised wooden button */
+  --sh-key-down: 0 1px 0 var(--c-ink);
+  --sh-sheet:  0 -12px 40px -12px rgb(20 34 44 / .45);
+  --sh-cutout: drop-shadow(0 6px 6px rgb(32 56 74 / .22));   /* use with filter: */
+  --sticker:   drop-shadow(0 0 0 #fffaf0) drop-shadow(2px 0 0 #fffaf0) drop-shadow(-2px 0 0 #fffaf0)
+               drop-shadow(0 2px 0 #fffaf0) drop-shadow(0 -2px 0 #fffaf0);   /* cream edge on alpha cutouts */
+
+  /* Motion */
+  --e-out:    cubic-bezier(.2, .8, .2, 1);
+  --e-spring: cubic-bezier(.34, 1.56, .64, 1);
+  --e-in-out: cubic-bezier(.65, 0, .35, 1);
+  --d-fast: 160ms; --d-base: 260ms; --d-slow: 520ms; --d-scene: 900ms;
+
+  /* Layers */
+  --z-scene: 1; --z-labels: 5; --z-header: 20; --z-pill: 40; --z-sheet: 60;
+}
+
+/* Evening is scoped to the woodland only (see §4.4). There is no site-wide dark theme. */
+.is-evening {
+  --c-forest-ink: #fff9e6;
+  --c-forest-label: rgb(41 62 50 / .5);
+}
+
+/* Transitional aliases preserve the pre-redesign render during Phase 1.
+   New section CSS uses the canonical tokens above. */
+:root {
+  --ink:var(--c-ink);--navy:var(--c-ink);--yellow:var(--c-butter);
+  --blue:#45628b;--lime:#bcc6a2;--paper:var(--c-paper);--white:var(--c-card);
+  --muted:#697362;--line:#20384a30;--font:var(--f-body);--display:var(--f-display);
+  --legacy-gutter:max(22px,calc((100vw - 1160px)/2));
+  --control-face:#20384a;--control-ink:#fff7e5;--control-edge:#122a38;
+  --control-border:#173141;--control-focus:#20384a;--control-size:13px;
+  --control-pad-x:19px;--control-gap:12px;--control-height:48px;
+  --lh-heading:.95;--lh-lede:1.45;--lh-small:1.4;
+  --control-min:44px;--border-width:1.5px;--outline-width:3px;
+  --press-key:3px;--press-ghost:1px;--chip-height:36px;--chip-pad:14px;
+  --stamp-pad:7px;--stamp-angle:-2deg;--tape-angle:4deg;--t-icon:20px;
+  --c-mask:#000;--c-tape:rgb(237 198 94 / .7);
+  --sh-ghost:inset 0 0 0 2px var(--c-ink);
+  --mask-torn:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 16' preserveAspectRatio='none'%3E%3Cpath d='M0 4L12 7 25 3 37 8 50 2 68 6 82 3 98 8 116 4 132 7 150 2 169 5 184 3 202 8 221 4 240 7 259 2 275 6 293 3 312 8 330 3 348 7 367 2 390 6V16H0Z'/%3E%3C/svg%3E");
+}
+@media(max-width:359px){:root{--legacy-gutter:18px}}
+
+/* Exact legacy values; removed as their owning sections are redesigned. */
+:root {
+  --legacy-type-001: max(var(--t-label), 16px);
+  --legacy-type-002: max(var(--t-label), clamp(46px,6.3vw,88px));
+  --legacy-color-001: #ff826c;
+  --legacy-color-002: #ffffff25;
+  --legacy-type-003: max(var(--t-label), 13px);
+  --legacy-type-004: max(var(--t-label), 6px);
+  --legacy-type-005: max(var(--t-label), 12px);
+  --legacy-shadow-001: 5px 5px 0 var(--ink);
+  --legacy-shadow-002: 2px 2px 0 var(--ink);
+  --legacy-type-006: max(var(--t-label), 24px);
+  --legacy-shadow-003: 3px 3px 0 #111b32;
+  --legacy-type-007: max(var(--t-label), 10px);
+  --legacy-shadow-004: 0 0 0 4px #e4ec9c25;
+  --legacy-type-008: max(var(--t-label), clamp(68px,7.4vw,104px));
+  --legacy-shadow-005: 6px 7px 0 var(--ink);
+  --legacy-type-009: max(var(--t-label), .82em);
+  --legacy-type-010: max(var(--t-label), 14px);
+  --legacy-color-003: #ffffffa0;
+  --legacy-type-011: max(var(--t-label), 15px);
+  --legacy-color-004: #ffffff12;
+  --legacy-color-005: #ffffff35;
+  --legacy-type-012: max(var(--t-label), 9px);
+  --legacy-type-013: max(var(--t-label), 11px);
+  --legacy-color-006: #101b404a;
+  --legacy-type-014: max(var(--t-label), 8px);
+  --legacy-shadow-006: 7px 7px 0 var(--ink);
+  --legacy-type-015: max(var(--t-label), 22px);
+  --legacy-type-016: max(var(--t-label), 30px);
+  --legacy-type-017: max(var(--t-label), 32px);
+  --legacy-type-018: max(var(--t-label), 17px);
+  --legacy-type-019: max(var(--t-label), 25px);
+  --legacy-type-020: max(var(--t-label), 23px);
+  --legacy-color-007: #25325519;
+  --legacy-shadow-007: 9px 9px 0 var(--ink);
+  --legacy-type-021: max(var(--t-label), 19px);
+  --legacy-type-022: max(var(--t-label), clamp(45px,4.6vw,64px));
+  --legacy-shadow-008: 8px 8px 0 var(--ink);
+  --legacy-color-008: #f6d44de0;
+  --legacy-color-009: #25325520;
+  --legacy-shadow-009: 4px 4px 0 var(--ink);
+  --legacy-type-023: max(var(--t-label), 36px);
+  --legacy-type-024: max(var(--t-label), 60px);
+  --legacy-type-025: max(var(--t-label), 70px);
+  --legacy-shadow-010: 6px 6px 0 var(--ink);
+  --legacy-shadow-011: 10px 10px 0 var(--ink);
+  --legacy-type-026: max(var(--t-label), 26px);
+  --legacy-type-027: max(var(--t-label), clamp(42px,5.6vw,76px));
+  --legacy-type-028: max(var(--t-label), clamp(43px,5.4vw,74px));
+  --legacy-color-010: #e4ec9c55;
+  --legacy-color-011: #fffdf507;
+  --legacy-type-029: max(var(--t-label), clamp(45px,5.5vw,78px));
+  --legacy-type-030: max(var(--t-label), clamp(80px,12vw,160px));
+  --legacy-type-031: max(var(--t-label), 200px);
+  --legacy-shadow-012: 10px 10px 0 #111b32;
+  --legacy-color-012: #111b32bd;
+  --legacy-type-032: max(var(--t-label), 38px);
+  --legacy-shadow-013: 3px 3px 0 var(--ink);
+  --legacy-type-033: max(var(--t-label), 50px);
+  --legacy-type-034: max(var(--t-label), 45px);
+  --legacy-type-035: max(var(--t-label), 31px);
+  --legacy-type-036: max(var(--t-label), clamp(50px,8vw,80px));
+  --legacy-type-037: max(var(--t-label), 78px);
+  --legacy-type-038: max(var(--t-label), 20px);
+  --legacy-type-039: max(var(--t-label), 18px);
+  --legacy-type-040: max(var(--t-label), 150px);
+  --legacy-type-041: max(var(--t-label), 5px);
+  --legacy-type-042: max(var(--t-label), clamp(67px,13vw,88px));
+  --legacy-type-043: max(var(--t-label), 7px);
+  --legacy-type-044: max(var(--t-label), 21px);
+  --legacy-type-045: max(var(--t-label), clamp(45px,9.5vw,68px));
+  --legacy-type-046: max(var(--t-label), 52px);
+  --legacy-type-047: max(var(--t-label), 27px);
+  --legacy-type-048: max(var(--t-label), clamp(38px,8.4vw,63px));
+  --legacy-type-049: max(var(--t-label), clamp(39px,8.5vw,65px));
+  --legacy-type-050: max(var(--t-label), clamp(43px,9.2vw,68px));
+  --legacy-type-051: max(var(--t-label), clamp(71px,16vw,116px));
+  --legacy-type-052: max(var(--t-label), 125px);
+  --legacy-shadow-014: 6px 6px 0 #111b32;
+  --legacy-type-053: max(var(--t-label), 34px);
+  --legacy-type-054: max(var(--t-label), 29px);
+  --legacy-type-055: max(var(--t-label), 37px);
+  --legacy-type-056: max(var(--t-label), 4px);
+  --legacy-type-057: max(var(--t-label), 61px);
+  --legacy-type-058: max(var(--t-label), 46px);
+  --legacy-type-059: max(var(--t-label), 40px);
+  --legacy-type-060: max(var(--t-label), 64px);
+  --legacy-type-061: max(var(--t-label), clamp(52px,11.4vw,68px));
+  --legacy-type-062: max(var(--t-label), clamp(44px,4.8vw,68px));
+  --legacy-type-063: max(var(--t-label), 1.25em);
+  --legacy-type-064: max(var(--t-label), 42px);
+  --legacy-type-065: max(var(--t-label), clamp(34px,10.3vw,56px));
+  --legacy-shadow-015: 5px 6px 0 var(--ink);
+  --legacy-color-013: #fffbed;
+  --legacy-color-014: #68767a;
+  --legacy-color-015: #5e6480;
+  --legacy-color-016: #253255;
+  --legacy-color-017: #fff9e8;
+  --legacy-shadow-016: 7px 8px 0 var(--yellow, #f6d44d);
+  --legacy-color-018: #121b3bcc;
+  --legacy-color-019: #f6d44d;
+  --legacy-shadow-017: 2px 2px 0 var(--ink, #253255);
+  --legacy-color-020: #e4ec9c;
+  --legacy-color-021: #4563f1;
+  --legacy-color-022: #20384a17;
+  --legacy-shadow-018: 4px 5px 0 var(--ink, #253255);
+  --legacy-type-066: max(var(--t-label), clamp(42px, 12vw, 58px));
+  --legacy-color-023: #606782;
+  --legacy-color-024: #25325540;
+  --legacy-color-025: #fffdf5;
+  --legacy-shadow-019: 3px 3px 0 var(--ink, #253255);
+  --legacy-type-067: max(var(--t-label), 58px);
+  --legacy-color-026: #fff8e7;
+  --legacy-type-068: max(var(--t-label), 84px);
+  --legacy-shadow-020: 0 3px 0 #132a3826;
+  --legacy-shadow-021: 0 6px 13px #132a3826;
+  --legacy-type-069: max(var(--t-label), clamp(46px,11vw,82px));
+  --legacy-color-027: #f7f0dd55;
+  --legacy-color-028: #d3d9bc;
+  --legacy-type-070: max(var(--t-label), clamp(33px,9.8vw,51px));
+  --legacy-type-071: max(var(--t-label), 1.27em);
+  --legacy-shadow-022: 0 5px 9px #132c3c24;
+  --legacy-color-029: #071c3b40;
+  --legacy-color-030: #e9c363;
+  --legacy-color-031: #d5ddc1;
+  --legacy-type-072: max(var(--t-label), clamp(46px,11vw,74px));
+  --legacy-color-032: #bac6a8;
+  --legacy-shadow-023: 0 18px 80px #0b253a55;
+  --legacy-color-033: #102e40bc;
+  --legacy-color-034: #edc65e;
+  --legacy-color-035: #20384a38;
+  --legacy-color-036: #ede6d4;
+  --legacy-type-073: max(var(--t-label), clamp(29px,7vw,40px));
+  --legacy-color-037: #20384a40;
+  --legacy-shadow-024: 0 4px 8px #20384a15;
+  --legacy-type-074: max(var(--t-label), clamp(26px,7vw,38px));
+  --legacy-color-038: #20384a20;
+  --legacy-shadow-025: 0 5px 10px #20384a20;
+  --legacy-color-039: #20384a30;
+  --legacy-color-040: #d7dcc0;
+  --legacy-type-075: max(var(--t-label), clamp(35px,4.5vw,59px));
+  --legacy-color-041: #20384a;
+  --legacy-color-042: #f7f0dd;
+  --legacy-color-043: #fffaf0;
+  --legacy-color-044: #9baa83;
+  --legacy-color-045: #c67b61;
+  --legacy-type-076: max(var(--t-label), clamp(43px, 9.8vw, 72px));
+  --legacy-color-046: #ddbd76;
+  --legacy-shadow-026: 0 9px 21px #20384a21, 0 1px 2px #20384a1a;
+  --legacy-color-047: #ece0b5df;
+  --legacy-type-077: max(var(--t-label), clamp(39px,10vw,62px));
+  --legacy-color-048: #20384a66;
+  --legacy-color-049: #5e7057;
+  --legacy-shadow-027: 0 8px 14px #755b2426, 0 1px 2px #755b241a;
+  --legacy-color-050: #fffaea;
+  --legacy-shadow-028: 0 13px 22px #755b2433, 0 1px 2px #755b241a;
+  --legacy-color-051: #eee7d8;
+  --legacy-color-052: #65715b;
+  --legacy-color-053: #20384a35;
+  --legacy-type-078: max(var(--t-label), 28px);
+  --legacy-color-054: #e9ddbad9;
+  --legacy-type-079: max(var(--t-label), clamp(41px,9.7vw,73px));
+  --legacy-shadow-029: 0 9px 18px #081b2855;
+  --legacy-color-055: #edc65edb;
+  --legacy-color-056: #b3bd98e8;
+  --legacy-color-057: #d4dfd1;
+  --legacy-color-058: #a8b294;
+  --legacy-shadow-030: inset 0 0 0 1px #20384a0d;
+  --legacy-shadow-031: 0 7px 13px #20384a30, 0 1px 2px #20384a10;
+  --legacy-color-059: #fff9ed;
+  --legacy-shadow-032: 0 11px 17px #20384a38;
+  --legacy-shadow-033: inset -2px -2px 1px #6a382531, 1px 3px 2px #20384a36;
+  --legacy-color-060: #68745d;
+  --legacy-color-061: #6e6539;
+  --legacy-type-080: max(var(--t-label), clamp(48px,12vw,86px));
+  --legacy-color-062: #d8d8a6;
+  --legacy-color-063: #20384a1c;
+  --legacy-color-064: #bb8955;
+  --legacy-shadow-034: inset 0 -4px #986e4166, 0 3px 3px #20384a16;
+  --legacy-color-065: #a9794d;
+  --legacy-color-066: #fff8e5;
+  --legacy-shadow-035: 3px 2px #edd8a0;
+  --legacy-type-081: max(var(--t-label), 33px);
+  --legacy-type-082: max(var(--t-label), 39px);
+  --legacy-color-067: #74532635;
+  --legacy-color-068: #fff8df;
+  --legacy-shadow-036: 1px 3px 5px #74532624;
+  --legacy-color-069: #5a6b58;
+  --legacy-shadow-037: -2px 2px 4px #74532614;
+  --legacy-color-070: #4f614e;
+  --legacy-shadow-038: 0 3px 0 #e4d9bf, 0 10px 20px #20384a20;
+  --legacy-color-071: #788567;
+  --legacy-shadow-039: 1px 3px 0 #d8cdb4, 0 11px 22px #081b2847;
+  --legacy-color-072: #3a4e48;
+  --legacy-shadow-040: 0 3px 0 #b09346;
+  --legacy-color-073: #b2bc9e;
+  --legacy-shadow-041: inset 0 0 0 5px #f7f0dd50, 0 4px 0 #d8cfb5;
+  --legacy-shadow-042: 1px 3px 0 #e1d5b8, 0 9px 14px #20384a23;
+  --legacy-shadow-043: 0 3px 0 #102a39;
+  --legacy-color-074: #f5efdc;
+  --legacy-type-083: max(var(--t-label), clamp(46px,14.4vw,60px));
+  --legacy-type-084: max(var(--t-label), .65em);
+  --legacy-type-085: max(var(--t-label), 1.35em);
+  --legacy-color-075: #a75b3f;
+  --legacy-color-076: #20384a25;
+  --legacy-type-086: max(var(--t-label), clamp(18px,5.2cqw,27px));
+  --legacy-type-087: max(var(--t-label), clamp(47px,5.1vw,64px));
+  --legacy-shadow-044: 0 3px 0 var(--control-edge), 0 5px 8px #20384a17;
+  --legacy-color-077: #c1b18e;
+  --legacy-color-078: #a79775;
+  --legacy-color-079: #ad8d40;
+  --legacy-color-080: #a18a49;
+  --legacy-color-081: #fff7e5;
+  --legacy-color-082: #122a38;
+  --legacy-color-083: #173141;
+  --legacy-shadow-045: 0 4px 0 var(--control-edge), 0 7px 11px #20384a20;
+  --legacy-shadow-046: 0 0 0 var(--control-edge), 0 1px 2px #20384a1a;
+  --legacy-shadow-047: 0 2px 0 var(--control-edge);
+  --legacy-color-084: #172a24;
+  --legacy-color-085: #efe9d4;
+  --legacy-color-086: #152622;
+  --legacy-color-087: #2a4035;
+  --legacy-color-088: #d8b45d;
+  --legacy-color-089: #a5b592;
+  --legacy-color-090: #b8c5a9;
+  --legacy-color-091: #d0dcb733;
+  --legacy-color-092: #8d7039;
+  --legacy-color-093: #b29751;
+  --legacy-color-094: #e1c888;
+  --legacy-color-095: #12231f;
+  --legacy-color-096: #f0ead5;
+  --legacy-color-097: #24382e;
+  --legacy-color-098: #e3d5ac;
+  --legacy-color-099: #293e33;
+  --legacy-color-100: #728865;
+  --legacy-color-101: #4f6041;
+  --legacy-color-102: #2c4235;
+  --legacy-color-103: #c0ccb4;
+  --legacy-color-104: #40533d;
+  --legacy-color-105: #30483b;
+  --legacy-color-106: #142b22;
+  --legacy-color-107: #6c7e5e;
+  --legacy-color-108: #1e332a;
+  --legacy-color-109: #73835d;
+  --legacy-color-110: #5b6845;
+  --legacy-color-111: #fbf0d6;
+  --legacy-color-112: #e9ddbb;
+  --legacy-color-113: #eee7cf;
+  --legacy-color-114: #253b30;
+  --legacy-color-115: #75643f;
+  --legacy-color-116: #819067;
+  --legacy-color-117: #3c5240;
+  --legacy-color-118: #456043;
+  --legacy-color-119: #b6c89e35;
+  --legacy-color-120: #f0d894;
+  --legacy-color-121: #fff0bdad;
+  --legacy-color-122: #ffd58c66;
+  --legacy-color-123: #f2b35a2e;
+  --legacy-color-124: #df943412;
+  --legacy-color-125: #d3983204;
+  --legacy-color-126: #d3983200;
+  --legacy-color-127: #f7d28a58;
+  --legacy-color-128: #eac07628;
+  --legacy-color-129: #dca9540d;
+  --legacy-color-130: #cba35102;
+  --legacy-color-131: #cba35100;
+  --legacy-color-132: #f4eedb;
+  --legacy-color-133: #20384a22;
+  --legacy-shadow-048: 0 2px 10px #20384a12;
+  --legacy-color-134: #eec858;
+  --legacy-type-088: max(var(--t-label), clamp(26px,6vw,36px));
+  --legacy-color-135: #d0d6c5;
+  --legacy-color-136: #74836966;
+  --legacy-shadow-049: 1px 3px 0 #d8cdb4, 0 6px 10px #20384a17;
+  --legacy-color-137: #e8d9a5;
+  --legacy-color-138: #34463c;
+  --legacy-color-139: #d9ddc3;
+  --legacy-color-140: #fffaf0ee;
+  --legacy-color-141: #c5cfbf;
+  --legacy-color-142: #e7c96e;
+  --legacy-color-143: #d0dcb74d;
+}
+
+/* Brief exceptions and the forest-only evening ground. */
+:root {--t-school:11px;--c-forest-ground:#172a24;}
+
+/* Explicit sizes and effects from the redesign section specifications. */
+:root{
+ --t-brand:15px;--t-roster:15px;--t-menu:28px;--t-photo-title:30px;
+ --t-feature:22px;--t-archive-title:20px;--t-profile-name:44px;
+ --t-hero-note:34px;--t-piece-note:20px;--t-date-day:40px;
+ --t-forest-name:clamp(22px,8cqw,38px);--t-forest-min-name:22px;--r-ticket:16px;--r-date:10px;
+ --grab-width:44px;--grab-height:5px;--header-height:64px;
+ --d-arrival:700ms;--d-hop:420ms;--d-ticket:520ms;
+ --c-ink-line:rgb(255 250 240 / .14);--c-ink-chip:rgb(255 250 240 / .35);
+ --c-spot-warm:rgb(255 236 180 / .18);--c-spot-clear:rgb(255 236 180 / 0);
+ --sh-photo-status:0 2px 10px rgb(32 56 74 / .07);
+ --grain-body:.21;--grain-dialog:.16;
+}

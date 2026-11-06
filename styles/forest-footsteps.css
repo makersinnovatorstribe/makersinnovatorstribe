@@ -1,0 +1,9 @@
+/* Soft sole impressions belong to the path's ground plane. */
+.forest-footsteps{--footstep-ink:#816c46;position:absolute;z-index:0;pointer-events:none;overflow:hidden;contain:layout style}
+.forest-footsteps[hidden]{display:none}
+.forest-footprint{position:absolute;left:0;top:0;width:12px;height:24px;pointer-events:none;opacity:var(--footprint-distance,1);transition:opacity 220ms ease-out}
+.forest-footprint>svg{display:block;width:100%;height:100%;fill:var(--footstep-ink);max-width:none;animation:forest-footprint-fade var(--footprint-life,3.2s) linear both}
+.forest-footprint[data-side='right']>svg{transform:scaleX(-1)}
+.is-evening .forest-footsteps{--footstep-ink:#d6bc84}
+@keyframes forest-footprint-fade{0%,8%{opacity:var(--footprint-strength,.44)}35%{opacity:calc(var(--footprint-strength,.44)*.7)}70%{opacity:calc(var(--footprint-strength,.44)*.28)}100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.forest-footsteps{display:none}}

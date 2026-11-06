@@ -1,0 +1,33 @@
+/* Document foundation and the three type voices. */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--s-6);color-scheme:light;background:var(--c-paper)}
+body{margin:0;overflow-x:clip;color:var(--c-ink);background:var(--c-paper);font:400 var(--t-body)/var(--lh-body) var(--f-body);-webkit-font-smoothing:antialiased}
+button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+button{font:inherit;color:inherit;cursor:pointer;border:0}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3,h4,p,figure{margin:0}
+h1,h2,h3,h4{font-family:var(--f-display);font-weight:800;line-height:var(--lh-snug);letter-spacing:var(--tr-display)}
+button:disabled,a[aria-disabled=true]{cursor:default;opacity:.55}
+[hidden]{display:none!important}
+::selection{background:var(--c-butter);color:var(--c-ink)}
+:focus-visible{outline:var(--outline-width) solid var(--c-butter);outline-offset:var(--outline-width)}
+.skip-link{position:fixed;top:var(--s-2);left:var(--s-2);padding:var(--s-3);background:var(--c-butter);color:var(--c-ink);z-index:var(--z-sheet);transform:translateY(-150%)}
+.skip-link:focus{transform:none}
+.section-wrap{padding-inline:var(--gutter);padding-block:var(--section-y)}
+.section-topline{display:flex;align-items:center;justify-content:space-between;gap:var(--s-4);margin-bottom:var(--s-6)}
+.section-heading{margin-bottom:var(--s-7)}
+.section-heading>.t-lede{margin-top:var(--s-4)}
+.t-hero{font:800 var(--t-hero)/var(--lh-tight) var(--f-display);letter-spacing:var(--tr-display)}
+.t-h2{font:800 var(--t-h2)/var(--lh-heading) var(--f-display);letter-spacing:var(--tr-display);text-wrap:balance}
+.t-h3{font:800 var(--t-h3)/var(--lh-snug) var(--f-display)}
+.t-h4{font:700 var(--t-h4)/var(--lh-snug) var(--f-display);text-wrap:balance}
+.t-lede{font:400 var(--t-lede)/var(--lh-lede) var(--f-body);max-width:var(--measure)}
+.t-small{font:500 var(--t-small)/var(--lh-small) var(--f-body)}
+.t-label,.eyebrow{font:700 var(--t-label)/1 var(--f-body);text-transform:uppercase;letter-spacing:var(--tr-label)}
+.t-note{font:700 var(--t-note)/1 var(--f-hand)}
+.loading-message{font:400 var(--t-small)/var(--lh-body) var(--f-body)}
+.visually-hidden,.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+/* One static paper tile, with no animated filter or blur. */
+body::after{content:'';position:fixed;inset:0;z-index:2147483647;pointer-events:none;background-image:url('../assets/images/textures/premium-paper-v1.webp');background-repeat:repeat;background-size:512px 512px;mix-blend-mode:multiply;opacity:var(--grain-body)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

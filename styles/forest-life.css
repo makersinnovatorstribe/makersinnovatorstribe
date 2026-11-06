@@ -1,0 +1,52 @@
+/* Keep the authored anchors intact. These two animations affect separate
+   properties: existing depth translation, and a slow turn about the roots. */
+.forest-leaf-breeze{transform-origin:50% 100%;animation-name:forest-paper-drift,forest-leaf-wave;animation-duration:var(--forest-idle-duration,9s),var(--leaf-breeze-duration,8s);animation-delay:var(--forest-idle-delay,0s),var(--leaf-breeze-delay,0s);animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-play-state:paused}
+.forest-leaf-breeze.forest-ambient-running{animation-play-state:running}
+.is-motion-paused .forest-leaf-breeze,.forest-life-paused .forest-leaf-breeze{animation-play-state:paused}
+@keyframes forest-leaf-wave{0%,100%{rotate:calc(var(--leaf-breeze-angle,1deg)*-.45)}38%{rotate:var(--leaf-breeze-angle,1deg)}72%{rotate:calc(var(--leaf-breeze-angle,1deg)*-.7)}}
+
+.forest-bird-anchor{position:absolute;left:54.7%;top:14.2%;width:16%;aspect-ratio:1;z-index:5;pointer-events:none;transform:translate(-50%,-83%)}
+.forest-bird-anchor[hidden]{display:none}
+.forest-bird-route,.forest-bird-sprite{display:block;width:100%;height:100%;pointer-events:none}
+.forest-bird-route{animation:forest-bird-tour 28s ease-in-out infinite;animation-delay:-6s;animation-play-state:paused;transform-origin:50% 80%}
+.forest-bird-sprite{background-size:400% 200%;background-repeat:no-repeat;background-position:0% 0%;animation:forest-bird-poses 28s step-end infinite;animation-delay:-6s;animation-play-state:paused}
+.forest-bird-anchor.is-life-running :is(.forest-bird-route,.forest-bird-sprite){animation-play-state:running}
+.forest-bird-source,.forest-leaf-source{display:none}
+/* Two small hops, then a brief curved flight above the same treehouse roof. */
+@keyframes forest-bird-tour{
+  0%,25%,100%{translate:0 0;rotate:0deg}
+  28%{translate:7px -5px;rotate:-3deg}
+  31%{translate:13px 4px;rotate:0deg}
+  34%{translate:20px -2px;rotate:-2deg}
+  37%,50%{translate:25px 9px;rotate:0deg}
+  55%{translate:30px -19px;rotate:-7deg}
+  60%{translate:62px -27px;rotate:2deg}
+  64%{translate:48px -9px;rotate:5deg}
+  68%,71%{translate:0 0;rotate:0deg}
+}
+@keyframes forest-bird-poses{
+  0%,14%,21%,52%,68%,86%,100%{background-position:0% 0%}
+  13.5%,85.5%{background-position:33.333333% 0%}
+  20%,42%{background-position:66.666667% 0%}
+  53%,55%,57%,59%,61%,63%,65%,67%{background-position:100% 0%}
+  53.5%,55.5%,57.5%,59.5%,61.5%,63.5%,65.5%,67.5%{background-position:0% 100%}
+  54%,56%,58%,60%,62%,64%,66%{background-position:33.333333% 100%}
+  54.5%,56.5%,58.5%,60.5%,62.5%,64.5%,66.5%{background-position:100% 0%}
+}
+
+.forest-leaf-region{position:absolute;inset:0;z-index:208;overflow:hidden;pointer-events:none;contain:layout style}
+.forest-leaf-region[hidden]{display:none}
+.forest-falling-leaf{position:absolute;left:var(--fall-left,25%);top:8%;width:var(--fall-size,13px);height:var(--fall-size,13px);opacity:0;animation:forest-leaf-descent var(--fall-duration,34s) linear infinite;animation-delay:var(--fall-delay,0s);animation-play-state:paused;pointer-events:none}
+.forest-falling-leaf>span{display:block;width:100%;height:100%;background-size:contain;background-repeat:no-repeat;background-position:center;animation:forest-leaf-tumble 7.7s ease-in-out infinite;animation-delay:var(--fall-delay,0s);animation-play-state:paused}
+.forest-leaf-region.is-life-running .forest-falling-leaf,.forest-leaf-region.is-life-running .forest-falling-leaf>span{animation-play-state:running}
+.is-evening .forest-leaf-region{filter:brightness(.8) saturate(.85)}
+@keyframes forest-leaf-descent{
+  0%{opacity:0;translate:0 -18px}
+  4%{opacity:.78;translate:9px 0}
+  14%{opacity:.78;translate:calc(var(--fall-drift,36px)*-.35) calc(var(--fall-distance,450px)*.26)}
+  27%{opacity:.78;translate:var(--fall-drift,36px) calc(var(--fall-distance,450px)*.6)}
+  40%{opacity:.68;translate:calc(var(--fall-drift,36px)*.25) var(--fall-distance,450px)}
+  46%,100%{opacity:0;translate:calc(var(--fall-drift,36px)*.25) var(--fall-distance,450px)}
+}
+@keyframes forest-leaf-tumble{0%,100%{rotate:-34deg}38%{rotate:28deg}72%{rotate:-12deg}}
+@media(prefers-reduced-motion:reduce){.forest-leaf-breeze{animation:none;rotate:none}.forest-bird-route,.forest-bird-sprite{animation:none;translate:none;rotate:none;background-position:0% 0%}.forest-leaf-region{display:none}}

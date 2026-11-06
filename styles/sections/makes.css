@@ -1,0 +1,25 @@
+.makes{color:var(--c-ink);background:var(--c-butter)}
+.makes .section-heading,.makes .section-topline{max-width:1160px;margin-inline:auto}
+.make-filters{margin-top:var(--s-6);margin-bottom:var(--s-7)}
+.makes>.chip-row{margin-top:var(--s-6);margin-bottom:var(--s-7)}
+.make-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s-3);max-width:1160px;margin:var(--s-6) auto 0}
+.make-card{display:flex;flex-direction:column;min-width:0;padding:0;border:0;color:var(--c-ink);text-align:left;transform:none}
+.make-well{display:grid;place-items:center;width:100%;aspect-ratio:1;background:var(--c-card);overflow:hidden}
+.make-well img{width:100%;height:100%;object-fit:cover}
+.make-well.is-cutout{background:color-mix(in srgb,var(--c-butter) 45%,var(--c-card))}
+.make-well.is-cutout img{width:78%;height:78%;object-fit:contain;filter:var(--sticker) var(--sh-cutout)}
+.make-cap{position:relative;display:block;min-width:0;padding:var(--s-4);flex:1}
+.make-cap .tag{display:block;line-height:var(--lh-snug);margin-bottom:var(--s-2)}
+.make-cap .t-h4{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;padding-right:var(--s-4)}
+.make-arrow{position:absolute;right:var(--s-3);bottom:var(--s-3);font:700 var(--t-note)/1 var(--f-body)}
+.make-description{display:none;margin-top:var(--s-3);padding-right:var(--s-3)}
+.make-card--feature{display:grid;grid-template-columns:46% minmax(0,1fr);grid-column:1/-1;align-items:stretch}
+.make-card--feature .make-cap{align-self:center}
+.make-card--feature .t-h4{font-size:var(--t-feature)}
+.make-card--feature .make-description{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.more-makes-control{display:flex;justify-content:center;max-width:1160px;margin:var(--s-7) auto 0}
+.make-grid.is-filtering{animation:makes-swap var(--d-fast) var(--e-out)}
+@keyframes makes-swap{from{opacity:.2}to{opacity:1}}
+@media(min-width:900px){.make-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s-6)}.make-card--feature{grid-column:span 2}}
+@media(max-width:359px){.make-cap{padding:var(--s-3)}.make-card--feature .t-h4{font-size:var(--t-h4)}}
+@media(prefers-reduced-motion:reduce){.make-grid.is-filtering{animation:none}}

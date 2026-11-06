@@ -1,0 +1,6 @@
+site/
+site-manifest.json
+node_modules/
+.editor/
+.netlify/
+*.log

@@ -4,6 +4,22 @@
   const scene = hero?.querySelector('.hero-workshop-scene');
   if (!hero || !scene) return;
 
+  const originalBear = scene.querySelector('.hero-workshop-art');
+  let ready=false;
+  function reveal(){if(ready)return;ready=true;scene.classList.add('is-ready');hero.querySelector('.craft-strip')?.classList.add('is-arriving');window.clearTimeout(safety)}
+  const safety=window.setTimeout(reveal,1200);
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)reveal();
+  else if(originalBear?.decode)originalBear.decode().then(reveal,()=>{});
+  else if(originalBear?.complete&&originalBear.naturalWidth)reveal();
+  else originalBear?.addEventListener('load',reveal,{once:true});
+  if (originalBear?.tagName === 'IMG' && window.MIT_HAMMER_BEAR) {
+    const bear = window.MIT_HAMMER_BEAR.createHero(originalBear);
+    // Reuse the preloaded, decoded image as the fallback so the bench does
+    // not wait for a second image element after the hanging pieces reveal.
+    originalBear.className='exco-hammer-fallback';
+    scene.append(bear);
+  }
+
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let visible = false;
   let pointerDown = false;

@@ -1,0 +1,24 @@
+.join{position:relative;color:var(--c-ink);background:var(--c-butter);text-align:center}
+.join>.eyebrow{margin-top:var(--s-5)}
+.join h2{margin:var(--s-5) auto;max-width:var(--measure)}
+.join>.t-lede{margin:0 auto var(--s-6);max-width:var(--measure)}
+.handle-card{display:flex;align-items:center;gap:var(--s-3);width:100%;max-width:420px;margin:0 auto var(--s-6);padding:var(--s-4);text-align:left}
+.handle-card>img{flex:none;width:48px;height:48px;object-fit:contain}
+.join-handle{font:700 var(--t-h4)/var(--lh-snug) var(--f-display);display:block}
+.handle-name{display:block;margin-top:var(--s-1);font:400 var(--t-small)/var(--lh-small) var(--f-body)}
+.handle-card .icon-btn{margin-left:auto}
+.join-action{display:flex;width:100%;max-width:420px;margin-inline:auto}
+.join>.btn{display:flex;width:100%;max-width:420px;margin-inline:auto}
+.join .social-links{display:flex;flex-direction:column;gap:var(--s-3);max-width:420px;margin:var(--s-4) auto 0}
+.join-note{width:fit-content;margin:var(--s-5) auto 0;color:var(--c-ink);rotate:-2deg}
+/* The three existing bears, floor and worktable stay together at 88% scale. */
+.experience-join-scene{position:relative;isolation:isolate;width:min(88%,431.2px);aspect-ratio:1.63;margin:0 auto var(--s-3);pointer-events:none}
+.experience-join-ground{position:absolute;z-index:0;left:2%;right:2%;bottom:3%;height:53%;border-radius:49% 47% 35% 40% / 52% 64% 36% 41%;background:color-mix(in srgb,var(--c-sage) 50%,var(--c-paper));transform:rotate(-2deg)}
+.experience-join-bear{position:absolute;z-index:2;width:29%;height:auto;filter:var(--sh-cutout)}
+.experience-join-bear.bear-one{left:3%;bottom:21%;transform:rotate(-5deg)}.experience-join-bear.bear-two{right:4%;bottom:18%;transform:rotate(6deg)}.experience-join-bear.bear-three{left:37%;bottom:39%;width:26%;transform:rotate(-3deg)}
+.experience-join-table{position:absolute;z-index:3;width:55%;height:29%;left:23%;bottom:14%;transform:rotate(-2deg)}
+.experience-join-table::before{content:'';position:absolute;z-index:2;top:0;width:100%;height:26%;background:var(--c-wood);border-radius:var(--s-1);box-shadow:var(--sh-paper)}
+.experience-join-table::after{content:'';position:absolute;left:10%;top:13%;width:9%;height:86%;background:var(--c-wood);border-radius:var(--s-1)}
+.experience-join-table b{position:absolute;right:10%;top:13%;width:9%;height:86%;background:var(--c-wood);border-radius:var(--s-1)}
+.experience-join-table i{position:absolute;z-index:3;width:20%;height:24%;top:-16%;left:27%;background:var(--c-card);transform:rotate(8deg);box-shadow:var(--sh-paper);border-radius:var(--s-1)}
+.experience-join-floor{position:absolute;z-index:4;width:100%;left:0;bottom:0;height:auto}

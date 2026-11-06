@@ -1,0 +1,212 @@
+Section,ID,Title,Text,Image_URL,Link_URL,Date,Time,Status
+page,header-contact-label,,DM us ↗,,,,,auto
+page,hero-first,,MAKE,,,,,auto
+page,hero-note,,a little,,,,,auto
+page,hero-last,,mischief,,,,,auto
+page,hero-description,,"The maker CCA at Nanyang Polytechnic. Textiles, tufting, laser cutting and 3D printing, one workshop at a time.",,,,,auto
+page,hero-contact-label,,Message us ↗,,,,,auto
+page,hero-makes-label,,See our makes,,,,,auto
+page,people-eyebrow,,Say hi if you spot them,,,,,auto
+page,people-heading,,Meet the,,,,,auto
+page,people-heading-end,,EXCOs!,,,,,auto
+page,people-description,,Eleven of us are hiding in these woods. Tap a name to find them.,,,,,auto
+page,makes-eyebrow,,Fresh from the workbench,,,,,auto
+page,makes-heading,,Made by,,,,,auto
+page,makes-heading-end,,the tribe.,,,,,auto
+page,logbook-eyebrow,,The logbook,,,,,auto
+page,logbook-heading,,The good,,,,,auto
+page,logbook-heading-end,,kind of messy.,,,,,auto
+page,logbook-description,,"Workshops, makes and the people in between.",,,,,auto
+page,archive-heading,,Past workshops,,,,,auto
+page,archive-description,,Posters and photos from workshops we've run.,,,,,auto
+page,join-eyebrow,,There's a place at the table,,,,,auto
+page,join-heading,,Your next,,,,,auto
+page,join-heading-end,,what if?,,,,,auto
+page,join-description,,Joining details and upcoming workshops are shared on Instagram. Send us a message to ask.,,,,,auto
+page,brand-name,,Makers Innovators Tribe,,,,,auto
+page,join-button-label,,Message us on Instagram ↗,,,,,auto
+page,join-note,,bring your idea along ↗,,,,,auto
+page,footer-note,,Curiosity looks good on you.,,,,,auto
+page,album-heading,,The good stuff.,,,,,auto
+page,album-description,,Little moments from our workshops and events.,,,,,auto
+page,brand-logo,,,assets/images/MITLogo_Web.webp,,,,auto
+page,hero-art,The MIT bear making a birdhouse at a wooden workbench.,,assets/images/atelier-v6/workshop.webp,,,,auto
+make,Textile,Strawberry bags,"Strawberry-shaped bags, brought to life in our textile workshop. A closer look at the fabric, the green tops, and the making along the way.",assets/images/photos/strawberry-bags.webp,,,,auto
+field,make.Textile.label,,Textiles,,,,,auto
+make,Tuft,"A mascot, made soft",Our MIT mascot became a rug in Tuft Together. From working on the pieces to gathering around the finished project.,assets/images/photos/mascot-rug.webp,,,,auto
+field,make.Tuft.label,,Tufting,,,,,auto
+make,Laser,Layers of imagination,Layered wooden scenes from our laser workshop. Each small layer adds another piece to the picture.,assets/images/photos/layered-wood.webp,,,,auto
+field,make.Laser.label,,Laser making,,,,,auto
+make,3D,Ideas in another dimension,"A look at the small objects from our 3D printing workshops, including a creature keychain and a blue plane.",assets/images/photos/creature-keychain.webp,,,,auto
+field,make.3D.label,,3D printing,,,,,auto
+make,Leather,Made by hand,"Hands, tools, and a little patience. A closer look at the leather wallet workshop.",assets/images/photos/leather-cutting.webp,,,,auto
+field,make.Leather.label,,Leathercraft,,,,,auto
+make,Embroidery,One stitch at a time,Learning at the embroidery machine and working through the details together.,assets/images/photos/embroidery-learning.webp,,,,auto
+field,make.Embroidery.label,,Embroidery,,,,,auto
+make,BottleLamp,From bottle to bloom,"A decorated bottle lamp with a red flower-shaped top, made in our upcycling workshop. Take a closer look at the finished lamps and the details.",assets/images/photos/bottle-lamp.webp,,,,auto
+field,make.BottleLamp.label,,Upcycling,,,,,auto
+make,UpcycledPouches,"A second life, stitched","Reused fabric, new drawstring pouches. A look at the finished bags and the sewing that brought them together.",assets/images/photos/drawstring-pouches.webp,,,,auto
+field,make.UpcycledPouches.label,,Upcycling,,,,,auto
+make,MoruDolls,Fuzzy little friends,Moru doll making at SLA Fest. Fuzzy dolls take shape around the shared craft table.,assets/images/photos/moru-dolls.webp,,,,auto
+field,make.MoruDolls.label,,Moru dolls,,,,,auto
+make,AcrylicStandee,Art that stands up,"An engraved acrylic standee from our laser workshop. A clear panel, an illustrated design, and a small base to hold it upright.",assets/images/photos/acrylic-standee.webp,,,,auto
+field,make.AcrylicStandee.label,,Laser making,,,,,auto
+make,PineappleKeychain,A pineapple for your pocket,A pineapple-shaped acrylic keychain from our laser workshop. The outline and engraved details turn a small piece of acrylic into a personal keepsake.,assets/images/photos/acrylic-keychains.webp,,,,auto
+field,make.PineappleKeychain.label,,Laser making,,,,,auto
+make,CorkCoasters,Small circles. Big personality.,"Cork coasters with different engraved designs, made in our laser workshop. Each person brings their own picture to the table.",assets/images/photos/cork-coasters.webp,,,,auto
+field,make.CorkCoasters.label,,Laser making,,,,,auto
+make,BluePrintedPlane,A plane in your palm,"A blue 3D printed plane, small enough to sit in a hand. One of the objects made in our 3D printing workshop.",assets/images/photos/printed-plane.webp,,,,auto
+field,make.BluePrintedPlane.label,,3D printing,,,,,auto
+make,MagentaPrintedPlane,Ready for its close-up,A magenta 3D printed plane displayed on its stand. A closer look at another print from the same workshop.,assets/images/photos/printed-projects.webp,,,,auto
+field,make.MagentaPrintedPlane.label,,3D printing,,,,,auto
+make,PrintedFigure,A tiny printed figure,A black 3D printed figure on a square base. A close-up of the small shapes and details from our 3D printing workshop.,assets/images/photos/printed-object.webp,,,,auto
+field,make.PrintedFigure.label,,3D printing,,,,,auto
+photo,mascot-rug,MIT mascot rug,,assets/images/photos/mascot-rug.webp,,,,auto
+field,photo.mascot-rug.category,,Tufting,,,,,auto
+photo,strawberry-bags,Strawberry bags on the cutting mat,,assets/images/photos/strawberry-bags.webp,,2026-09-16,,auto
+field,photo.strawberry-bags.category,,Textiles,,,,,auto
+photo,creature-keychain,3D printed creature keychain,,assets/images/photos/creature-keychain.webp,,2026-05-29,,auto
+field,photo.creature-keychain.category,,3D Printing,,,,,auto
+photo,layered-wood,Layered wooden scenes,,assets/images/photos/layered-wood.webp,,2026-06-19,,auto
+field,photo.layered-wood.category,,Laser,,,,,auto
+photo,drawstring-pouches,Finished drawstring pouches,,assets/images/photos/drawstring-pouches.webp,,,,auto
+field,photo.drawstring-pouches.category,,Upcycling,,,,,auto
+photo,leather-cutting,Hands cutting leather,,assets/images/photos/leather-cutting.webp,,2026-07-17,,auto
+field,photo.leather-cutting.category,,Leathercraft,,,,,auto
+photo,embroidery-learning,Learning at the embroidery machine,,assets/images/photos/embroidery-learning.webp,,,,auto
+field,photo.embroidery-learning.category,,Embroidery,,,,,auto
+photo,rug-trimming,Trimming the mascot rug together,,assets/images/photos/rug-trimming.webp,,,,auto
+field,photo.rug-trimming.category,,Tufting,,,,,auto
+photo,rug-community,Community around the finished rug,,assets/images/photos/rug-community.webp,,,,auto
+field,photo.rug-community.category,,Community,,,,,auto
+photo,printed-plane,Blue 3D printed plane in a hand,,assets/images/photos/printed-plane.webp,,2026-05-29,,auto
+field,photo.printed-plane.category,,3D Printing,,,,,auto
+photo,strawberry-session,Holding finished strawberry bags,,assets/images/photos/strawberry-session.webp,,2026-09-16,,auto
+field,photo.strawberry-session.category,,Textiles,,,,,auto
+photo,strawberry-detail,Finished strawberry bag,,assets/images/photos/strawberry-detail.webp,,2026-09-16,,auto
+field,photo.strawberry-detail.category,,Textiles,,,,,auto
+photo,wood-workshop,Layered wood panel in a hand,,assets/images/photos/wood-workshop.webp,,2026-06-19,,auto
+field,photo.wood-workshop.category,,Laser,,,,,auto
+photo,wood-making,Layered wooden scenes in hands,,assets/images/photos/wood-making.webp,,2026-06-19,,auto
+field,photo.wood-making.category,,Laser,,,,,auto
+photo,embroidery-prep,Planning embroidery designs,,assets/images/photos/embroidery-prep.webp,,,,auto
+field,photo.embroidery-prep.category,,Embroidery,,,,,auto
+photo,embroidery-session,Working at an embroidery machine,,assets/images/photos/embroidery-session.webp,,,,auto
+field,photo.embroidery-session.category,,Embroidery,,,,,auto
+photo,leather-workshop,Cutting leather wallet pieces,,assets/images/photos/leather-workshop.webp,,2026-07-17,,auto
+field,photo.leather-workshop.category,,Leathercraft,,,,,auto
+photo,leather-session,Cutting leather,,assets/images/photos/leather-session.webp,,2026-07-17,,auto
+field,photo.leather-session.category,,Leathercraft,,,,,auto
+photo,printed-projects,Magenta 3D printed plane,,assets/images/photos/printed-projects.webp,,2026-05-29,,auto
+field,photo.printed-projects.category,,3D Printing,,,,,auto
+photo,printed-object,Black 3D printed figure,,assets/images/photos/printed-object.webp,,2026-05-29,,auto
+field,photo.printed-object.category,,3D Printing,,,,,auto
+photo,bottle-lamp-making,Bottle lamp held at the workshop,,assets/images/photos/bottle-lamp-making.webp,,,,auto
+field,photo.bottle-lamp-making.category,,Upcycling,,,,,auto
+photo,bottle-lamp,Rose bottle lamp,,assets/images/photos/bottle-lamp.webp,,,,auto
+field,photo.bottle-lamp.category,,Upcycling,,,,,auto
+photo,bottle-lamp-detail,Finished bottle lamp at the workshop,,assets/images/photos/bottle-lamp-detail.webp,,,,auto
+field,photo.bottle-lamp-detail.category,,Upcycling,,,,,auto
+photo,pouch-making,Sewing drawstring pouches,,assets/images/photos/pouch-making.webp,,,,auto
+field,photo.pouch-making.category,,Upcycling,,,,,auto
+photo,moru-dolls,Making Moru Dolls at SLA Fest,,assets/images/photos/moru-dolls.webp,,,,auto
+field,photo.moru-dolls.category,,Community,,,,,auto
+photo,tufting-workshop,Working at tufting frames,,assets/images/photos/tufting-workshop.webp,,,,auto
+field,photo.tufting-workshop.category,,Tufting,,,,,auto
+photo,acrylic-standee,Engraved acrylic standee,,assets/images/photos/acrylic-standee.webp,,2026-06-17,,auto
+field,photo.acrylic-standee.category,,Laser,,,,,auto
+photo,acrylic-keychains,Pineapple acrylic keychain,,assets/images/photos/acrylic-keychains.webp,,2026-05-29,,auto
+field,photo.acrylic-keychains.category,,Laser,,,,,auto
+photo,cork-coasters,Cork coasters held together,,assets/images/photos/cork-coasters.webp,,2026-05-26,,auto
+field,photo.cork-coasters.category,,Laser,,,,,auto
+photo,orientation-community,MIT orientation group,,assets/images/photos/orientation-community.webp,,,,auto
+field,photo.orientation-community.category,,Community,,,,,auto
+moment,orientation-community,Find your people.,,,,,,auto
+moment,strawberry-session,A little figuring it out.,,,,,,auto
+moment,embroidery-session,A lot of making it happen.,,,,,,auto
+moment,rug-community,Good people. Very good ideas.,,,,,,auto
+workshop,october-tufting,Tufting Workshop,"Making a tufted piece with yarn, one patch of colour at a time.",assets/images/posters/october-tufting.webp,,2026-10-09,12:00-16:00,auto
+workshop,october-sewing,Strawberry Bag Sewing,"Sewing fabric into a strawberry-shaped bag, complete with a leafy green top.",assets/images/posters/october-sewing.webp,,2026-10-23,14:00-16:30,auto
+workshop,bottle-lamp,Bottle Lamp Workshop,"A plastic bottle gets a second life as a small, flower-topped lamp.",assets/images/posters/bottle-lamp.webp,,2026-09-25,,auto
+workshop,upcycling-pouch,Old Shirt to Drawstring Pouch,Reused clothing becomes a drawstring pouch through a little cutting and stitching.,assets/images/posters/upcycling-pouch.webp,,2026-09-23,14:00-16:30,auto
+workshop,october-acrylic-standee,Acrylic Standee Workshop,Acrylic standees from our October laser-making workshops.,assets/images/posters/october-acrylic-standee.webp,,2026-10-20,,auto
+profile,natalie,Natalie,I'm someone who enjoys being creative and working with my hands. Bob da Builder era!,assets/images/committee/portraits/delivery-v1/natalie-960.webp,,,,auto
+field,profile.natalie.role,,President,,,,,auto
+field,profile.natalie.programme,,XPID,,,,,auto
+field,profile.natalie.year,,Year 3,,,,,auto
+field,profile.natalie.favouriteCraft,,Leather craft and acrylic,,,,,auto
+field,profile.natalie.funFact,,I love exploring and jumping into waterfalls.,,,,,auto
+pose,natalie,,,assets/images/committee/previews/named-v2/natalie-640.webp,,,,auto
+profile,kar-way,Kar Way,I'm open to different opinions and like helping everyone collaborate. I enjoy exploring new ideas and bringing them to life through different projects.,assets/images/committee/portraits/delivery-v1/kar-way-960.webp,,,,auto
+field,profile.kar-way.role,,VP Secretary,,,,,auto
+field,profile.kar-way.programme,,Business Management (Supply Chain & Events Management),,,,,auto
+field,profile.kar-way.year,,Year 3,,,,,auto
+field,profile.kar-way.favouriteCraft,,Gundam / Laser,,,,,auto
+field,profile.kar-way.funFact,,"I guarantee that either before or after a trip, I'll be sick.",,,,,auto
+pose,kar-way,,,assets/images/committee/previews/named-v2/kar-way-640.webp,,,,auto
+profile,elayna,Elayna,"Crafting is how I express myself, and I'm always thinking about what I should create next.",assets/images/committee/portraits/delivery-v1/elayna-960.webp,,,,auto
+field,profile.elayna.role,,VP Events & Workshops,,,,,auto
+field,profile.elayna.programme,,Nursing,,,,,auto
+field,profile.elayna.year,,Year 3,,,,,auto
+field,profile.elayna.favouriteCraft,,Card making (you're evil for letting me choose only one 😸),,,,,auto
+field,profile.elayna.funFact,,I like to eat rainbow agar agar.,,,,,auto
+pose,elayna,,,assets/images/committee/previews/named-v2/elayna-640.webp,,,,auto
+profile,yu-jing,Yu Jing,"I'm the VP Publicity of MIT! I tend to doomscroll a lot just to find inspiration, but I usually get distracted halfway.",assets/images/committee/portraits/delivery-v2/yu-jing-960.webp,,,,auto
+field,profile.yu-jing.role,,VP Publicity,,,,,auto
+field,profile.yu-jing.programme,,Communication & Motion Design,,,,,auto
+field,profile.yu-jing.year,,Year 2,,,,,auto
+field,profile.yu-jing.favouriteCraft,,Paper craft,,,,,auto
+field,profile.yu-jing.funFact,,"I can't really draw even though I'm in SDM, lol!",,,,,auto
+pose,yu-jing,,,assets/images/committee/previews/yu-jing-v1.webp,,,,auto
+profile,alfred,Alfred,I am an information technology student. My interests include programming and web design.,assets/images/committee/portraits/delivery-v1/alfred-960.webp,,,,auto
+field,profile.alfred.role,,Assistant Secretary,,,,,auto
+field,profile.alfred.programme,,Diploma in Computing,,,,,auto
+field,profile.alfred.year,,Year 2,,,,,auto
+field,profile.alfred.favouriteCraft,,Laser,,,,,auto
+field,profile.alfred.funFact,,I like eclairs.,,,,,auto
+pose,alfred,,,assets/images/committee/previews/named-v3/alfred-640.webp,,,,auto
+profile,wei-shen,Wei Shen,,assets/images/committee/portraits/delivery-v2/wei-shen-960.webp,,,,auto
+field,profile.wei-shen.role,,Quartermaster,,,,,auto
+field,profile.wei-shen.programme,,,,,,,auto
+field,profile.wei-shen.year,,,,,,,auto
+field,profile.wei-shen.favouriteCraft,,,,,,,auto
+field,profile.wei-shen.funFact,,,,,,,auto
+pose,wei-shen,,,assets/images/committee/previews/named-v2/wei-shen-640.webp,,,,auto
+profile,puteri,Puteri,Passionate about continuous learning and anything adventurous!,assets/images/committee/portraits/delivery-v1/puteri-960.webp,,,,auto
+field,profile.puteri.role,,3D Craft,,,,,auto
+field,profile.puteri.programme,,Diploma in Food Science & Nutrition,,,,,auto
+field,profile.puteri.year,,Year 2,,,,,auto
+field,profile.puteri.favouriteCraft,,Leather,,,,,auto
+field,profile.puteri.funFact,,"I have a younger brother, who is a cat.",,,,,auto
+pose,puteri,,,assets/images/committee/previews/puteri-v1.webp,,,,auto
+profile,yamone,Yamone,I'm the Textile Lead of MIT and love exploring different crafts and getting creative with my hands. I enjoy coming up with fun and creative workshops where others can try something new and discover the joy of crafting too :),assets/images/committee/portraits/delivery-v2/yamone-960.webp,,,,auto
+field,profile.yamone.role,,Textile Craft,,,,,auto
+field,profile.yamone.programme,,Diploma in Infocomm & Media Engineering,,,,,auto
+field,profile.yamone.year,,Year 2,,,,,auto
+field,profile.yamone.favouriteCraft,,Sewing! I love how versatile it is and how you can turn a simple piece of fabric into almost anything.,,,,,auto
+field,profile.yamone.funFact,,I'm a huge fan of dry Mala U mian from our South Canteen and could honestly eat it every day!,,,,,auto
+pose,yamone,,,assets/images/committee/previews/named-v2/yamone-640.webp,,,,auto
+profile,luther,Luther,"I like Kirby, rhythm games (like MaiMai), and Pokémon.",assets/images/committee/portraits/delivery-v2/luther-960.webp,,,,auto
+field,profile.luther.role,,Laser Craft,,,,,auto
+field,profile.luther.programme,,Electronic and Computer Engineering,,,,,auto
+field,profile.luther.year,,Year 2,,,,,auto
+field,profile.luther.favouriteCraft,,Laser craft,,,,,auto
+field,profile.luther.funFact,,"I'm going to make another machine (either MaiMai or Chunithm) in MakerSpace, like the arcade machine. Come check it out once it's done!",,,,,auto
+pose,luther,,,assets/images/committee/previews/luther-v1.webp,,,,auto
+profile,jun-leong,Jun Leong,"I'm an Architecture student who enjoys turning ideas into things people can experience. From art and furniture to this website, I like exploring different ways of making.",assets/images/committee/portraits/delivery-v2/jun-leong-960.webp,,,,auto
+field,profile.jun-leong.role,,Publicity I/C,,,,,auto
+field,profile.jun-leong.programme,,Diploma in Architecture,,,,,auto
+field,profile.jun-leong.year,,Year 3,,,,,auto
+field,profile.jun-leong.favouriteCraft,,Laser craft,,,,,auto
+field,profile.jun-leong.funFact,,I helped design a mahogany chair that won first runner-up in the Singapore Timber Association School Design Competition.,,,,,auto
+pose,jun-leong,,,assets/images/committee/previews/named-v2/jun-leong-640.webp,,,,auto
+profile,pei-ni,Pei Ni,I like Hangyodon and Kamen Rider.,assets/images/committee/portraits/delivery-v2/pei-ni-960.webp,,,,auto
+field,profile.pei-ni.role,,Publicity I/C,,,,,auto
+field,profile.pei-ni.programme,,Cybersecurity and Digital Forensics,,,,,auto
+field,profile.pei-ni.year,,Year 2,,,,,auto
+field,profile.pei-ni.favouriteCraft,,Crochet,,,,,auto
+field,profile.pei-ni.funFact,,I don't like the taste of watermelon.,,,,,auto
+pose,pei-ni,,,assets/images/committee/previews/pei-ni-v1.webp,,,,auto
+setting,instagram,,"'@nyp_mit",,https://www.instagram.com/nyp_mit/,,,auto
+setting,committee-term,,2026–27,,,,,auto
+setting,joining,,Open the joining form,,,,,auto

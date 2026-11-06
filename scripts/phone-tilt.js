@@ -1,20 +1,21 @@
 (() => {
   'use strict';
 
-  // One sensor stream shared by the woodland. Readings remain in memory only.
-  // Permission-free browsers start automatically; others require a real scene gesture.
+  // One passive stream for the whole site, independent of EXCO interactions.
   const listeners = new Set();
-  const scenes = new Map();
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   const orientation = window.DeviceOrientationEvent;
   const needsPermission = typeof orientation?.requestPermission === 'function';
   const state = { x: 0, y: 0 };
   let permission = !orientation || window.isSecureContext === false ? 'unavailable' : needsPermission ? 'unknown' : 'granted';
-  let listening = false, neutral = null, timer = 0, pageSuspended = false, disposed = false;
-  let sensorAvailable = true;
+  let listening = false, neutral = null, pageSuspended = false, disposed = false;
+  let probed = false, gesturePending = false, requestId = 0;
   const notify = () => listeners.forEach(listener => listener());
   const delta = (angle, origin) => ((angle - origin + 540) % 360) - 180;
   const normalize = value => Math.sign(value) * Math.min(1, Math.max(0, Math.abs(value) - 1.5) / 18.5);
+  const quiet = () => disposed || reduced.matches || document.hidden || pageSuspended;
+  const gestures = ['touchend', 'pointerup', 'click', 'keydown'];
+  function removeGestures() { gestures.forEach(name => document.removeEventListener(name, requestFromGesture, true)); }
 
   function recenter() {
     neutral = null;
@@ -24,79 +25,90 @@
   }
   function stop() {
     listening = false;
-    window.clearTimeout(timer);
-    timer = 0;
     window.removeEventListener('deviceorientation', sample);
     recenter();
   }
+  function finishPermission(answer) {
+    permission = answer;
+    removeGestures();
+    if (answer === 'denied') stop();
+    else start();
+  }
   function sample(event) {
-    if (!listening || disposed || document.hidden || reduced.matches || !Number.isFinite(event.beta) || !Number.isFinite(event.gamma)) return;
-    if (!neutral) {
-      neutral = { beta: event.beta, gamma: event.gamma };
-      window.clearTimeout(timer);
-      timer = 0;
-    }
+    if (!listening || quiet() || !Number.isFinite(event.beta) || !Number.isFinite(event.gamma)) return;
+    // WebKit can deliver readings for an already-authorized origin before its
+    // permission promise settles. A real reading is sufficient to start motion.
+    if (permission === 'unknown') finishPermission('granted');
+    if (!neutral) neutral = { beta: event.beta, gamma: event.gamma };
     const rotation = ((window.screen?.orientation?.angle ?? window.orientation ?? 0) * Math.PI) / 180;
     const horizontal = delta(event.gamma, neutral.gamma);
     const vertical = delta(event.beta, neutral.beta);
+    // A phone held around 60° has little comfortable forward/back travel.
+    // Calibrate at the actual grip, then compensate the screen's vertical axis
+    // (about 2× at 60°). Cap the gain near upright; travel is bounded downstream.
+    const heldPitch = neutral.beta * Math.cos(rotation) - neutral.gamma * Math.sin(rotation);
+    const pitchGain = Math.min(2.5, 1 / Math.max(.4, Math.abs(Math.cos(heldPitch * Math.PI / 180))));
     const x = normalize(horizontal * Math.cos(rotation) + vertical * Math.sin(rotation));
-    const y = normalize(vertical * Math.cos(rotation) - horizontal * Math.sin(rotation));
+    const y = normalize((vertical * Math.cos(rotation) - horizontal * Math.sin(rotation)) * pitchGain);
     if (Math.abs(x - state.x) < .002 && Math.abs(y - state.y) < .002) return;
     state.x = x;
     state.y = y;
     notify();
   }
   function start() {
-    if (disposed || listening || !sensorAvailable || permission !== 'granted' || reduced.matches || document.hidden || pageSuspended) return;
+    if (quiet() || listening || permission === 'denied' || permission === 'unavailable') return;
     recenter();
     listening = true;
     window.addEventListener('deviceorientation', sample, { passive: true });
-    timer = window.setTimeout(() => {
-      if (!neutral && listening) {
-        sensorAvailable = false;
-        stop();
-      }
-    }, 6000);
+    // Do not time out: some phones begin providing readings after page load.
+    // An idle passive listener consumes no animation frames.
   }
-  async function requestFromScene(event, host) {
-    if (disposed || permission !== 'unknown' || reduced.matches || document.hidden || pageSuspended || event.isTrusted !== true) return;
-    const control = event.target?.closest?.('.exco-person, .exco-lantern-toggle');
-    if (!control || !host.contains(control)) return;
-    // Call synchronously inside an existing button's real click activation, as iOS requires.
-    // This is a native permission prompt, never a permission bypass or a new tilt control.
-    permission = 'pending';
+  async function requestPermission(interactive) {
+    if (quiet() || permission !== 'unknown' || (interactive && gesturePending)) return;
+    if (interactive) gesturePending = true;
+    const id = ++requestId;
     try {
+      // Called synchronously during a real click when prompting is necessary.
       const answer = await orientation.requestPermission();
-      if (disposed) return;
-      permission = answer === 'granted' ? 'granted' : 'denied';
-      start();
-    } catch {
-      if (!disposed) permission = 'denied';
+      if (disposed || id !== requestId || permission !== 'unknown') return;
+      finishPermission(answer === 'granted' ? 'granted' : 'denied');
+    } catch (error) {
+      if (disposed || id !== requestId || permission !== 'unknown') return;
+      // A passive probe cannot show a first-use prompt. Leave it available for
+      // the next ordinary page tap, rather than treating this as user denial.
+      if (error?.name !== 'NotAllowedError') finishPermission('denied');
+    } finally {
+      if (interactive) gesturePending = false;
     }
   }
-  function armScene(host) {
-    if (disposed || !host?.addEventListener || permission === 'unavailable') return () => {};
-    if (scenes.has(host)) return scenes.get(host).cleanup;
-    const gesture = event => { requestFromScene(event, host); };
-    const cleanup = () => {
-      if (scenes.get(host)?.cleanup !== cleanup) return;
-      host.removeEventListener('click', gesture, true);
-      scenes.delete(host);
-    };
-    scenes.set(host, { cleanup });
-    host.addEventListener('click', gesture, { capture: true });
-    return cleanup;
+  function requestFromGesture(event) {
+    if (event.isTrusted !== true) return;
+    if (event.type === 'keydown' && (event.key === 'Escape' || event.metaKey || event.ctrlKey || event.altKey)) return;
+    // Touch release can carry activation without producing a click, including
+    // the first hero interaction. Rejected swipe activation leaves the next tap
+    // eligible; none of these passive listeners intercept normal scrolling.
+    if (window.navigator?.userActivation?.isActive === false) return;
+    requestPermission(true);
   }
-  function visibilityChanged() { if (document.hidden) stop(); else start(); }
-  function preferenceChanged() { if (reduced.matches) stop(); else start(); }
+  function resume() {
+    start();
+    // Cached browser decisions resolve without a gesture; first-use permission
+    // rejects without a prompt and is requested on the first real page click.
+    if (!quiet() && permission === 'unknown' && !probed) {
+      probed = true;
+      requestPermission(false);
+    }
+  }
+  function visibilityChanged() { if (document.hidden) stop(); else resume(); }
+  function preferenceChanged() { if (reduced.matches) stop(); else resume(); }
   function pageHidden() { pageSuspended = true; stop(); }
-  function pageShown() { pageSuspended = false; start(); }
+  function pageShown() { pageSuspended = false; resume(); }
   function destroy() {
     if (disposed) return;
     disposed = true;
     stop();
-    for (const scene of [...scenes.values()]) scene.cleanup();
     listeners.clear();
+    removeGestures();
     window.removeEventListener('orientationchange', recenter);
     window.screen?.orientation?.removeEventListener('change', recenter);
     window.removeEventListener('pagehide', pageHidden);
@@ -106,6 +118,7 @@
     else reduced.removeListener?.(preferenceChanged);
   }
 
+  if (needsPermission && permission === 'unknown') gestures.forEach(name => document.addEventListener(name, requestFromGesture, { capture: true, passive: true }));
   window.addEventListener('orientationchange', recenter, { passive: true });
   window.screen?.orientation?.addEventListener('change', recenter);
   window.addEventListener('pagehide', pageHidden);
@@ -115,7 +128,6 @@
   else reduced.addListener?.(preferenceChanged);
   window.MIT_PHONE_TILT = {
     state,
-    armScene,
     destroy,
     subscribe(listener) {
       if (disposed) return () => {};
@@ -123,5 +135,5 @@
       return () => listeners.delete(listener);
     }
   };
-  start();
+  resume();
 })();
