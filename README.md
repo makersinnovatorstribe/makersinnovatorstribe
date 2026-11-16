@@ -21,7 +21,7 @@ Runtime source remains unbundled for editing; delivery CSS/JavaScript are compac
 
 ## Remaining follow-up
 
-- Wei Shen's profile write-up has not been supplied.
+- All eleven profile write-ups are complete, including Wei Shen's details supplied on 16 November 2026.
 - No upcoming workshop has been confirmed; completed workshops appear in the archive.
 - Further phone performance tuning and real iPhone/Android testing remain. Current release checks are browser simulations, not a physical-phone guarantee.
 - The local completion dashboard still uses bundled profile data rather than the live spreadsheet.

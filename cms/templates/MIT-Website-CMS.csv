@@ -165,12 +165,12 @@ field,profile.alfred.year,,Year 2,,,,,auto
 field,profile.alfred.favouriteCraft,,Laser,,,,,auto
 field,profile.alfred.funFact,,I like eclairs.,,,,,auto
 pose,alfred,,,assets/images/committee/previews/named-v3/alfred-640.webp,,,,auto
-profile,wei-shen,Wei Shen,,assets/images/committee/portraits/delivery-v2/wei-shen-960.webp,,,,auto
+profile,wei-shen,Wei Shen,Avid enjoyer of JP!! A dream of mine is to build a life-size Gundam.,assets/images/committee/portraits/delivery-v2/wei-shen-960.webp,,,,auto
 field,profile.wei-shen.role,,Quartermaster,,,,,auto
-field,profile.wei-shen.programme,,,,,,,auto
-field,profile.wei-shen.year,,,,,,,auto
-field,profile.wei-shen.favouriteCraft,,,,,,,auto
-field,profile.wei-shen.funFact,,,,,,,auto
+field,profile.wei-shen.programme,,Aerospace Engineering,,,,,auto
+field,profile.wei-shen.year,,Year 2,,,,,auto
+field,profile.wei-shen.favouriteCraft,,3D printing,,,,,auto
+field,profile.wei-shen.funFact,,"I like to make yummy food because when I don't, it's burnt :D",,,,,auto
 pose,wei-shen,,,assets/images/committee/previews/named-v2/wei-shen-640.webp,,,,auto
 profile,puteri,Puteri,Passionate about continuous learning and anything adventurous!,assets/images/committee/portraits/delivery-v1/puteri-960.webp,,,,auto
 field,profile.puteri.role,,3D Craft,,,,,auto
