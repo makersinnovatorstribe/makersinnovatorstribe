@@ -22,6 +22,6 @@ Runtime source remains unbundled for editing; delivery CSS/JavaScript are compac
 ## Remaining follow-up
 
 - All eleven profile write-ups are complete, including Wei Shen's details supplied on 16 November 2026.
-- No upcoming workshop has been confirmed; completed workshops appear in the archive.
+- November posters are current: Leather Journal Cover on 17 November, 5–8pm; Tufted Mirror on 13 and 20 November, 1–5pm. Each date has its own automatic archive cutoff.
 - Further phone performance tuning and real iPhone/Android testing remain. Current release checks are browser simulations, not a physical-phone guarantee.
 - The local completion dashboard still uses bundled profile data rather than the live spreadsheet.
